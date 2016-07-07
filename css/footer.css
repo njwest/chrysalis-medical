@@ -1,0 +1,99 @@
+/*
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+*/
+/* footer section */
+footer {
+  background: url("../images/footer-bg.jpg") 50% 0 repeat-y fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+footer h2 {
+  padding-bottom: 14px;
+}
+
+footer h3 {
+  padding-top: 8px;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+footer span {
+  font-weight: bold;
+  padding-left: 24px;
+}
+
+footer .ph, footer .address {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+footer .fa {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+/* social icon */
+.social-icon {
+  padding: 0;
+}
+
+.social-icon li {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+
+.social-icon li a {
+  background: #f0f0f0;
+  border-radius: 50%;
+  color: #5C5C5C;
+  font-size: 16px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  margin-top: 12px;
+  margin-right: 16px;
+  top: 0;
+  position: relative;
+  padding: 0;
+}
+
+.social-icon li a:hover {
+  background: #F6D76B;
+  top: 5px;
+}
+
+/* copyright section */
+#copyright {
+  background: #343434;
+  color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+#copyright p {
+  color: #ffffff;
+}
+
+#copyright a {
+  color: #ffffff;
+}
+
+#copyright a:hover {
+  color: #FF0;
+}

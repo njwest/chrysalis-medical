@@ -49,6 +49,45 @@ hr {
   background-size: cover !important;
 }
 
+/*
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+*/
+/* start navigation */
+.navbar-default {
+  background: #ffffff;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.04);
+  border: none;
+  margin-bottom: 0;
+}
+
+.navbar-brand, .navbar-nav li a {
+  line-height: 28px;
+}
+
+.navbar-default .navbar-brand {
+  color: #5C5C5C;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-default .navbar-nav li a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #3081AA;
+}
+
+/*
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+*/
 /* preloader section */
 .preloader {
   position: fixed;
@@ -105,30 +144,13 @@ hr {
   }
 }
 
-/* start navigation */
-.navbar-default {
-  background: #ffffff;
-  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.04);
-  border: none;
-  margin-bottom: 0;
-}
+/*
 
-.navbar-brand, .navbar-nav li a {
-  line-height: 28px;
-}
+Template 2076 Zentro
 
-.navbar-default .navbar-brand {
-  color: #5C5C5C;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+http://www.tooplate.com/view/2076-zentro
 
-.navbar-default .navbar-nav li a {
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
+*/
 /* home section */
 #home {
   background: url("../images/home-bg.jpg") 50% 0 repeat-y fixed;
@@ -172,42 +194,13 @@ hr {
   color: #202020;
 }
 
-/* expertise section */
-#expertise {
-  text-align: center;
-}
+/*
 
-#expertise h3 {
-  font-size: 18px;
-  line-height: 4px;
-}
+Template 2076 Zentro
 
-#expertise h4 {
-  color: #5C5C5C;
-  padding-top: 24px;
-}
+http://www.tooplate.com/view/2076-zentro
 
-#expertise .col-md-4 {
-  padding-top: 42px;
-}
-
-/* howwework section */
-#howwework h4 {
-  line-height: 1.5;
-}
-
-#howwework .col-md-8 {
-  padding-bottom: 42px;
-}
-
-#howwework .col-md-6 {
-  padding-bottom: 18px;
-}
-
-#howwework span {
-  color: #5C5C5C;
-}
-
+*/
 /* aboutus section */
 #aboutus {
   padding-top: 80px;
@@ -234,6 +227,63 @@ hr {
   line-height: 8px;
 }
 
+/*
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+*/
+/* howwework section */
+#howwework h4 {
+  line-height: 1.5;
+}
+
+#howwework .col-md-8 {
+  padding-bottom: 42px;
+}
+
+#howwework .col-md-6 {
+  padding-bottom: 18px;
+}
+
+#howwework span {
+  color: #5C5C5C;
+}
+
+/*
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+*/
+/* expertise section */
+#expertise {
+  text-align: center;
+}
+
+#expertise h3 {
+  font-size: 18px;
+  line-height: 4px;
+}
+
+#expertise h4 {
+  color: #5C5C5C;
+  padding-top: 24px;
+}
+
+#expertise .col-md-4 {
+  padding-top: 42px;
+}
+
+/*
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+*/
 /* contact section */
 #contact {
   padding-top: 80px;
@@ -276,6 +326,13 @@ hr {
   color: #ffffff;
 }
 
+/*
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+*/
 /* footer section */
 footer {
   background: url("../images/footer-bg.jpg") 50% 0 repeat-y fixed;
@@ -367,8 +424,4 @@ footer .fa {
 
 #copyright a:hover {
   color: #FF0;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #3081AA;
 }
