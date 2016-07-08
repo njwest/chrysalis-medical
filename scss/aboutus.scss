@@ -1,16 +1,15 @@
 /* aboutus section */
 
-#hero {
+#aboutus-wrapper {
   height: 130vh;
 }
 
 #aboutus {
   padding-top: 80px;
   padding-bottom: 80px;
-  // // width: 200px;
-  // z-index: 10;
-  // position: fixed;
-  // right: 0;
+  // width: 200px;
+  z-index: -10;
+  position: fixed;
   // top: 30;
   // height: 83px;
 }

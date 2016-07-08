@@ -162,13 +162,15 @@ p {
 }
 
 /* aboutus section */
-#hero {
+#aboutus-wrapper {
   height: 130vh;
 }
 
 #aboutus {
   padding-top: 80px;
   padding-bottom: 80px;
+  z-index: -10;
+  position: fixed;
 }
 
 #aboutus .col-md-4 {
@@ -236,6 +238,11 @@ p {
 }
 
 /* expertise section */
+#expertise {
+  z-index: 10;
+  background-color: white;
+}
+
 #expertise h3 {
   font-size: 18px;
   line-height: 4px;
