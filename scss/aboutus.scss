@@ -1,21 +1,35 @@
 /* aboutus section */
 
+#hero {
+  height: 100vh;
+}
+
 #aboutus {
   padding-top: 80px;
   padding-bottom: 80px;
+  // // width: 200px;
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  top: 30;
+  height: 83px;
 }
+
 #aboutus .col-md-4 {
   padding-top: 52px;
 }
+
 #aboutus img {
   width: 100%;
   padding-bottom: 18px;
 }
+
 #aboutus .col-md-4 div {
   position: relative;
   bottom: 18px;
   padding-bottom: 12px;
 }
+
 #aboutus h3 {
   font-size: 18px;
   line-height: 8px;

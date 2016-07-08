@@ -1,5 +1,5 @@
 /* main scss */
-/* variables */
+/* sitewide variables */
 /* sitewide */
 body {
   background: #ffffff;
@@ -32,8 +32,17 @@ p {
   padding-bottom: 100px;
 }
 
-#howwework, #contact {
+.grayGradientBg {
   background: #f0f0f0;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#f0f0f0, white);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#f0f0f0, white);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#f0f0f0, white);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#f0f0f0, white);
+  /* Standard syntax */
 }
 
 .parallax-section {
@@ -153,9 +162,18 @@ p {
 }
 
 /* aboutus section */
+#hero {
+  height: 100vh;
+}
+
 #aboutus {
   padding-top: 80px;
   padding-bottom: 80px;
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  top: 30;
+  height: 83px;
 }
 
 #aboutus .col-md-4 {
