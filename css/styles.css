@@ -16,6 +16,7 @@ body {
 .subheading {
   font-size: 16px;
   padding-bottom: 60px;
+  display: inline;
 }
 
 p {
@@ -235,111 +236,21 @@ p {
 
 #contact input {
   height: 48px;
+  shadow: black 0.3em 0.3em 0.3em;
 }
 
 #contact input[type="submit"] {
-  background: transparent;
-  border: 2px solid #999;
+  background: #A5BF44;
   border-radius: 10px;
   letter-spacing: 2px;
   margin-top: 12px;
   height: 50px;
 }
 
-#contact input[type="submit"]:hover {
-  background: #999;
-  color: #ffffff;
-}
-
-/* footer section */
-footer {
-  background: url("../images/footer-bg.jpg") 50% 0 repeat-y fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-footer h2 {
-  padding-bottom: 14px;
-}
-
-footer h3 {
-  padding-top: 8px;
-}
-
-footer p {
-  color: #ffffff;
-}
-
-footer span {
-  font-weight: bold;
-  padding-left: 24px;
-}
-
-footer .ph, footer .address {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-footer .fa {
-  font-size: 12px;
-  padding-right: 10px;
-}
-
-/* social icon */
-.social-icon {
-  padding: 0;
-}
-
-.social-icon li {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
-}
-
-.social-icon li a {
-  background: #f0f0f0;
-  border-radius: 50%;
-  color: #5C5C5C;
-  font-size: 16px;
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-  margin-top: 12px;
-  margin-right: 16px;
-  top: 0;
-  position: relative;
-  padding: 0;
-}
-
-.social-icon li a:hover {
-  background: #F6D76B;
-  top: 5px;
-}
-
-/* copyright section */
-#copyright {
-  background: #343434;
-  color: #ffffff;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  text-align: center;
+.form-control {
+  color: white;
 }
 
 #copyright p {
-  color: #ffffff;
-}
-
-#copyright a {
-  color: #ffffff;
-}
-
-#copyright a:hover {
-  color: #FF0;
+  color: black;
 }
