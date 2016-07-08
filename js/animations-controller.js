@@ -3,13 +3,13 @@
 var AnimationsCtrl = function($rootScope, $document, $scope) {
 
 	$scope.animation = {};
-	$scope.animation.current = 'fadeIn';
+	$scope.animation.current = 'fadeInUp';
 	$scope.animation.previous = $scope.animation.current;
 
 	// only required for dynamic animations
 	$scope.changeAnimation = function() {
 
-		var elements = document.getElementsByClass('aboutus');
+		var elements = document.getElementsByClassName('aboutus');
 		var $elements = angular.element(elements);
 
 		$elements.removeClass('animated ' + $scope.animation.previous);
