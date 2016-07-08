@@ -163,17 +163,12 @@ p {
 
 /* aboutus section */
 #hero {
-  height: 100vh;
+  height: 300vh;
 }
 
 #aboutus {
   padding-top: 80px;
   padding-bottom: 80px;
-  z-index: 10;
-  position: fixed;
-  right: 0;
-  top: 30;
-  height: 83px;
 }
 
 #aboutus .col-md-4 {

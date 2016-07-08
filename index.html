@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="animations">
 <head>
 	<meta charset="utf-8">
 	<title>Chrysalis Medical Communications</title>
@@ -16,6 +16,11 @@
 	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles.css">
+	<script src="js/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="js/bower_components/angular-scroll-animate/dist/angular-scroll-animate.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/animations-controller.js"></script>
 </head>
 <body>
 <!-- preloader section -->
@@ -60,66 +65,28 @@
 </section>
 
 <!-- hero section -->
-<section id="hero">
-	<!-- aboutus section -->
-	<section id="aboutus">
+<section id="hero" ng-controller="AnimationsCtrl">
 
-	  <!-- aboutus1 section -->
-	  <section id="aboutus1" class="aboutus parallax-section animated">
+	<!-- aboutus section -->
+	<section id="aboutus" ng-repeat="description in descriptions" when-visible="animateElementIn" when-not-visible="animateElementOut">
+
+	  <section class="aboutus parallax-section animated">
 	  	<div class="container">
 	  		<div class="row">
 	  			<div class="col-md-8 col-sm-12">
-	  				<h1 class="heading">About Us</h1>
-						<h2>Description 1</h2>
+	  				<h1 class="heading">{{description.title}}</h1>
+						<h2>{{description.subtitle}}</h2>
 	  			</div>
 	  			<div class="col-md-6 col-sm-12 wow">
 	          <h2 class="subheading">Who we are</h2><br />
 	          <br />
 	          <div id="aboutus-descriptions-1" class="aboutus-descriptions wow fadeIn" data-wow-delay="0.4s">
-	            Chrysalis Medical Communications is the newest company within the <a class="fa" href="http://www.nucleus-global.com/" target="_blank">Nucleus Global</a> family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.
+	            {{description.description}}
 	          </div>
 	  			</div>
 	  		</div>
 	  	</div>
 	  </section>
-
-	  <!-- aboutus2 section -->
-	  <section id="aboutus2" class="aboutus parallax-section animated hide">
-	  	<div class="container">
-	  		<div class="row">
-	  			<div class="col-md-8 col-sm-12">
-	  				<h1 class="heading">About Us</h1>
-						<h2>Description 2</h2>
-	  			</div>
-	  			<div class="col-md-6 col-sm-12 wow">
-	          <h2 class="subheading">Who we are</h2><br />
-	          <br />
-	          <div id="aboutus-descriptions-2" class="aboutus-descriptions wow">
-	            Our experienced in-house scientific team all hold advanced degrees, and our dedicated client services team has decades of combined expertise in managing publication plans, advisory boards, patient education pieces, and more.
-	          </div>
-	  			</div>
-	  		</div>
-	  	</div>
-	  </section>
-
-	  <!-- aboutus section -->
-	  <section id="aboutus3" class="aboutus parallax-section animated hide">
-	  	<div class="container">
-	  		<div class="row">
-	  			<div class="col-md-8 col-sm-12">
-	  				<h1 class="heading">About Us</h1>
-						<h2>Description 3</h2>
-	  			</div>
-	  			<div class="col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
-	          <h2 class="subheading">Who we are</h2><br />
-	          <br />
-	          <div id="aboutus-descriptions-3" class="aboutus-descriptions wow fadeIn" data-wow-delay="0.4s">
-	            As part of Nucleus Global, a company with 30 years of experience in medical communications, we also provide cutting-edge digital options supported by our in-house studio team, 3-D designers, and application developers to transform complex information into clear and impactful medical communications deliverables.
-	          </div>
-	  			</div>
-	  		</div>
-	  	</div>
-	  </section> <!-- aboutus3 -->
 
 	</section> <!-- aboutus -->
 
@@ -249,8 +216,6 @@
 	</div>
 </section>
 
-<!-- JAVASCRIPT JS FILES -->
-<script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.parallax.js"></script>
 <script src="js/smoothscroll.js"></script>
