@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-  var breakpoint1 = 500;
-  var breakpoint2 = 1000;
-  var breakpoint3 = 1500;
-  var breakpoint4 = 2000;
+  var breakpoint1 = 1000;
+  var breakpoint2 = 3000;
+  var breakpoint3 = 4000;
+  var breakpoint4 = 5000;
   var previousScroll = 0;
   var scrollingUp;
   var scrollingDown;
