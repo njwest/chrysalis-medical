@@ -15,22 +15,22 @@ $(document).ready(function() {
 
   // Hide and show aboutus descriptions on scroll
   $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+    var scroll = $(window).scrollTop();
     var directionCheck = function() {
       if (previousScroll < scroll) {
         console.log('previousScroll = ', previousScroll);
         console.log('scroll = ', scroll);
         scrollingDown = true;
         scrollingUp = false;
-        console.log('User is scrolling down')
+        console.log('User is scrolling down');
         previousScroll = scroll;
       }
-      else {
+      else if (scroll < previousScroll) {
         console.log('previousScroll = ', previousScroll);
         console.log('scroll = ', scroll);
         scrollingDown = false;
         scrollingUp = true;
-        console.log('User is scrolling up')
+        console.log('User is scrolling up');
         previousScroll = scroll;
       }
     };
@@ -40,7 +40,7 @@ $(document).ready(function() {
       directionCheck();
       if (scrollingDown) {
         $('#aboutus1').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus2').removeClass('hide').addClass('fadeIn');
+        $('#aboutus2').removeClass('hide fadeOut').addClass('fadeIn');
         console.log('scrolling down, showing 2');
       }
     }
@@ -50,7 +50,7 @@ $(document).ready(function() {
       directionCheck();
       if (scrollingDown) {
         $('#aboutus2').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus3').removeClass('hide').addClass('fadeIn');
+        $('#aboutus3').removeClass('hide fadeOut').addClass('fadeIn');
         console.log('scrolling down, showing 3');
       }
     }
