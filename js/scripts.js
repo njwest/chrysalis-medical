@@ -1,21 +1,22 @@
+// Start at top of page on refresh - Necessary for animation to work properly
+$(window).on('beforeunload', function() {
+  $(window).scrollTop(0);
+});
+
 $(document).ready(function() {
 
   var breakpoint1 = 1000;
   var breakpoint2 = 3000;
   var breakpoint3 = 4000;
-  var breakpoint4 = 5000;
+  var breakpoint4 = 6000;
   var previousScroll = 0;
   var scrollingUp;
   var scrollingDown;
 
-
-  // Hide about us descriptions 2 & 3 on page load
-//   $('#aboutus2').addClass('hide');
-//   $('#aboutus3').addClass('hide');
-
   // Hide and show aboutus descriptions on scroll
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
+    console.log(scroll);
     var directionCheck = function() {
       if (previousScroll < scroll) {
         console.log('previousScroll = ', previousScroll);
