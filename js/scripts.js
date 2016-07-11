@@ -6,9 +6,9 @@ $(window).on('beforeunload', function() {
 $(document).ready(function() {
 
   var breakpoint1 = 1000;
-  var breakpoint2 = 3000;
-  var breakpoint3 = 4000;
-  var breakpoint4 = 6000;
+  var breakpoint2 = 4000;
+  var breakpoint3 = 7000;
+  var breakpoint4 = 10000;
   var previousScroll = 0;
   var scrollingUp;
   var scrollingDown;
