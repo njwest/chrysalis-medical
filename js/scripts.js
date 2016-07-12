@@ -35,7 +35,10 @@ $(document).ready(function() {
         previousScroll = scroll;
       }
     };
-    // SCROLLING DOWN
+
+    /*****************
+    * SCROLLING DOWN *
+    *****************/
     // Show aboutus2
     if ((scroll >= breakpoint1) && (scroll < breakpoint2)) {
       directionCheck();
@@ -62,16 +65,20 @@ $(document).ready(function() {
       if (scrollingDown) {
         $('#aboutus3').removeClass('fadeIn').addClass('fadeOut');
         console.log('scrolling down, hiding 3');
+        $('#down-arrow').removeClass('fadeIn').addClass('fadeOut');
       }
     }
 
-    // SCROLLING UP
+    /***************
+    * SCROLLING UP *
+    ***************/
     // Show aboutus3
     if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
       directionCheck();
       if (scrollingUp) {
         $('#aboutus2').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus3').removeClass('fadeOut').addClass('fadeIn');
+        $('#down-arrow').removeClass('fadeOut').addClass('fadeIn');
         console.log('scrolling up, showing 3');
       }
     }

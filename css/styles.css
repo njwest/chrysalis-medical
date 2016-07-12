@@ -161,7 +161,7 @@ p {
 
 /* aboutus section */
 #aboutus-wrapper {
-  height: 900vh;
+  height: 800vh;
 }
 
 #aboutus1, #aboutus2, #aboutus3 {
@@ -171,6 +171,13 @@ p {
   position: fixed;
   height: 50%;
   top: 25%;
+}
+
+#down-arrow {
+  z-index: -10;
+  position: fixed;
+  height: 50%;
+  top: 90%;
 }
 
 .stick {
