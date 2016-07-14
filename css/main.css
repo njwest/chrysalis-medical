@@ -138,7 +138,8 @@ p {
 
 /* aboutus section */
 #aboutus-wrapper {
-  height: 800vh; }
+  height: 750vh;
+  /* fallback if needed */ }
 
 #aboutus1, #aboutus2, #aboutus3 {
   padding-top: 80px;

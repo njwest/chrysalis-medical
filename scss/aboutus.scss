@@ -1,7 +1,8 @@
 /* aboutus section */
 
 #aboutus-wrapper {
-  height: 800vh;
+  height: 750vh; /* fallback if needed */
+  // height: calc(800%)vh
 }
 
 #aboutus1, #aboutus2, #aboutus3 {

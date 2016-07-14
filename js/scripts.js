@@ -5,10 +5,12 @@ $(window).on('beforeunload', function() {
 
 $(document).ready(function() {
 
-  var breakpoint1 = 1000;
-  var breakpoint2 = 3500;
-  var breakpoint3 = 6000;
-  var breakpoint4 = 8500;
+  var browserHeight = $( window ).height();
+  console.log(browserHeight);
+  var breakpoint1 = browserHeight;
+  var breakpoint2 = browserHeight * 4;
+  var breakpoint3 = browserHeight * 6;
+  var breakpoint4 = browserHeight * 9;
   var previousScroll = 0;
   var scrollingUp;
   var scrollingDown;
@@ -16,22 +18,19 @@ $(document).ready(function() {
   // Hide and show aboutus descriptions on scroll
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    console.log(scroll);
     var directionCheck = function() {
       if (previousScroll < scroll) {
-        console.log('previousScroll = ', previousScroll);
-        console.log('scroll = ', scroll);
         scrollingDown = true;
         scrollingUp = false;
         console.log('User is scrolling down');
+        console.log('----------------------');
         previousScroll = scroll;
       }
       else if (scroll < previousScroll) {
-        console.log('previousScroll = ', previousScroll);
-        console.log('scroll = ', scroll);
         scrollingDown = false;
         scrollingUp = true;
         console.log('User is scrolling up');
+        console.log('----------------------');
         previousScroll = scroll;
       }
     };
