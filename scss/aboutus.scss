@@ -1,30 +1,26 @@
 /* aboutus section */
 
-#aboutus-wrapper {
-  // height: 750vh; /* fallback if needed */
-  // height: calc(800%)vh
-}
+// #aboutus-wrapper {
+//   height: 750vh; /* fallback if needed */
+//   // height: calc(800%)vh
+// }
 
 #aboutus1, #aboutus2, #aboutus3 {
-  padding-top: 80px;
+  height: 100vh;
+  padding-top: 30%;
   padding-bottom: 80px;
-  z-index: -10;
-  // position: fixed;
-  // height: 50%;
-  // top: 25%;
+//   // z-index: $aboutUsZindex;
+//   // position: fixed;
+//   // height: 50%;
+//   // top: 50%;
 }
-
-#down-arrow {
-  z-index: -10;
-  position: fixed;
-  height: 50%;
-  top: 90%;
-}
-
-.stick {
-    position:fixed;
-    top:0px;
-}
+//
+// #down-arrow {
+//   // z-index: $aboutUsZindex;
+//   position: fixed;
+//   height: 50%;
+//   top: 90%;
+// }
 
 #aboutus .col-md-4 {
   padding-top: 52px;
