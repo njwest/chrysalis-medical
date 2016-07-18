@@ -4,83 +4,146 @@ $(window).on('beforeunload', function() {
 });
 
 $(document).ready(function() {
-
   var browserHeight = $( window ).height();
-  // console.log(browserHeight);
-  var breakpoint1 = browserHeight;
+  console.log(browserHeight);
+  var breakpoint1 = browserHeight / 3;
   var breakpoint2 = browserHeight * 4;
   var breakpoint3 = browserHeight * 6;
   var breakpoint4 = browserHeight * 9;
   var previousScroll = 0;
-  var scrollingUp;
-  var scrollingDown;
-
-  /*****************
-  * SCROLLING DOWN *
-  *****************/
-  // Show aboutus2
-  if ((scroll >= breakpoint1) && (scroll < breakpoint2)) {
-    directionCheck();
-    if (scrollingDown) {
-      $('#aboutus1').removeClass('fadeIn').addClass('fadeOut');
-      $('#aboutus2').removeClass('hide fadeOut').addClass('fadeIn');
-      // console.log('scrolling down, showing 2');
+  var scrollingUp = 'currently-not-scrolling';
+  var scrollingDown = 'currently-not-scrolling';
+  var currentDiv = 'aboutus1';
+  var aTop;
+  var scroll = $(window).scrollTop();
+  var directionCheck = function() {
+    if (previousScroll < scroll) {
+      scrollingDown = true;
+      scrollingUp = false;
+      console.log('User is scrolling down');
+      console.log('----------------------');
+      previousScroll = scroll;
     }
-  }
-
-  // Show aboutus3
-  if ((scroll >= breakpoint2) && (scroll < breakpoint3)) {
-    directionCheck();
-    if (scrollingDown) {
-      $('#aboutus2').removeClass('fadeIn').addClass('fadeOut');
-      $('#aboutus3').removeClass('hide fadeOut').addClass('fadeIn');
-      // console.log('scrolling down, showing 3');
+    else if (scroll < previousScroll) {
+      scrollingDown = false;
+      scrollingUp = true;
+      console.log('User is scrolling up');
+      console.log('----------------------');
+      previousScroll = scroll;
     }
-  }
+  };
 
-  // Hide aboutus3
-  if (scroll >= breakpoint3) {
-    directionCheck();
-    if (scrollingDown) {
-      $('#aboutus3').removeClass('fadeIn').addClass('fadeOut');
-      // console.log('scrolling down, hiding 3');
-      $('#down-arrow').removeClass('fadeIn').addClass('fadeOut');
-    }
-  }
+  // $(window).scroll(function() {
+  //   if (currentDiv === 'aboutus1') {
+  //     directionCheck();
+  //     if (scrollingDown) {
+  //       aTop = $('#aboutus1').height();
+  //       if($(this).scrollTop()>=aTop){
+  //         scrollToAboutus2();
+  //         currentDiv = 'aboutus2';
+  //         console.log('#aboutus1 scroll fired!!!!!');
+  //         scrollingDown = 'currently-not-scrolling';
+  //       }
+  //     }
+  //   }
+  //   else if (currentDiv === 'aboutus2') {
+  //     directionCheck();
+  //     if (scrollingDown) {
+  //       aTop = $('#aboutus2').height();
+  //       if($(this).scrollTop()>=aTop){
+  //         scrollToAboutus3();
+  //         currentDiv = 'aboutus3';
+  //         console.log('#aboutus2 scroll fired!!!!!');
+  //         scrollingDown = 'currently-not-scrolling';
+  //       }
+  //     }
+  //   }
+  // });
 
-  /***************
-  * SCROLLING UP *
-  ***************/
-  // Show aboutus3
-  if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
-    directionCheck();
-    if (scrollingUp) {
-      $('#aboutus2').removeClass('fadeIn').addClass('fadeOut');
-      $('#aboutus3').removeClass('fadeOut').addClass('fadeIn');
-      $('#down-arrow').removeClass('fadeOut').addClass('fadeIn');
-      // console.log('scrolling up, showing 3');
-    }
-  }
+  // $('#aboutus1').on('mouseenter', function() {
+  //   console.log('#aboutus1 scroll fired!!!!!');
+  //   scrollToAboutus2();
+  // });
 
-  // Show aboutus2
-  if ((scroll < breakpoint3) && (scroll >= breakpoint2)) {
-    directionCheck();
-    if (scrollingUp) {
-      $('#aboutus3').removeClass('fadeIn').addClass('fadeOut');
-      $('#aboutus2').removeClass('fadeOut').addClass('fadeIn');
-      // console.log('scrolling up, showing 2');
-    }
-  }
 
-  // Show aboutus1
-  if (scroll < breakpoint1) {
-    directionCheck();
-    if (scrollingUp) {
-      $('#aboutus1').removeClass('fadeOut').addClass('fadeIn');
-      $('#aboutus2').removeClass('fadeIn').addClass('fadeOut');
-      // console.log('scrolling up, showing 1');
-    }
-  }
+
+  // Hide and show aboutus descriptions on scroll
+//   $(window).scroll(function() {
+//     var scroll = $(window).scrollTop();
+//     var directionCheck = function() {
+//       if (previousScroll < scroll) {
+//         scrollingDown = true;
+//         scrollingUp = false;
+//         // console.log('User is scrolling down');
+//         // console.log('----------------------');
+//         previousScroll = scroll;
+//       }
+//       else if (scroll < previousScroll) {
+//         scrollingDown = false;
+//         scrollingUp = true;
+//         // console.log('User is scrolling up');
+//         // console.log('----------------------');
+//         previousScroll = scroll;
+//       }
+//     };
+//
+//
+//
+//     /*****************
+//     * SCROLLING DOWN *
+//     *****************/
+//     // Show aboutus2
+//     if ((scroll >= breakpoint1) && (scroll < breakpoint2)) {
+//       directionCheck();
+//       if (scrollingDown) {
+//         console.log('Show aboutus 2 scroll down fired');
+//       }
+//     }
+//
+//     // Show aboutus3
+//     if ((scroll >= breakpoint2) && (scroll < breakpoint3)) {
+//       directionCheck();
+//       if (scrollingDown) {
+//         console.log('Show aboutus 3 scroll down fired');
+//       }
+//     }
+//
+//     // Hide aboutus3
+//     if (scroll >= breakpoint3) {
+//       directionCheck();
+//       if (scrollingDown) {
+//         console.log('Hide aboutus 3 scroll down fired');
+//       }
+//     }
+//     /***************
+//     * SCROLLING UP *
+//     ***************/
+//     // Show aboutus3
+//     if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
+//       directionCheck();
+//       if (scrollingUp) {
+//         console.log('Show aboutus 3 scroll up fired');
+//       }
+//     }
+//
+//     // Show aboutus2
+//     if ((scroll < breakpoint3) && (scroll >= breakpoint2)) {
+//       directionCheck();
+//       if (scrollingUp) {
+//         console.log('Show aboutus 2 scroll up fired')
+//       }
+//     }
+//
+//     // Show aboutus1
+//     if (scroll < breakpoint1) {
+//       directionCheck();
+//       if (scrollingUp) {
+//         console.log('Show aboutus 1 scroll up fired')
+//       }
+//     }
+//
+//   }); // end window scroll function
+
 
 
   // Down arrow controller
@@ -90,38 +153,46 @@ $(document).ready(function() {
   console.log('clickCount = ', clickCount);
 
   var scrollToAboutus2 = function() {
-    $('#aboutus1').addClass('fadeOut');
+    $('.aboutus1-text').addClass('fadeOut');
     $('html, body').animate({
         scrollTop: $("#aboutus2").offset().top
       }, 1500);
-    $('#aboutus2').removeClass('hide fadeOut').addClass('fadeIn').attr('data-wow-delay', '1s');
+    $('.aboutus2-text').removeClass('hide fadeOut').addClass('fadeIn').attr('data-wow-delay', '2s');
+    $('#dimer-left').removeClass('hide').addClass('fadeIn pulse infinite');
     console.log('scrollToAboutus2 fired');
   }; // and scrollToAboutus2
 
   var scrollToAboutus3 = function() {
-    $('#aboutus2').removeClass('fadeIn').addClass('fadeOut');
-    if (firstTimeScrolling === true) {
-      console.log('if fired');
-      $('html, body').animate({
+    $('.aboutus2-text').removeClass('fadeIn').addClass('fadeOut');
+    $('html, body').animate({
         scrollTop: $("#aboutus3").offset().top
       }, 1500);
-      firstTimeScrolling = false;
-      console.log('firstTimeScrolling = ', firstTimeScrolling);
-    } else {
-      console.log('else fired');
-      $('html, body').animate({
-        scrollTop: $("#aboutus3").offset().top
-      }, 1500);
-      console.log('firstTimeScrolling = ', firstTimeScrolling);
-    }
-    $('#aboutus1').removeClass('fadeOut').show();
-    $('#aboutus2').removeClass('fadeOut').show();
+    $('.aboutus3-text').removeClass('hide fadeOut').addClass('fadeIn').attr('data-wow-delay', '1s');
+    $('#dimer-right').removeClass('hide').addClass('fadeIn pulse infinite');
+    $('#dna-green').removeClass('hide').addClass('fadeIn pulse infinite').attr('data-wow-delay', '2s');
     $('#down-arrow-div').addClass('fadeOut');
     console.log('scrollToAboutus3 fired');
+    // if (firstTimeScrolling === true) {
+    //   console.log('if fired');
+    //   $('html, body').animate({
+    //     scrollTop: $("#aboutus3").offset().top
+    //   }, 1500);
+    //   firstTimeScrolling = false;
+    //   console.log('firstTimeScrolling = ', firstTimeScrolling);
+    // } else {
+    //   console.log('else fired');
+    //   $('html, body').animate({
+    //     scrollTop: $("#aboutus3").offset().top
+    //   }, 1500);
+    //   console.log('firstTimeScrolling = ', firstTimeScrolling);
+    // }
+    // $('#aboutus1').removeClass('fadeOut').show();
+    // $('#aboutus2').removeClass('fadeOut').show();
+
   }; // end scrollToAboutus3
 
   $('#down-arrow').on('click', function() {
-    clickCount++
+    clickCount++;
     console.log('clickCount = ', clickCount);
     if (clickCount === 1) {
       scrollToAboutus2();
