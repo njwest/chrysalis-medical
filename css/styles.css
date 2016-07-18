@@ -87,15 +87,18 @@ p {
 #home {
   margin-top: 75px;
   position: fixed;
+  width: 960px;
+  margin-left: -480px;
+  left: 50%;
   z-index: -1;
 }
 
 #dimer-left {
-  margin-right: 280px;
+  margin-right: 240px;
 }
 
 #dimer-right {
-  margin-right: 230px;
+  margin-right: 180px;
 }
 
 #dna-green {
