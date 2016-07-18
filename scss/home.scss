@@ -22,51 +22,48 @@
 }
 
 #dna-green {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  transform: translateY(-50%);
   margin-top: 50px;
 }
 
-
-// No longer using video...
-
-// video#bgvid {
-//     position: fixed;
-//     top: 25%;
-//     left: 50%;
-//     min-width: 100%;
-//     min-height: 100%;
-//     width: 100% !important;
-//     height: auto !important;
-//     z-index: -100;
-//     -ms-transform: translateX($translateXValue) translateY($translateYValue);
-//     -moz-transform: translateX($translateXValue) translateY($translateYValue);
-//     -webkit-transform: translateX($translateXValue) translateY($translateYValue);
-//     transform: translateX($translateXValue) translateY($translateYValue);
-//     // background: url(polina.jpg) no-repeat;
-//     background-size: cover;
+#dna-grey {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  transform: translateY(-50%);
+  margin-top: 50px;
+}
+//
+// @-webkit-keyframes slideInRight {
+//   from {
+//     -webkit-transform: translate3d(100%, 0, 0);
+//     transform: translate3d(100%, 0, 0);
+//     visibility: visible;
+//   }
+//
+//   to {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
 // }
 //
-// .video-container {
-//   padding-right: 15px;
-//   padding-left: 15px;
-//   margin-right: auto;
-//   margin-left: auto;
-//   position: fixed;
-//   height: 10px;
-//   top: 10px;
+// @keyframes slideInRight {
+//   from {
+//     -webkit-transform: translate3d(100%, 0, 0);
+//     transform: translate3d(100%, 0, 0);
+//     visibility: visible;
+//   }
+//
+//   to {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
 // }
 //
-// @media (min-width: 768px) {
-//   .video-container {
-//     width: 750px;
-//   }
-// }
-// @media (min-width: 992px) {
-//   .video-container {
-//     width: 970px;
-//   }
-// }
-// @media (min-width: 1200px) {
-//   .video-container {
-//     width: 1170px;
-//   }
+// .slideInRight {
+//   -webkit-animation-name: slideInRight;
+//   animation-name: slideInRight;
 // }

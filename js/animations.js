@@ -5,13 +5,12 @@ $(window).on('beforeunload', function() {
 
 $(document).ready(function() {
   var browserHeight = $( window ).height();
-  var breakpoint1 = browserHeight * .33;
+  var breakpoint1 = browserHeight;
   console.log('breakpoint1 =', breakpoint1);
-  var breakpoint2 = browserHeight * .75;
+  var breakpoint2 = browserHeight * 2;
   console.log('breakpoint2 =', breakpoint2);
-  var breakpoint3 = browserHeight;
-  console.log('breakpoint3 =', breakpoint3);
-  var breakpoint4 = browserHeight * 9;
+  // var breakpoint3 = browserHeight;
+  // var breakpoint4 = browserHeight * 1.5;
   var previousScroll = 0;
   var scrollingUp = 'currently-not-scrolling';
   var scrollingDown = 'currently-not-scrolling';
@@ -23,11 +22,13 @@ $(document).ready(function() {
       scrollingDown = true;
       scrollingUp = false;
       previousScroll = scroll;
+      console.log('scrolling down');
     }
     else if (scroll < previousScroll) {
       scrollingDown = false;
       scrollingUp = true;
       previousScroll = scroll;
+      console.log('scrolling up');
     }
   };
 
@@ -35,68 +36,115 @@ $(document).ready(function() {
   // Mouse scroll controller
   $(window).scroll(function() {
     scroll = $(window).scrollTop();
-    console.log('scroll = ', scroll);
+
+    // Scrolling Down
     if (currentDiv === 'aboutus1') {
       directionCheck();
       if (scrollingDown) {
-        aTop = $('#aboutus1').height();
+        aTop = ($('#aboutus1').height() / 2);
         if($(this).scrollTop()>=aTop){
-          scrollToAboutus2();
+          scrollDownToAboutus2();
           currentDiv = 'aboutus2 initiated';
           scrollingDown = 'currently-not-scrolling';
         }
       }
     }
-    else if (breakpoint3 >= scroll) {
+    else if (breakpoint1 >= scroll) {
       currentDiv = 'aboutus2';
     }
     else if (currentDiv === 'aboutus2') {
       directionCheck();
       if (scrollingDown) {
-        aTop = $('#aboutus2').height();
-        if($(this).scrollTop()>=aTop){
-          scrollToAboutus3();
-          currentDiv = 'aboutus3';
+        aTop = ($('#aboutus2').height() / 2);
+        if ($(this).scrollTop()>=aTop){
+          scrollDownToAboutus3();
+          currentDiv = 'aboutus3 initiated';
+          scrollingDown = 'currently-not-scrolling';
+        }
+      }
+      else if (scrollingUp) {
+        aTop = ($('#aboutus2').height() / 2);
+        if ($(this).scrollTop()>=aTop){
+          scrollUpToAboutus1();
+          currentDiv = 'aboutus3 initiated';
           scrollingDown = 'currently-not-scrolling';
         }
       }
     }
+    // Scrolling Up
+    // else if (breakpoint2 <= scroll) {
+    //   currentDiv = 'aboutus3';
+    // }
+    // else if (currentDiv === 'aboutus3') {
+    //   directionCheck();
+    //   if (scrollingUp) {
+    //     scrollUpToAboutus2();
+    //     currentDiv = 'aboutus2 initiated';
+    //   }
+    // }
+    // else if (breakpoint1 < scroll) {
+    //   currentDiv = 'aboutus2';
+    // }
+    // else if (currentDiv === 'aboutus2') {
+    //   directionCheck();
+    //   if (scrollingUp) {
+    //     scrollUpToAboutus1();
+    //     console.log('scrolling up fired');
+    //   }
+    // }
   });
 
 
 
 
-  // Down arrow controller
-  var firstTimeScrolling = true;
-  var clickCount = 0;
-  var scrollToAboutus2 = function() {
+  // Scroll Functions
+  var scrollDownToAboutus2 = function() {
     $('.aboutus1-text').addClass('fadeOut');
     $('html, body').animate({
         scrollTop: $("#aboutus2").offset().top
       }, 1500);
     $('.aboutus2-text').removeClass('hide fadeOut').addClass('fadeIn').attr('data-wow-delay', '1s');
-    $('#dimer-left').removeClass('hide').addClass('fadeIn pulse infinite');
-  }; // and scrollToAboutus2
+    $('#dimer-left').removeClass('hide').addClass('slideInRight pulse infinite');
+  }; // and scrollDownToAboutus2
 
-  var scrollToAboutus3 = function() {
+  var scrollDownToAboutus3 = function() {
     $('.aboutus2-text').removeClass('fadeIn').addClass('fadeOut');
     $('html, body').animate({
         scrollTop: $("#aboutus3").offset().top
       }, 1500);
     $('.aboutus3-text').removeClass('hide fadeOut').addClass('fadeIn').attr('data-wow-delay', '1s');
-    $('#dimer-right').removeClass('hide').addClass('fadeIn pulse infinite');
-    $('#dna-green').removeClass('hide').addClass('fadeIn pulse infinite').attr('data-wow-delay', '2s');
+    $('#dimer-right').removeClass('hide').addClass('slideInRight pulse infinite').attr('data-wow-delay', '3s');
+    $('#dna-green').removeClass('hide').addClass('fadeIn pulse infinite').attr('data-wow-delay', '5s');
     $('#down-arrow-div').addClass('fadeOut');
+  }; // end scrollDownToAboutus3
 
-  }; // end scrollToAboutus3
+  var scrollUpToAboutus1 = function() {
+    console.log('scrollUpToAboutus1 fired!')
+    $('.aboutus2-text').addClass('fadeOut');
+    $('html, body').animate({
+        scrollTop: $("#aboutus1").offset().top
+      }, 1500);
+    $('.aboutus1-text').removeClass('hide fadeOut').addClass('fadeIn').attr('data-wow-delay', '1s');
+  }; // and scrollUpToAboutus1
 
+  var scrollUpToAboutus2 = function() {
+    $('.aboutus3-text').addClass('fadeOut');
+    $('html, body').animate({
+        scrollTop: $("#aboutus2").offset().top
+      }, 1500);
+    $('.aboutus2-text').removeClass('hide fadeOut').addClass('fadeIn').attr('data-wow-delay', '1s');
+  }; // and scrollUpToAboutus2
+
+  // Down arrow controller
+  var firstTimeScrolling = true;
+  var clickCount = 0;
   $('#down-arrow').on('click', function() {
     clickCount++;
     if (clickCount === 1) {
-      scrollToAboutus2();
+      scrollDownToAboutus2();
     }
     else if (clickCount === 2) {
-      scrollToAboutus3();
+      scrollDownToAboutus3();
     }
   }); // end #downarrow click function
 
