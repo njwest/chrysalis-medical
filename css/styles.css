@@ -66,6 +66,10 @@ p {
   margin-bottom: 0;
 }
 
+#navbar-logo {
+  width: 100px;
+}
+
 .navbar-brand, .navbar-nav li a {
   line-height: 28px;
 }
@@ -89,24 +93,33 @@ p {
   position: fixed;
   width: 960px;
   margin-left: -480px;
-  left: 50%;
+  left: 60%;
   z-index: -1;
 }
 
+#chrysalis-logo {
+  width: 75%;
+}
+
 #dimer-left {
-  margin-right: 240px;
+  margin-right: 400px;
 }
 
 #dimer-right {
-  margin-right: 180px;
+  margin-right: 360px;
+}
+
+#dimer-left, #dimer-right {
+  width: 5%;
 }
 
 #dna-green, #dna-grey {
   position: fixed;
-  left: 50%;
-  bottom: 0%;
+  left: 60%;
+  top: 80%;
   transform: translateY(-50%);
   margin-top: 50px;
+  width: 10%;
 }
 
 /* aboutus section */

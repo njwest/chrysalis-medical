@@ -1,5 +1,7 @@
 /* home section */
 
+$leftPercentage: 60%;
+
 #home-section {
   // margin-top: 30px;
 }
@@ -9,54 +11,31 @@
   position: fixed;
   width: 960px;
   margin-left: -480px;
-  left: 50%;
+  left: $leftPercentage;
   z-index: -1;
 }
 
+#chrysalis-logo {
+  width: 75%;
+}
+
 #dimer-left {
-  margin-right: 240px;
+  margin-right: 400px;
 }
 
 #dimer-right {
-  margin-right: 180px;
+  margin-right: 360px;
+}
+
+#dimer-left, #dimer-right {
+  width: 5%;
 }
 
 #dna-green, #dna-grey {
   position: fixed;
-  left: 50%;
-  bottom: 0%;
+  left: $leftPercentage;
+  top: 80%;
   transform: translateY(-50%);
   margin-top: 50px;
+  width: 10%;
 }
-
-//
-// @-webkit-keyframes slideInRight {
-//   from {
-//     -webkit-transform: translate3d(100%, 0, 0);
-//     transform: translate3d(100%, 0, 0);
-//     visibility: visible;
-//   }
-//
-//   to {
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//   }
-// }
-//
-// @keyframes slideInRight {
-//   from {
-//     -webkit-transform: translate3d(100%, 0, 0);
-//     transform: translate3d(100%, 0, 0);
-//     visibility: visible;
-//   }
-//
-//   to {
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//   }
-// }
-//
-// .slideInRight {
-//   -webkit-animation-name: slideInRight;
-//   animation-name: slideInRight;
-// }
