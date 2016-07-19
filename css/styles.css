@@ -101,17 +101,9 @@ p {
   margin-right: 180px;
 }
 
-#dna-green {
+#dna-green, #dna-grey {
   position: fixed;
-  right: 0%;
-  bottom: 0%;
-  transform: translateY(-50%);
-  margin-top: 50px;
-}
-
-#dna-grey {
-  position: fixed;
-  right: 0%;
+  left: 50%;
   bottom: 0%;
   transform: translateY(-50%);
   margin-top: 50px;
