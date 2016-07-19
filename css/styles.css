@@ -120,7 +120,7 @@ p {
 /* aboutus section */
 #aboutus1, #aboutus2, #aboutus3 {
   height: 100vh;
-  padding-top: 50%;
+  padding-top: 25%;
   padding-bottom: 80px;
 }
 
@@ -231,6 +231,10 @@ p {
 
 #down-arrow-div {
   background: none;
+}
+
+#copyright {
+  background: white;
 }
 
 #copyright p {
