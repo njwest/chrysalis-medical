@@ -68,13 +68,13 @@ $(document).ready(function() {
   $('.nav-links').on('click', function(e) {
     navClick = true;
     var elementId = $(this).attr("id");
-    if (e != 'aboutus1-link') {
+    if (elementId != 'aboutus1-link') {
       arrowFadeOut();
       console.log('navClick = ', navClick);
       e.preventDefault();
       return false;
     }
-    else if (e === 'aboutus1-link') {
+    else if (elementId === 'aboutus1-link') {
       e.preventDefault();
       scrollUpToAboutus1();
       navClick = false;
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
   // Mouse scroll controller
   $(window).scroll(function() {
-    // if (navClick === false) {
+    if (navClick === false) {
       scroll = $(window).scrollTop();
 
       // Scrolling Down
@@ -139,7 +139,7 @@ $(document).ready(function() {
         clickCount = 0;
       }
 
-    // } // end navClick
+    } // end navClick
 
   }); // end window scroll function
 
