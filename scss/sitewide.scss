@@ -1,49 +1,14 @@
-/* sitewide */
+/* Sitewide */
 
-body
-	{
-		background: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    position: relative;
-	}
+/* Variables */
+$blue: #488BAD;
+$green: #B1C063;
 
-.center {
-  text-align: center;
+/* Styles */
+.gray-text {
+  color: gray;
 }
 
-.heading {
-  font-size: 80px;
-  color: $blueText
-}
-
-.subheading {
-  font-size: 16px;
-  padding-bottom: 60px;
-  display: inline;
-}
-
-p {
-  color: #848484;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.4px;
-  line-height: 28px;
-}
-
-#howwework, #aboutus, #expertise {
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-.grayGradientBg {
-  background: $grayBackground; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($grayBackground, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($grayBackground, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($grayBackground, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($grayBackground, white); /* Standard syntax */
-}
-
-.parallax-section {
-  background-attachment: fixed !important;
-  background-size: cover !important;
+h2 {
+  color: $blue;
 }

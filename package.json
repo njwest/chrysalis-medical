@@ -1,21 +1,14 @@
 {
-  "name": "chrysalis-website",
+  "name": "chrysalis",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://DarrylMendonez@stash.ngappsdev.com:8443/scm/nc-us/chrysalis-website.git"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^1.5.4"
+    "sass": "^0.5.0"
   }
 }

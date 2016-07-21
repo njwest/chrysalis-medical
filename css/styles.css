@@ -1,62 +1,64 @@
 /* main scss */
-/* sitewide variables */
-/* sitewide */
-body {
-  background: #ffffff;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  position: relative;
+/* Sitewide */
+/* Variables */
+/* Styles */
+.gray-text {
+  color: gray;
 }
 
-.center {
-  text-align: center;
+h2 {
+  color: #488BAD;
 }
 
-.heading {
-  font-size: 80px;
-  color: #3081AA;
+.navbar, .navbar-header {
+  min-height: 80px;
 }
 
-.subheading {
-  font-size: 16px;
-  padding-bottom: 60px;
-  display: inline;
+.center-navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
 }
 
-p {
-  color: #848484;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.4px;
-  line-height: 28px;
+.center-navbar-brand:hover,
+.center-navbar-brand:focus {
+  text-decoration: none;
 }
 
-#howwework, #aboutus, #expertise {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.center-navbar-brand > img {
+  display: block;
 }
 
-.grayGradientBg {
-  background: #f0f0f0;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#f0f0f0, white);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#f0f0f0, white);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#f0f0f0, white);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#f0f0f0, white);
-  /* Standard syntax */
+@media (min-width: 768px) {
+  .navbar > .container .center-navbar-brand,
+  .navbar > .container-fluid .center-navbar-brand {
+    margin-left: -15px;
+  }
 }
 
-.parallax-section {
-  background-attachment: fixed !important;
-  background-size: cover !important;
+.navbar-toggle {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  top: 45px;
 }
 
-/* navigation */
-.navbar {
-  height: 80px;
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+#desktop-navbar-img {
+  width: 100px;
+}
+
+#mobile-navbar-img {
+  width: 90px;
 }
 
 .navbar-default {
@@ -66,182 +68,24 @@ p {
   margin-bottom: 0;
 }
 
-#navbar-logo {
-  width: 100px;
+.navbar-default .navbar-nav > li > a {
+  color: #488BAD;
+  padding-top: 35px;
 }
 
-.navbar-brand, .navbar-nav li a {
-  line-height: 28px;
+.navbar-default .navbar-nav > li > a:hover {
+  color: #B1C063;
 }
 
-.navbar-default .navbar-brand {
-  color: #5C5C5C;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.navbar-default .navbar-nav li a {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #3081AA;
-}
-
-/* home section */
-#home {
-  margin-top: 80px;
-  position: fixed;
-  width: 960px;
-  margin-left: -480px;
-  left: 60%;
-  z-index: -1;
-}
-
-#chrysalis-logo {
-  width: 75%;
-}
-
-#dimer-left {
-  margin-right: 400px;
-}
-
-#dimer-right {
-  margin-right: 360px;
-}
-
-#dimer-left, #dimer-right {
-  width: 5%;
-}
-
-#dna-green, #dna-grey {
-  position: fixed;
-  left: 60%;
-  top: 80%;
-  transform: translateY(-50%);
-  margin-top: 50px;
-  width: 10%;
-}
-
-/* aboutus section */
-#aboutus1, #aboutus2, #aboutus3 {
-  height: 100vh;
-  padding-top: 25%;
-  padding-bottom: 80px;
-}
-
-#aboutus .col-md-4 {
-  padding-top: 52px;
-}
-
-#aboutus img {
-  width: 100%;
-  padding-bottom: 18px;
-}
-
-#aboutus .col-md-4 div {
-  position: relative;
-  bottom: 18px;
-  padding-bottom: 12px;
-}
-
-/* howwework section */
-#howwework {
-  z-index: 100;
-}
-
-#howwework h4 {
-  line-height: 1.5;
-}
-
-#howwework .col-md-8 {
-  padding-bottom: 42px;
-}
-
-#howwework .col-md-6 {
-  padding-bottom: 18px;
-}
-
-#howwework span {
-  color: #5C5C5C;
-}
-
-/* expertise section */
-#expertise {
-  z-index: 100;
-  background-color: white;
-}
-
-#expertise h3 {
-  font-size: 18px;
-  line-height: 4px;
-}
-
-#expertise h4 {
-  color: #5C5C5C;
-  padding-top: 24px;
-}
-
-#expertise .col-md-4 {
-  padding-top: 42px;
-}
-
-/* contact section */
-#contact {
-  padding-top: 80px;
-  padding-bottom: 100px;
-  z-index: 100;
-}
-
-#contact .col-md-8 {
-  margin-bottom: 32px;
-}
-
-#contact .form-control {
-  background: #ffffff;
+.navbar-default .navbar-toggle {
   border: none;
-  border-radius: 0;
-  box-shadow: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  transition: all 0.4s ease-in-out;
 }
 
-#contact .form-control:focus {
-  border-color: #f9f9f9;
+.fa-chevron-down {
+  color: gray;
 }
 
-#contact input {
-  height: 48px;
-  shadow: black 0.3em 0.3em 0.3em;
-}
-
-#contact input[type="submit"] {
-  background: #A5BF44;
-  border-radius: 10px;
-  letter-spacing: 2px;
-  margin-top: 12px;
-  height: 50px;
-}
-
-.form-control {
-  color: black;
-}
-
-.flip {
-  -moz-transform: scale(-1, -1);
-  -o-transform: scale(-1, -1);
-  -webkit-transform: scale(-1, -1);
-  transform: scale(-1, -1);
-}
-
-#down-arrow-div {
-  background: none;
-}
-
-#copyright {
-  background: white;
-}
-
-#copyright p {
-  color: black;
+#submit-btn {
+  background-color: #B1C063;
+  color: white;
 }
