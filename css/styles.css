@@ -2,6 +2,10 @@
 /* Sitewide */
 /* Variables */
 /* Styles */
+body {
+  padding-top: 80px;
+}
+
 .gray-text {
   color: gray;
 }
@@ -81,7 +85,7 @@ h2 {
   border: none;
 }
 
-.fa-chevron-down {
+#mobile-arrow {
   color: gray;
 }
 
