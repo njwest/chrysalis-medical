@@ -32,6 +32,6 @@ $(function() {
   });
 
   // allows gif to animate on page reload
-  $("#transformative-thining-gif").attr("src", "img/transformative-thinking.gif?" + Math.random());
+  $("#transformative-thinking-gif").attr("src", "img/transformative-thinking.gif?" + Math.random());
 
 }); // end document ready function
