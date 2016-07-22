@@ -22,7 +22,7 @@ h2 {
   height: 100vh;
 }
 
-hr {
+.border-color-green {
   border-color: #B1C063;
 }
 
@@ -99,6 +99,11 @@ hr {
 
 #mobile-arrow {
   color: gray;
+}
+
+.mobile-nav-line {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .video-container {
