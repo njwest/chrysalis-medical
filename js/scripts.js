@@ -32,6 +32,6 @@ $(function() {
   });
 
   // allows gif to animate on page reload
-  // $("#hero-gif").attr("src", "img/chrysalis-logo.gif?" + Math.random());
+  $(".animated-gif").attr("src", "img/chrysalis-logo.gif?" + Math.random());
 
 }); // end document ready function
