@@ -1,14 +1,7 @@
 $(function() {
 
-  // Push body down when mobile nav drawer opens
-  // Use this only if client wants the body of the page to be pushed down as the mobile nav drawer opens.
-  // $('button.navbar-toggle').click(function() {
-  //   if ($('body').css('padding-top') === '80px') {
-  //       $('body').css('padding-top', '+=350');
-  //   } else {
-  //       $('body').css('padding-top', '80px');
-  //   }
-  // });
+  // Allow gif to animate on page reload
+  $("#transformative-thinking-gif").attr("src", "img/transformative-thinking.gif?" + Math.random());
 
   // Auto-close mobile nav on user click
   $('.nav a').on('click', function(){
@@ -31,7 +24,14 @@ $(function() {
     }
   });
 
-  // allows gif to animate on page reload
-  $("#transformative-thinking-gif").attr("src", "img/transformative-thinking.gif?" + Math.random());
+  // Push body down when mobile nav drawer opens
+  // Use this only if client wants the body of the page to be pushed down as the mobile nav drawer opens.
+  // $('button.navbar-toggle').click(function() {
+  //   if ($('body').css('padding-top') === '80px') {
+  //       $('body').css('padding-top', '+=350');
+  //   } else {
+  //       $('body').css('padding-top', '80px');
+  //   }
+  // });
 
 }); // end document ready function
