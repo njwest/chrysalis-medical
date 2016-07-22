@@ -3,6 +3,7 @@
 /* Variables */
 $blue: #488BAD;
 $green: #B1C063;
+$gray: #E6E7E8;
 
 /* Styles */
 body {
@@ -15,4 +16,20 @@ body {
 
 h2 {
   color: $blue;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.section {
+  // margin-top: 70px;
+}
+
+hr {
+  border-color: $green;
 }

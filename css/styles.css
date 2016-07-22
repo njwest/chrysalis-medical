@@ -14,6 +14,18 @@ h2 {
   color: #488BAD;
 }
 
+.bg-gray {
+  background-color: #E6E7E8;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+hr {
+  border-color: #B1C063;
+}
+
 .navbar, .navbar-header {
   min-height: 80px;
 }
@@ -77,7 +89,7 @@ h2 {
   padding-top: 35px;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover, .navbar-nav > li > a:active {
   color: #B1C063;
 }
 
@@ -89,7 +101,40 @@ h2 {
   color: gray;
 }
 
+#chevron-down-home {
+  position: absolute;
+  top: 95vh;
+  transform: translateY(-100%);
+  width: 100%;
+}
+
+.dimer {
+  max-width: 100px;
+}
+
+#chevron-down-aboutus1 {
+  position: absolute;
+  top: 195vh;
+  transform: translateY(-100%);
+  width: 100%;
+}
+
+#chevron-down-aboutus2 {
+  position: absolute;
+  top: 295vh;
+  transform: translateY(-100%);
+  width: 100%;
+}
+
+#chevron-down-aboutus3 {
+  position: absolute;
+  top: 395vh;
+  transform: translateY(-100%);
+  width: 100%;
+}
+
 #submit-btn {
   background-color: #B1C063;
   color: white;
+  margin-bottom: 15px;
 }
