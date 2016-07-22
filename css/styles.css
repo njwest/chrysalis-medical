@@ -103,34 +103,34 @@ hr {
 
 #chevron-down-home {
   position: absolute;
-  top: 95vh;
+  bottom: 5vh;
   transform: translateY(-100%);
   width: 100%;
 }
 
-.dimer {
-  max-width: 100px;
-}
-
 #chevron-down-aboutus1 {
   position: absolute;
-  top: 195vh;
+  bottom: -112vh;
   transform: translateY(-100%);
   width: 100%;
 }
 
 #chevron-down-aboutus2 {
   position: absolute;
-  top: 295vh;
+  bottom: -207vh;
   transform: translateY(-100%);
   width: 100%;
 }
 
 #chevron-down-aboutus3 {
   position: absolute;
-  top: 395vh;
+  bottom: -307vh;
   transform: translateY(-100%);
   width: 100%;
+}
+
+.dimer {
+  max-width: 100px;
 }
 
 #submit-btn {
