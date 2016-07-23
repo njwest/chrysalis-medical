@@ -1,9 +1,10 @@
-#aboutus {
-  height: 600vh;
+#aboutus-desktop {
+  height: 2400vh;
 }
 
 .aboutus-fixed {
   position: fixed;
   top: 40%;
   left: 15%;
+  z-index: -1;
 }

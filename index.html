@@ -33,7 +33,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#home" class="smoothScroll">HOME</a></li>
           <li><hr class="mobile-nav-line"></li>
-          <li><a href="#aboutus" class="smoothScroll">ABOUT US</a></li>
+          <li class="hidden-xs"><a href="#aboutus-desktop" class="smoothScroll">ABOUT US</a></li>
+          <li class="visible-xs"><a href="#aboutus-mobile" class="smoothScroll">ABOUT US</a></li>
           <li><hr class="mobile-nav-line"></li>
           <li><a href="#howwework" class="smoothScroll">HOW WE WORK</a></li>
           <li><hr class="mobile-nav-line"></li>
@@ -55,14 +56,14 @@
       <div class="container full-screen">
         <div class="row">
           <div class="col-md-12">
-            <!-- mobile only -->
-            <img id="transformative-thinking-gif" class="img-responsive visible-xs center-block" src="img/transformative-thinking.gif" alt="Transformative Thinking" />
-            <!-- tablet and desktop -->
+            <!-- desktop & tablet -->
             <div class="video-container hidden-xs">
               <video autoplay>
                 <source src="video/hero-video.mp4">
               </video>
             </div>
+            <!-- mobile -->
+            <img id="transformative-thinking-gif" class="img-responsive visible-xs center-block" src="img/transformative-thinking.gif" alt="Transformative Thinking" />
           </div>
           <div id="chevron-down-home" class="row">
             <div class="col-md-12">
@@ -72,10 +73,60 @@
         </div>
       </div>
     </div> <!-- home -->
-    <!-- about us -->
+
+    <!-- about us desktop & tablet -->
+    <div id="aboutus-desktop">
+      <aside id="aboutus1-fixed" class="aboutus-fixed hidden-xs hide animated wow" data-wow-delay="1s">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h2>About Us</h2>
+            <h3>Who we are</h3>
+            <p>
+              Chrysalis Medical Communications is the newest company within the Nucleus Global family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.
+            </p>
+          </div>
+          <div class="hidden-xs col-sm-offset-1 col-sm-1 animated wow">
+            <img class="dimer img-responsive center-block align-right swaying" src="img/dimer-left.png" alt="Dimer" />
+          </div>
+          <div class="hidden-xs col-sm-3">
+            <img class="dimer img-responsive align-left swaying" src="img/dimer-right.png" alt="Dimer" />
+          </div>
+        </div>
+      </aside>
+
+      <aside id="aboutus2-fixed" class="aboutus-fixed hidden-xs hide animated wow">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h3>What we can do</h3>
+            <p>
+              As part of Nucleus Global, a company with 30 years of experience in medical communications, we also provide cutting-edge digital options supported by our in-house studio team, 3-D designers, and application developers to transform complex information into clear and impactful medical communications deliverables.
+            </p>
+          </div>
+          <div class="hidden-xs col-sm-6">
+            <img class="dimer img-responsive center-block floating" src="img/dimer-left.png" alt="" />
+          </div>
+        </div>
+      </aside>
+
+      <aside id="aboutus3-fixed" class="aboutus-fixed hidden-xs hide animated wow">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h3>Our team</h3>
+            <p>
+              Our experienced in-house scientific team all hold advanced degrees, and our dedicated client services team has decades of combined expertise in managing publication plans, advisory boards, patient education pieces, and more.
+            </p>
+          </div>
+          <div class="hidden-xs col-sm-6">
+            <img class="img-responsive" src="img/dna-green.png" alt="" />
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- about us mobile -->
     <div id="aboutus">
       <!-- about us 1 -->
-      <!-- <div id="aboutus1" class="full-screen">
+      <div id="aboutus1" class="visible-xs full-screen">
         <br />
         <br />
         <br />
@@ -102,7 +153,7 @@
         </div>
       </div> <!-- about us 1 -->
       <!-- about us 2 -->
-      <!-- <div id="aboutus2" class="full-screen">
+      <div id="aboutus2" class="visible-xs full-screen">
         <br />
         <br />
         <br />
@@ -125,7 +176,7 @@
         </div>
       </div> <!-- about us 2 -->
       <!-- about us 3 -->
-      <!-- <div id="aboutus3" class="full-screen">
+      <div id="aboutus3" class="visible-xs full-screen">
         <br />
         <br />
         <br />
@@ -145,8 +196,8 @@
           <div class="col-md-12">
             <a href="#howwework" class="smoothScroll"><img class="img-responsive visible-xs center-block" src="img/chevron-down.png" alt="Down Arrow" /></a>
           </div>
-        </div> -->
-      <!-- </div> <!-- about us 3 -->
+        </div>
+      </div> <!-- about us 3 -->
     </div> <!-- about us -->
 
     <!-- how we work -->
@@ -310,58 +361,6 @@
         </div>
       </div>
     </div>
-
-    <aside id="aboutus1-fixed" class="aboutus-fixed hide animated wow" data-wow-delay="1s">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <h2>About Us</h2>
-          <h3>Who we are</h3>
-          <p>
-            Chrysalis Medical Communications is the newest company within the Nucleus Global family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.
-          </p>
-        </div>
-        <div class="hidden-xs col-sm-offset-1 col-sm-1 animated wow">
-          <img class="dimer img-responsive center-block align-right swaying" src="img/dimer-left.png" alt="Dimer" />
-        </div>
-        <div class="hidden-xs col-sm-3">
-          <img class="dimer img-responsive align-left swaying" src="img/dimer-right.png" alt="Dimer" />
-        </div>
-      </div>
-    </aside>
-
-    <aside id="aboutus2-fixed" class="aboutus-fixed hide animated wow">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <h3>What we can do</h3>
-          <p>
-            As part of Nucleus Global, a company with 30 years of experience in medical communications, we also provide cutting-edge digital options supported by our in-house studio team, 3-D designers, and application developers to transform complex information into clear and impactful medical communications deliverables.
-          </p>
-        </div>
-        <div class="hidden-xs col-sm-6">
-          <img class="dimer img-responsive center-block floating" src="img/dimer-left.png" alt="" />
-        </div>
-      </div>
-    </aside>
-
-    <aside id="aboutus3-fixed" class="aboutus-fixed hide animated wow">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <h3>Our team</h3>
-          <p>
-            Our experienced in-house scientific team all hold advanced degrees, and our dedicated client services team has decades of combined expertise in managing publication plans, advisory boards, patient education pieces, and more.
-          </p>
-        </div>
-        <div class="hidden-xs col-sm-6">
-          <img class="img-responsive" src="img/dna-green.png" alt="" />
-        </div>
-      </div>
-    </aside>
-
-
-
-
-
-
 
   </div> <!-- container -->
 </main>

@@ -6,7 +6,7 @@ $(window).on('beforeunload', function() {
 $(function() {
 
   var browserHeight = $( window ).height();
-  var breakpoint1 = browserHeight / 2;
+  var breakpoint1 = browserHeight * 2;
   console.log('breakpoint1 = ', breakpoint1);
   var breakpoint2 = breakpoint1 + breakpoint1;
   console.log('breakpoint2 = ', breakpoint2);
