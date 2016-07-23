@@ -276,6 +276,16 @@ floating and swaying
   }
 }
 
+#aboutus {
+  height: 600vh;
+}
+
+.aboutus-fixed {
+  position: fixed;
+  top: 40%;
+  left: 15%;
+}
+
 #submit-btn {
   background-color: #B1C063;
   color: white;
