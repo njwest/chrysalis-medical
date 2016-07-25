@@ -30,10 +30,6 @@ body {
   font-size: 20px;
 }
 
-.expertise-text {
-  color: #5D5D5D
-}
-
 .bg-gray {
   background-color: $gray;
 }
@@ -51,10 +47,11 @@ body {
   }
 }
 
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
 }
 
 .border-color-green {

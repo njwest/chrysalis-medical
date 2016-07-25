@@ -26,10 +26,6 @@ body {
   font-size: 20px;
 }
 
-.expertise-text {
-  color: #5D5D5D;
-}
-
 .bg-gray {
   background-color: #E6E7E8;
 }
@@ -46,10 +42,13 @@ body {
   }
 }
 
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
 }
 
 .border-color-green {
@@ -375,6 +374,10 @@ floating and swaying
 
 #expertise {
   background-color: white;
+}
+
+.expertise-text {
+  color: #5D5D5D;
 }
 
 #submit-btn {
