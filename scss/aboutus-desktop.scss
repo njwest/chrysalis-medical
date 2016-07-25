@@ -1,10 +1,32 @@
 #aboutus-desktop {
-  height: 650vh;
+  height: 600vh;
 }
 
 .aboutus-fixed {
   position: fixed;
-  top: 40%;
-  left: 15%;
+  top: 25%;
   z-index: -1;
+}
+
+.aboutus-fixed-container {
+  right: 15px;
+  left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .aboutus-fixed-container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .aboutus-fixed-container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutus-fixed-container {
+    width: 1170px;
+  }
 }

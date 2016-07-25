@@ -8,12 +8,13 @@ $gray: #E6E7E8;
 /* Styles */
 body {
   padding-top: 80px;
+  font-family: "Helvetica";
 }
 
 .header {
-  font-family: light;
   color: $blue;
   font-size: 60px;
+  font-weight: lighter;
 }
 
 .subheader {
@@ -22,20 +23,71 @@ body {
 
 .primary-font {
   font-size: 30px;
+  font-weight: lighter;
 }
 
 .secondary-font {
   font-size: 20px;
 }
 
+.expertise-text {
+  color: #5D5D5D
+}
+
 .bg-gray {
   background-color: $gray;
 }
 
-.full-screen {
-  height: 100vh;
+@media (max-width: 768px) {
+  .full-screen-mobile {
+    height: 100vh;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .full-screen-desktop {
+    height: 100vh;
+  }
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
 
 .border-color-green {
   border-color: $green;
+}
+
+// fadeInUp
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }

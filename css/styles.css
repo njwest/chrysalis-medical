@@ -4,12 +4,13 @@
 /* Styles */
 body {
   padding-top: 80px;
+  font-family: "Helvetica";
 }
 
 .header {
-  font-family: light;
   color: #28779F;
   font-size: 60px;
+  font-weight: lighter;
 }
 
 .subheader {
@@ -18,22 +19,72 @@ body {
 
 .primary-font {
   font-size: 30px;
+  font-weight: lighter;
 }
 
 .secondary-font {
   font-size: 20px;
 }
 
+.expertise-text {
+  color: #5D5D5D;
+}
+
 .bg-gray {
   background-color: #E6E7E8;
 }
 
-.full-screen {
-  height: 100vh;
+@media (max-width: 768px) {
+  .full-screen-mobile {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .full-screen-desktop {
+    height: 100vh;
+  }
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
 
 .border-color-green {
   border-color: #A4B447;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }
 
 .navbar, .navbar-header {
@@ -288,14 +339,38 @@ floating and swaying
 }
 
 #aboutus-desktop {
-  height: 650vh;
+  height: 600vh;
 }
 
 .aboutus-fixed {
   position: fixed;
-  top: 40%;
-  left: 15%;
+  top: 25%;
   z-index: -1;
+}
+
+.aboutus-fixed-container {
+  right: 15px;
+  left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .aboutus-fixed-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .aboutus-fixed-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .aboutus-fixed-container {
+    width: 1170px;
+  }
 }
 
 #expertise {
@@ -309,5 +384,6 @@ floating and swaying
 }
 
 .footer-text {
+  font-family: helvetica;
   color: gray;
 }

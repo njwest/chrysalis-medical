@@ -49,27 +49,28 @@ $(function() {
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
       if ((scroll >= breakpoint1) && (scroll < breakpoint2)) {
-        $('#hero-video').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus1-fixed').removeClass('hide fadeOut').addClass('fadeIn');
         // console.log('aboutus1 fadeIn fired');
       }
       else if ((scroll >= breakpoint3) && (scroll < breakpoint4)) {
-        $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
+
         // console.log('aboutus1 fadeOut fired');
       }
       else if ((scroll >= breakpoint5) && (scroll < breakpoint6)) {
+        $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus2-fixed').removeClass('hide fadeOut').addClass('fadeIn');
         // console.log('aboutus2 fadeIn fired');
       }
       else if ((scroll >= breakpoint7) && (scroll < breakpoint8)) {
-        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
+
         // console.log('aboutus2 fadeOut fired');
       }
       else if ((scroll >= breakpoint9) && (scroll < breakpoint10)) {
+        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus3-fixed').removeClass('hide fadeOut').addClass('fadeIn');
-        console.log('aboutus3 fadeIn fired');
+        // console.log('aboutus3 fadeIn fired');
       }
-      else if (scroll >= breakpoint11) {
+      else if (scroll >= breakpoint12) {
         $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
         // console.log('aboutus3 fadeOut fired');
       }
@@ -77,30 +78,31 @@ $(function() {
     } // end scrolling down
 
     if (scrollingUp) {
-      if ((scroll < breakpoint13) && (scroll >= breakpoint11)) {
+      if ((scroll < breakpoint12) && (scroll >= breakpoint11)) {
         $('#aboutus3-fixed').removeClass('fadeOut').addClass('fadeIn');
         // console.log('aboutus3 fadeIn fired');
       }
       else if ((scroll < breakpoint10) && (scroll >= breakpoint9)) {
-        $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
+
         // console.log('aboutus3 fadeOut fired');
       }
       else if ((scroll < breakpoint8) && (scroll >= breakpoint7)) {
+        $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus2-fixed').removeClass('fadeOut').addClass('fadeIn');
         // console.log('aboutus2 fadeIn fired');
       }
       else if ((scroll < breakpoint6) && (scroll >= breakpoint5)) {
-        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
+
         // console.log('aboutus2 fadeOut fired');
       }
       else if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
+        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus1-fixed').removeClass('fadeOut').addClass('fadeIn');
         // console.log('data-status-click fired;');
       }
       else if ((scroll < breakpoint2) && (scroll >= breakpoint1)) {
         if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
           $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
-          $('#hero-video').removeClass('fadeOut').addClass('fadeIn');
           // console.log('aboutus1 fadeOut fired');
         }
       }

@@ -49,21 +49,22 @@
   </div><!-- /.container-fluid -->
 </nav>
 <main>
-  <div class="container">
 
     <!-- home -->
-    <div id="home">
+    <div id="home" class="container">
       <div class="container full-screen">
         <div class="row">
           <div class="col-md-12">
             <!-- desktop & tablet -->
-            <div id="hero-video" class="video-container hidden-xs animated wow">
+            <div class="video-container hidden-xs animated wow">
               <video autoplay>
                 <source src="video/hero-video.mp4">
               </video>
             </div>
             <!-- mobile -->
-            <img id="transformative-thinking-gif" class="img-responsive visible-xs center-block" src="img/transformative-thinking.gif" alt="Transformative Thinking" />
+            <div class="full-screen-mobile">
+              <img id="transformative-thinking-gif" class="img-responsive visible-xs center-block" src="img/transformative-thinking.gif" alt="Transformative Thinking" />
+            </div>
           </div>
           <div id="chevron-down-home" class="row">
             <div class="col-md-12">
@@ -78,7 +79,7 @@
     <div id="aboutus-desktop" class="hidden-xs">
 
       <!-- about us 1 desktop -->
-      <aside id="aboutus1-fixed" class="aboutus-fixed hide animated wow">
+      <aside id="aboutus1-fixed" class="aboutus-fixed aboutus-fixed-container hide animated wow">
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <h2 class="header">About Us</h2>
@@ -97,7 +98,7 @@
       </aside> <!-- end about us 1 desktop -->
 
       <!-- about us 2 desktop -->
-      <aside id="aboutus2-fixed" class="aboutus-fixed hide animated wow">
+      <aside id="aboutus2-fixed" class="aboutus-fixed aboutus-fixed-container hide animated wow">
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <h3 class="subheader">What we can do</h3>
@@ -112,7 +113,7 @@
       </aside> <!-- about us 2 desktop -->
 
       <!-- about us 3 desktop -->
-      <aside id="aboutus3-fixed" class="aboutus-fixed hide animated wow">
+      <aside id="aboutus3-fixed" class="aboutus-fixed aboutus-fixed-container hide animated wow">
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <h3 class="subheader">Our team</h3>
@@ -128,9 +129,9 @@
     </div> <!-- about us desktop -->
 
     <!-- about us mobile -->
-    <div id="aboutus-mobile" class="visible-xs">
+    <div id="aboutus-mobile" class="visible-xs container">
       <!-- about us 1 mobile -->
-      <div id="aboutus1" class="full-screen">
+      <div id="aboutus1" class="full-screen-mobile">
         <br />
         <br />
         <br />
@@ -158,7 +159,7 @@
       </div> <!-- about us 1 mobile -->
 
       <!-- about us 2 mobile -->
-      <div id="aboutus2" class="full-screen">
+      <div id="aboutus2" class="full-screen-mobile">
         <br />
         <br />
         <br />
@@ -182,7 +183,7 @@
       </div> <!-- about us 2 mobile -->
 
       <!-- about us 3 mobile -->
-      <div id="aboutus3" class="full-screen">
+      <div id="aboutus3" class="full-screen-mobile">
         <br />
         <br />
         <br />
@@ -207,36 +208,37 @@
     </div> <!-- about us mobile -->
 
     <!-- how we work -->
-    <div id="howwework">
+    <div id="howwework" class="bg-gray full-screen-desktop">
       <br />
       <br />
       <br />
       <br />
-      <div class="bg-gray container">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-12 animated wow fadeIn" data-wow-delay='0.5s'>
+          <div class="col-sm-12 animated wow fadeIn" data-wow-delay="0.5s">
             <h2 class="header">How We Work</h2>
             <p class="primary-font">
               Chrysalis values the partnerships we have built with both our clients and our internal team members. Each day we strive to meet our 5 core values...
             </p>
+            <br />
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay='0.9s'>
+          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay="0.9s">
             <img class="img-circle img-responsive center-block" src="img/icon-integrity.png" alt="Integrity" />
             <h3 class="text-center primary-font">Integrity</h3>
             <p class="text-center secondary-font">
               Being honest in what we write, speak, and think
             </p>
           </div>
-          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay='1.2s'>
+          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay="1.2s">
             <img class="img-circle img-responsive center-block" src="img/icon-science.png" alt="" />
             <h3 class="text-center primary-font">Sound Science</h3>
             <p class="text-center secondary-font">
               Deep scientific understanding to effectively represent the data
             </p>
           </div>
-          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay='1.5s'>
+          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay="1.5s">
             <img class="img-circle img-responsive center-block" src="img/icon-commitment.png" alt="" />
             <h3 class="text-center primary-font">Commitment</h3>
             <p class="text-center secondary-font">
@@ -245,14 +247,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-md-offset-2 col-md-4 animated wow fadeInUp" data-wow-delay='1.8s'>
+          <div class="col-sm-12 col-md-offset-2 col-md-4 animated wow fadeInUp" data-wow-delay="1.8s">
             <img class="img-circle img-responsive center-block" src="img/icon-passion.png" alt="" />
             <h3 class="text-center primary-font">Passion</h3>
             <p class="text-center secondary-font">
               Doing what we love and smiling while we do it
             </p>
           </div>
-          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay='2.1s'>
+          <div class="col-sm-12 col-md-4 animated wow fadeInUp" data-wow-delay="2.1s">
             <img class="img-circle img-responsive center-block" src="img/icon-partnership.png" alt="" />
             <h3 class="text-center primary-font">Partnership</h3>
             <p class="text-center secondary-font">
@@ -264,102 +266,108 @@
     </div> <!-- how we work -->
 
     <!-- expertise -->
-    <div id="expertise" class="container">
+    <div id="expertise" class="container full-screen-desktop">
       <br />
       <br />
       <br />
       <br />
       <div class="row">
-        <div class="col-xs-12 animated wow fadeIn" data-wow-delay='0.5s'>
+        <div class="col-xs-12 animated wow fadeIn" data-wow-delay="0.5s">
           <h2 class="header">Areas of Expertise</h2>
         </div>
       </div>
-      <div class="row">
+      <div class="row expertise-text">
         <div class="col-xs-12 col-sm-6">
-          <h4 class="primary-font">Strategic Planning and Support</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="0.9s">Strategic Planning and Support</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Publications Planning and Execution</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="1.2s">Publications Planning and Execution</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">External Expert Engagement</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="1.5s">External Expert Engagement</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Scientific Event Management</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="1.8s">Scientific Event Management</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Market Access and Health Economics Communications</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="2.1s">Market Access and Health Economics Communications</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Medical Education and Marketing Support</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="2.4s">Medical Education and Marketing Support</h4>
           <hr class="border-color-green visible-xs">
         </div>
         <div class="col-xs-12 col-sm-6">
-          <h4 class="primary-font">Internal Communications and Training</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="2.7s">Internal Communications and Training</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Creative Design</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="3s">Creative Design</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Digital Media Design</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="3.3s">Digital Media Design</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Clinical Trial Support</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="3.6s">Clinical Trial Support</h4>
           <hr class="border-color-green">
-          <h4 class="primary-font">Continuing Medical Education</h4>
+          <h4 class="primary-font animated wow fadeInUp" data-wow-delay="3.9s">Continuing Medical Education</h4>
         </div>
       </div>
     </div> <!-- expertise -->
 
-    <div id="contactus">
+    <div id="contactus"class="bg-gray full-screen-desktop">
       <br />
       <br />
       <br />
       <br />
-      <div  class="bg-gray container">
+      <div  class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h2 class="header">Contact Us</h2>
+            <h2 class="header animated wow fadeIn" data-wow-delay="0.5s">Contact Us</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12">
             <form>
-              <div class="form-group">
+              <div class="form-group animated wow fadeInUp" data-wow-delay="0.9s">
                 <input type="text" class="form-control" id="name" placeholder="Name">
               </div>
-              <div class="form-group">
+              <div class="form-group animated wow fadeInUp" data-wow-delay="1.2s">
                 <input type="email" class="form-control" id="email" placeholder="Email">
               </div>
-              <div class="form-group">
+              <div class="form-group animated wow fadeInUp" data-wow-delay="1.5s">
                 <textarea class="form-control" rows="6" placeholder="Message"></textarea>
               </div>
-              <div class="row hidden-xs hidden-sm">
+
+              <!-- desktop & tablet -->
+              <div class="row hidden-xs hidden-sm animated wow fadeInUp" data-wow-delay="1.8s">
                 <div class="col-md-6">
                   <p class="secondary-font">
                     Stacey Everett: 609-981-4157<br />
                     stacey.everett@chyrsalismedical.com
                   </p>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-6 text-right animated wow fadeInUp" data-wow-delay="2.1s">
                   <p class="secondary-font">
                     Dan Hutta, PhD: 609-981-4105<br />
                     daniel.hutta@chrysalismedical.com
                   </p>
                 </div>
               </div>
-              <button id="submit-btn" type="submit" class="btn btn-default center-block">Submit</button>
-            </form>
-            <div class="row">
-              <div class="col-xs-12 text-center visible-xs visible-sm">
-                <h4>
-                  Stacey Everett: 609-981-4151<br />
-                  stacey.everett@chrysalismedical.com<br />
-                  <br />
-                  Dan Hutta, PhD: 609-981-4105<br />
-                  daniel.hutta@chrysalismedical.com
-                </h4>
+              <button id="submit-btn" type="submit" class="hidden-xs btn btn-default center-block animated wow fadeInUp" data-wow-delay="2.4s">Submit</button>
+              <!-- end desktop & tablet -->
+
+              <!-- mobile -->
+              <div class="row">
+                <div class="col-xs-12 text-center visible-xs visible-sm">
+                  <button id="submit-btn" type="submit" class="btn btn-default center-block animated wow fadeInUp" data-wow-delay="1.8s">Submit</button>
+                  <h4 class="animated wow fadeInUp" data-wow-delay="2.1s">
+                    Stacey Everett: 609-981-4151<br />
+                    stacey.everett@chrysalismedical.com<br />
+                    <br />
+                    Dan Hutta, PhD: 609-981-4105<br />
+                    daniel.hutta@chrysalismedical.com
+                  </h4>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div> <!-- contactus -->
 
     <!-- footer -->
-    <div id="footer">
+    <div id="footer" class="container">
       <div class="row">
         <div class="col-xs-12 visible-xs">
           <h5 class="footer-text text-center">Copyright &copy; 2016 Nucleus Global</h5>
@@ -370,7 +378,7 @@
       </div>
     </div>
 
-  </div> <!-- container -->
+
 </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

@@ -26,12 +26,12 @@ $(function() {
 
   // Push body down when mobile nav drawer opens
   // Use this only if client wants the body of the page to be pushed down as the mobile nav drawer opens.
-  // $('button.navbar-toggle').click(function() {
-  //   if ($('body').css('padding-top') === '80px') {
-  //       $('body').css('padding-top', '+=350');
-  //   } else {
-  //       $('body').css('padding-top', '80px');
-  //   }
-  // });
+  $('button.navbar-toggle').click(function() {
+    if ($('body').css('padding-top') === '80px') {
+        $('body').css('padding-top', '+=350');
+    } else {
+        $('body').css('padding-top', '80px');
+    }
+  });
 
 }); // end document ready function
