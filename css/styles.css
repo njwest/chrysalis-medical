@@ -144,6 +144,12 @@ body {
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .navbar-default {
+    background: white;
+  }
+}
+
 .navbar-default .navbar-nav > li > a {
   color: #28779F;
   padding-top: 35px;

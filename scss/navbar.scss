@@ -55,6 +55,12 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .navbar-default {
+    background: white;
+  }
+}
+
 .navbar-default .navbar-nav>li>a {
   color: $blue;
   padding-top: 35px;
