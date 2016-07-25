@@ -6,12 +6,22 @@ body {
   padding-top: 80px;
 }
 
-.gray-text {
-  color: gray;
+.header {
+  font-family: light;
+  color: #28779F;
+  font-size: 60px;
 }
 
-h2 {
-  color: #488BAD;
+.subheader {
+  font-size: 30px;
+}
+
+.primary-font {
+  font-size: 30px;
+}
+
+.secondary-font {
+  font-size: 20px;
 }
 
 .bg-gray {
@@ -23,7 +33,7 @@ h2 {
 }
 
 .border-color-green {
-  border-color: #B1C063;
+  border-color: #A4B447;
 }
 
 .navbar, .navbar-header {
@@ -85,12 +95,12 @@ h2 {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #488BAD;
+  color: #28779F;
   padding-top: 35px;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-nav > li > a:active {
-  color: #B1C063;
+  color: #A4B447;
 }
 
 .navbar-default .navbar-toggle {
@@ -293,7 +303,11 @@ floating and swaying
 }
 
 #submit-btn {
-  background-color: #B1C063;
+  background-color: #A4B447;
   color: white;
   margin-bottom: 15px;
+}
+
+.footer-text {
+  color: gray;
 }
