@@ -4,6 +4,10 @@
     height: 0;
     overflow: hidden;
     z-index: 10;
+    // margin-right: auto;
+    // margin-left: auto;
+    // right: -60px;
+    // left: -60px;
 }
 
 .video-container iframe,
@@ -16,3 +20,25 @@
     width: 100%;
     height: 100%;
 }
+
+.aboutus-fixed {
+  position: fixed;
+  top: 25%;
+  z-index: -1;
+}
+
+// @media (min-width: 768px) {
+//   .video-container {
+//     width: 750px;
+//   }
+// }
+// @media (min-width: 992px) {
+//   .video-container {
+//     width: 970px;
+//   }
+// }
+// @media (min-width: 1200px) {
+//   .video-container {
+//     width: 1170px;
+//   }
+// }
