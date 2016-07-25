@@ -53,58 +53,58 @@ $(function() {
         // console.log('aboutus1 fadeIn fired');
       }
       else if ((scroll >= breakpoint3) && (scroll < breakpoint4)) {
-
+        $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
+        $('#aboutus2-fixed').removeClass('hide fadeOut').addClass('fadeIn');
         // console.log('aboutus1 fadeOut fired');
       }
       else if ((scroll >= breakpoint5) && (scroll < breakpoint6)) {
-        $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus2-fixed').removeClass('hide fadeOut').addClass('fadeIn');
+        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
+        $('#aboutus3-fixed').removeClass('hide fadeOut').addClass('fadeIn');
         // console.log('aboutus2 fadeIn fired');
       }
       else if ((scroll >= breakpoint7) && (scroll < breakpoint8)) {
-
+        $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
         // console.log('aboutus2 fadeOut fired');
       }
       else if ((scroll >= breakpoint9) && (scroll < breakpoint10)) {
-        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus3-fixed').removeClass('hide fadeOut').addClass('fadeIn');
+
         // console.log('aboutus3 fadeIn fired');
       }
       else if (scroll >= breakpoint12) {
-        $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
+
         // console.log('aboutus3 fadeOut fired');
       }
 
     } // end scrolling down
 
     if (scrollingUp) {
-      if ((scroll < breakpoint12) && (scroll >= breakpoint11)) {
+      if ((scroll < breakpoint8) && (scroll >= breakpoint7)) {
         $('#aboutus3-fixed').removeClass('fadeOut').addClass('fadeIn');
         // console.log('aboutus3 fadeIn fired');
       }
-      else if ((scroll < breakpoint10) && (scroll >= breakpoint9)) {
-
-        // console.log('aboutus3 fadeOut fired');
-      }
-      else if ((scroll < breakpoint8) && (scroll >= breakpoint7)) {
+      else if ((scroll < breakpoint6) && (scroll >= breakpoint5)) {
         $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus2-fixed').removeClass('fadeOut').addClass('fadeIn');
-        // console.log('aboutus2 fadeIn fired');
-      }
-      else if ((scroll < breakpoint6) && (scroll >= breakpoint5)) {
-
-        // console.log('aboutus2 fadeOut fired');
+        // console.log('aboutus3 fadeOut fired');
       }
       else if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
         $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus1-fixed').removeClass('fadeOut').addClass('fadeIn');
-        // console.log('data-status-click fired;');
+        // console.log('aboutus2 fadeIn fired');
       }
       else if ((scroll < breakpoint2) && (scroll >= breakpoint1)) {
         if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
           $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
           // console.log('aboutus1 fadeOut fired');
         }
+        // console.log('aboutus2 fadeOut fired');
+      }
+      else if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
+
+        // console.log('data-status-click fired;');
+      }
+      else if ((scroll < breakpoint2) && (scroll >= breakpoint1)) {
+
       }
     } // end scrolling up
     console.log($('#aboutus-desktop-nav').data('status-click'));
