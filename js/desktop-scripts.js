@@ -6,32 +6,32 @@ $(window).on('beforeunload', function() {
 $(function() {
 
   var browserHeight = $( window ).height();
-  var breakpoint1 = browserHeight * 2;
-  console.log('breakpoint1 = ', breakpoint1);
+  var breakpoint1 = browserHeight;
+  // console.log('breakpoint1 = ', breakpoint1);
   var breakpoint2 = breakpoint1 + breakpoint1;
-  console.log('breakpoint2 = ', breakpoint2);
+  // console.log('breakpoint2 = ', breakpoint2);
   var breakpoint3 = breakpoint2 + breakpoint1;
-  console.log('breakpoint3 = ', breakpoint3);
+  // console.log('breakpoint3 = ', breakpoint3);
   var breakpoint4 = breakpoint3 + breakpoint1;
-  console.log('breakpoint4 = ', breakpoint4);
+  // console.log('breakpoint4 = ', breakpoint4);
   var breakpoint5 = breakpoint4 + breakpoint1;
-  console.log('breakpoint5 = ', breakpoint5);
+  // console.log('breakpoint5 = ', breakpoint5);
   var breakpoint6 = breakpoint5 + breakpoint1;
-  console.log('breakpoint6 = ', breakpoint6);
+  // console.log('breakpoint6 = ', breakpoint6);
   var breakpoint7 = breakpoint6 + breakpoint1;
-  console.log('breakpoint7 = ', breakpoint7);
+  // console.log('breakpoint7 = ', breakpoint7);
   var breakpoint8 = breakpoint7 + breakpoint1;
-  console.log('breakpoint8 = ', breakpoint8);
+  // console.log('breakpoint8 = ', breakpoint8);
   var breakpoint9 = breakpoint8 + breakpoint1;
-  console.log('breakpoint9 = ', breakpoint9);
+  // console.log('breakpoint9 = ', breakpoint9);
   var breakpoint10 = breakpoint9 + breakpoint1;
-  console.log('breakpoint10 = ', breakpoint10);
+  // console.log('breakpoint10 = ', breakpoint10);
   var breakpoint11 = breakpoint10 + breakpoint1;
-  console.log('breakpoint11 = ', breakpoint11);
+  // console.log('breakpoint11 = ', breakpoint11);
   var breakpoint12 = breakpoint11 + breakpoint1;
-  console.log('breakpoint12 = ', breakpoint12);
+  // console.log('breakpoint12 = ', breakpoint12);
   var breakpoint13 = breakpoint12 + breakpoint1;
-  console.log('breakpoint13 = ', breakpoint13);
+  // console.log('breakpoint13 = ', breakpoint13);
   var previousScroll = 0;
   var scroll;
   var scrollingDown;
@@ -41,20 +41,18 @@ $(function() {
       scrollingDown = true;
       scrollingUp = false;
       previousScroll = scroll;
-      // console.log('scrolling down');
     }
     else if (scroll < previousScroll) {
       scrollingDown = false;
       scrollingUp = true;
       previousScroll = scroll;
-      // console.log('scrolling up');
     }
   };
 
   // Animations during user scrolls
   $(window).scroll(function() {
     scroll = $(window).scrollTop();
-    console.log('scroll = ', scroll);
+    // console.log('scroll = ', scroll);
     directionCheck();
     if (scrollingDown) {
 
@@ -110,15 +108,27 @@ $(function() {
       }
       else if ((scroll < breakpoint5) && (scroll >= breakpoint4)) {
         $('#aboutus1-fixed').removeClass('fadeOut').addClass('fadeIn');
-        console.log('aboutus1 fadeIn fired');
+        console.log('data-status-click fired;');
       }
       else if ((scroll < breakpoint3) && (scroll >= breakpoint2)) {
-        $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
-        console.log('aboutus1 fadeOut fired');
+        if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
+          $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
+          console.log('aboutus1 fadeOut fired');
+        }
       }
     } // end scrolling up
-
+    console.log($('#aboutus-desktop-nav').data('status-click'));
   }); // end window scroll
+
+  // Prevent fadeOut when user clicks 'About Us' on navbar
+  $('#aboutus-desktop-nav').on('click', function() {
+    $('#aboutus-desktop-nav').data('status-click', true);
+    var resetDataStatusClick = function() {
+      $('#aboutus-desktop-nav').data('status-click', false);
+    }
+    setTimeout(resetDataStatusClick, 2000);
+    console.log('you clicked aboutus desktop nav');
+  });
 
 }); // end document ready
 

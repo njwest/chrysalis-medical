@@ -111,6 +111,7 @@ h2 {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+  z-index: 10;
 }
 
 .video-container iframe,
@@ -277,7 +278,7 @@ floating and swaying
 }
 
 #aboutus-desktop {
-  height: 2400vh;
+  height: 1200vh;
 }
 
 .aboutus-fixed {
