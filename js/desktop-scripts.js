@@ -6,7 +6,7 @@ $(window).on('beforeunload', function() {
 $(function() {
 
   var browserHeight = $( window ).height();
-  var breakpoint1 = browserHeight / 2;
+  var breakpoint1 = browserHeight / 3;
   var breakpoint2 = breakpoint1 + breakpoint1;
   var breakpoint3 = breakpoint2 + breakpoint1;
   var breakpoint4 = breakpoint3 + breakpoint1;
@@ -19,6 +19,8 @@ $(function() {
   var breakpoint11 = breakpoint10 + breakpoint1;
   var breakpoint12 = breakpoint11 + breakpoint1;
   var breakpoint13 = breakpoint12 + breakpoint1;
+  var breakpoint14 = breakpoint13 + breakpoint1;
+  var breakpoint15 = breakpoint14 + breakpoint1;
   var previousScroll = 0;
   var scroll;
   var scrollingDown;
@@ -48,21 +50,21 @@ $(function() {
         .attr('data-user-scroll', 'true')
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
-      if ((scroll >= breakpoint1) && (scroll < breakpoint2)) {
+      if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
         $('#aboutus1-fixed').removeClass('hide fadeOut').addClass('fadeIn');
         // console.log('aboutus1 fadeIn fired');
       }
-      else if ((scroll >= breakpoint3) && (scroll < breakpoint4)) {
+      else if ((scroll >= breakpoint5) && (scroll < breakpoint7)) {
         $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus2-fixed').removeClass('hide fadeOut').addClass('fadeIn');
         // console.log('aboutus1 fadeOut fired');
       }
-      else if ((scroll >= breakpoint5) && (scroll < breakpoint6)) {
+      else if ((scroll >= breakpoint9) && (scroll < breakpoint11)) {
         $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus3-fixed').removeClass('hide fadeOut').addClass('fadeIn');
         // console.log('aboutus2 fadeIn fired');
       }
-      else if ((scroll >= breakpoint7) && (scroll < breakpoint8)) {
+      else if ((scroll >= breakpoint13) && (scroll < breakpoint15)) {
         $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
         // console.log('aboutus2 fadeOut fired');
       }
@@ -78,21 +80,21 @@ $(function() {
     } // end scrolling down
 
     if (scrollingUp) {
-      if ((scroll < breakpoint8) && (scroll >= breakpoint7)) {
+      if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
         $('#aboutus3-fixed').removeClass('fadeOut').addClass('fadeIn');
         // console.log('aboutus3 fadeIn fired');
       }
-      else if ((scroll < breakpoint6) && (scroll >= breakpoint5)) {
+      else if ((scroll < breakpoint11) && (scroll >= breakpoint9)) {
         $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus2-fixed').removeClass('fadeOut').addClass('fadeIn');
         // console.log('aboutus3 fadeOut fired');
       }
-      else if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
+      else if ((scroll < breakpoint7) && (scroll >= breakpoint5)) {
         $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus1-fixed').removeClass('fadeOut').addClass('fadeIn');
         // console.log('aboutus2 fadeIn fired');
       }
-      else if ((scroll < breakpoint2) && (scroll >= breakpoint1)) {
+      else if ((scroll < breakpoint3) && (scroll >= breakpoint1)) {
         if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
           $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
           // console.log('aboutus1 fadeOut fired');
