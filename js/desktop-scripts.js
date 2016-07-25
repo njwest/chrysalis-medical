@@ -90,27 +90,27 @@ $(function() {
     } // end scrolling down
 
     if (scrollingUp) {
-      if ((scroll < breakpoint13) && (scroll >= breakpoint12)) {
+      if ((scroll < breakpoint12) && (scroll >= breakpoint11)) {
         $('#aboutus3-fixed').removeClass('fadeOut').addClass('fadeIn');
         console.log('aboutus3 fadeIn fired');
       }
-      else if ((scroll < breakpoint11) && (scroll >= breakpoint10)) {
+      else if ((scroll < breakpoint10) && (scroll >= breakpoint9)) {
         $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
         console.log('aboutus3 fadeOut fired');
       }
-      else if ((scroll < breakpoint9) && (scroll >= breakpoint8)) {
+      else if ((scroll < breakpoint8) && (scroll >= breakpoint7)) {
         $('#aboutus2-fixed').removeClass('fadeOut').addClass('fadeIn');
         console.log('aboutus2 fadeIn fired');
       }
-      else if ((scroll < breakpoint7) && (scroll >= breakpoint6)) {
+      else if ((scroll < breakpoint6) && (scroll >= breakpoint5)) {
         $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
         console.log('aboutus2 fadeOut fired');
       }
-      else if ((scroll < breakpoint5) && (scroll >= breakpoint4)) {
+      else if ((scroll < breakpoint4) && (scroll >= breakpoint3)) {
         $('#aboutus1-fixed').removeClass('fadeOut').addClass('fadeIn');
         console.log('data-status-click fired;');
       }
-      else if ((scroll < breakpoint3) && (scroll >= breakpoint2)) {
+      else if ((scroll < breakpoint2) && (scroll >= breakpoint1)) {
         if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
           $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
           console.log('aboutus1 fadeOut fired');
