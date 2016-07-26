@@ -205,12 +205,6 @@ body {
   height: 100%;
 }
 
-.aboutus-fixed {
-  position: fixed;
-  top: 25%;
-  z-index: -1;
-}
-
 #chevron-down-home {
   position: absolute;
   bottom: 5vh;
