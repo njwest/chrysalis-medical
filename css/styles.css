@@ -360,7 +360,7 @@ floating and swaying
 }
 
 #aboutus-desktop {
-  height: 250vh;
+  height: 275vh;
 }
 
 .aboutus-fixed {
@@ -410,6 +410,11 @@ floating and swaying
   background-color: #A4B447;
   color: white;
   margin-bottom: 15px;
+  width: 153px;
+  height: 63px;
+  font-size: 150%;
+  font-weight: lighter;
+  border-color: white;
 }
 
 .footer-text {

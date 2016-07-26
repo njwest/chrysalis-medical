@@ -33,8 +33,10 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#home" class="smoothScroll">HOME</a></li>
           <li><hr class="mobile-nav-line"></li>
-          <li class="hidden-xs"><a id="aboutus-desktop-nav" href="#aboutus-desktop" class="smoothScroll" data-status-click="false">ABOUT US</a></li>
-          <li class="visible-xs"><a href="#aboutus-mobile" class="smoothScroll">ABOUT US</a></li>
+          <!-- desktop & tablet -->
+          <li class="hidden-xs"><a id="aboutus-desktop-nav" href="#end-of-home" class="smoothScroll" data-status-click="false">ABOUT US</a></li> <!-- end desktop -->
+          <!-- mobile -->
+          <li class="visible-xs"><a href="#aboutus-mobile" class="smoothScroll">ABOUT US</a></li> <!-- end mobile -->
           <li><hr class="mobile-nav-line"></li>
           <li><a href="#howwework" class="smoothScroll">HOW WE WORK</a></li>
           <li><hr class="mobile-nav-line"></li>
@@ -61,6 +63,7 @@
                 <source src="video/hero-video.mp4">
               </video>
             </div> <!-- end desktop & tablet -->
+            <div id="end-of-home"></div> <!-- this div is necessary so 'About Us' nav link works properly for desktop & tablet -->
             <!-- mobile -->
             <div class="full-screen-mobile">
               <div class="vertical-center">
@@ -74,7 +77,6 @@
         </div>
       </div>
     </div> <!-- home -->
-
     <!-- about us desktop & tablet -->
     <div id="aboutus-desktop" class="hidden-xs">
 
@@ -308,15 +310,15 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <form>
+            <form id="contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="Name">
+                <input id="name" type="text" class="form-control" id="name" placeholder="Name">
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input id="email" type="email" class="form-control" id="email" placeholder="Email">
               </div>
               <div class="form-group">
-                <textarea class="form-control" rows="6" placeholder="Message"></textarea>
+                <textarea id="message" class="form-control" rows="6" placeholder="Message"></textarea>
               </div>
 
               <!-- desktop & tablet -->
@@ -377,5 +379,6 @@
   <script src="js/smoothscroll.js"></script>
   <script src="js/desktop-scripts.js"></script>
   <script src="js/mobile-scripts.js"></script>
+  <script src="js/contactus.js"></script>
 </body>
 </html>
