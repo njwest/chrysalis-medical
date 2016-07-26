@@ -18,6 +18,10 @@ body {
   padding-top: 80px;
 }
 
+#aboutus-title {
+  padding-top: 0px;
+}
+
 .subheader {
   font-size: 30px;
 }
@@ -41,7 +45,6 @@ body {
   }
 }
 
-
 @media (min-width: 992px) {
   .full-screen-desktop {
     height: 100vh;
@@ -59,7 +62,7 @@ body {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .border-color-green {
