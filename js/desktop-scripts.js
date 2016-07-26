@@ -96,7 +96,6 @@ $(function() {
         // console.log('aboutus2 fadeOut fired');
       }
     } // end scrolling up
-    console.log($('#aboutus-desktop-nav').data('status-click'));
   }); // end window scroll
 
   // Prevent fadeOut when user clicks 'About Us' on navbar

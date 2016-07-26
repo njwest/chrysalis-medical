@@ -60,7 +60,7 @@
             <!-- desktop & tablet -->
             <div id="hero-video" class="video-container hidden-xs animated wow">
               <video autoplay>
-                <source src="video/hero-video.mp4">
+                <source src="video/hero-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
               </video>
             </div> <!-- end desktop & tablet -->
             <div id="end-of-home"></div> <!-- this div is necessary so 'About Us' nav link works properly for desktop & tablet -->
@@ -310,7 +310,8 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <form id="contact-form">
+            <div id="form-messages"></div>
+            <form id="contact-form" role="form" method="post" action="php/mailer.php">
               <div class="form-group">
                 <input id="name" type="text" class="form-control" id="name" placeholder="Name">
               </div>
@@ -336,7 +337,7 @@
                   </p>
                 </div>
               </div>
-              <button id="submit-btn" type="submit" class="hidden-xs btn btn-default center-block">Submit</button>
+              <button id="submit-btn" name="submit" type="submit" value=" Send" class="hidden-xs btn btn-default center-block">Submit</button>
               <!-- end desktop & tablet -->
 
               <!-- mobile -->
