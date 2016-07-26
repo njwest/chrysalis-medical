@@ -23,6 +23,7 @@ $(function() {
   var breakpoint13 = breakpoint12 + breakpoint1;
   var breakpoint14 = breakpoint13 + breakpoint1;
   var breakpoint15 = breakpoint14 + breakpoint1;
+  var breakpointHalf = breakpoint1 / 2;
   var previousScroll = 0;
   var scroll;
   var scrollingDown;
@@ -127,13 +128,16 @@ $(function() {
     $('#aboutus-desktop-nav').data('status-click', true);
     var resetDataStatusClick = function() {
       $('#aboutus-desktop-nav').data('status-click', false);
-    }
+    };
     setTimeout(resetDataStatusClick, 2000);
   });
 
   // About Us Arrow Functions for Desktop
   $(".aboutus-scroll").click(function(event){
     $('html, body').animate({scrollTop: '+=' + breakpoint3 + 'px'}, 800);
+  });
+  $("#aboutus-scroll3").click(function(event){
+    $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint5 + breakpointHalf + breakpointHalf + breakpointHalf) + 'px'}, 800);
   });
 
 }); // end document ready
