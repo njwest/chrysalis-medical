@@ -139,7 +139,7 @@ body {
   background-color: transparent;
 }
 
-#desktop-navbar-img {
+#desktop-navbar-img, #tablet-navbar-img {
   width: 100px;
 }
 
