@@ -1,3 +1,5 @@
+/* Scripts for mobile view */
+
 $(function() {
 
   // Allow gif to animate on page reload

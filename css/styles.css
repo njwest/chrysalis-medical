@@ -373,6 +373,17 @@ floating and swaying
   z-index: -1;
 }
 
+.aboutus-arrow {
+  position: fixed;
+  top: 65%;
+  left: 49%;
+  z-index: 100;
+}
+
+.aboutus-scroll {
+  cursor: pointer;
+}
+
 .aboutus-fixed-container {
   right: 15px;
   left: 15px;

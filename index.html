@@ -63,16 +63,26 @@
       <div class="full-screen-desktop">
         <div class="row">
           <div class="col-md-12">
+
             <!-- desktop -->
-            <div id="hero-video" class="video-container hidden-xs hidden-sm animated wow">
-              <video autoplay>
-                <source src="video/hero-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-              </video>
-            </div> <!-- end desktop -->
+            <div id="hero-video" class="hidden-xs hidden-sm animated wow">
+              <div class="video-container">
+                <video autoplay>
+                  <source src="video/hero-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                </video>
+              </div>
+            </div>
+            <a href="#end-of-home" class="smoothScroll hidden-xs">
+              <img class="img-responsive center-block animated wow fadeInDown" data-wow-delay="6.5s" src="img/chevron-down.png" alt="Down Arrow" />
+            </a> <!-- end desktop -->
+
             <div id="end-of-home"></div> <!-- this div is necessary so 'About Us' nav link works properly for desktop -->
+
+            <!-- tablet -->
             <div class="visible-sm">
               <img id="chrysalis-logo-gif" class="img-responsive center-block" src="img/chrysalis-logo.gif" alt="Chrysalis" />
-            </div>
+            </div> <!-- end tablet -->
+
             <!-- mobile -->
             <div class="full-screen-mobile visible-xs">
               <div class="vertical-center">
@@ -87,9 +97,11 @@
               </div>
             </div>
           </div><!-- end mobile -->
+
         </div>
       </div>
     </div> <!-- home -->
+
     <!-- about us desktop & tablet -->
     <div id="aboutus-desktop" class="hidden-xs">
 
@@ -142,6 +154,39 @@
         </div>
       </aside> <!-- about us 3 desktop -->
     </div> <!-- about us desktop -->
+
+
+    <!-- about us desktop & tablet chevron arrows -->
+    <div id=aboutus-desktop-arrows class="hidden-xs">
+
+      <!-- about us desktop arrows 1 -->
+      <aside id="aboutus-desktop-arrows-1" class="row aboutus-arrow hide animated wow">
+        <div class="col-sm-12">
+          <a class="smoothScroll hidden-xs aboutus-scroll">
+            <img class="img-responsive center-block" src="img/chevron-down.png" alt="Down Arrow" />
+          </a>
+        </div>
+      </aside>
+
+      <!-- about us desktop arrows 2 -->
+      <aside id="aboutus-desktop-arrows-2" class="row aboutus-arrow hide animated wow">
+        <div class="col-sm-12">
+          <a class="smoothScroll hidden-xs aboutus-scroll">
+            <img class="img-responsive center-block" src="img/chevron-down.png" alt="Down Arrow" />
+          </a>
+        </div>
+      </aside>
+
+      <!-- about us desktop arrows 2 -->
+      <aside id="aboutus-desktop-arrows-3" class="row aboutus-arrow hide animated wow">
+        <div class="col-sm-12">
+          <a href="#howwework" class="smoothScroll hidden-xs">
+            <img class="img-responsive center-block" src="img/chevron-down.png" alt="Down Arrow" />
+          </a>
+        </div>
+      </aside>
+
+    </div> <!-- end aboutus desktop arrows -->
 
     <!-- about us mobile -->
     <div id="aboutus-mobile" class="visible-xs container">
