@@ -35,8 +35,8 @@ $(function() {
       url: url,
       data: jsondata,
       success: function (msg) {
-          $(formMessages).removeClass('error');
-          $(formMessages).addClass('success');
+          $(formMessages).removeClass('bg-danger');
+          $(formMessages).addClass('bg-success text-success');
           $(formMessages).text(response);
           $('#name').val('');
           $('#email').val('');

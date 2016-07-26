@@ -40,7 +40,7 @@
           <li><a href="#home" class="smoothScroll">HOME</a></li>
           <li><hr class="mobile-nav-line"></li>
           <!-- desktop & tablet -->
-          <li class="hidden-xs"><a id="aboutus-desktop-nav" href="#end-of-home" class="smoothScroll" data-status-click="false">ABOUT US</a></li> <!-- end desktop -->
+          <li class="hidden-xs"><a id="aboutus-desktop-nav" href="#end-of-home-desktop" class="smoothScroll" data-status-click="false">ABOUT US</a></li> <!-- end desktop -->
           <!-- mobile -->
           <li class="visible-xs"><a href="#aboutus-mobile" class="smoothScroll">ABOUT US</a></li> <!-- end mobile -->
           <li><hr class="mobile-nav-line"></li>
@@ -365,7 +365,6 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <div id="form-messages"></div>
             <form id="contact-form" role="form" method="post" action="php/mailer.php">
               <div class="form-group">
                 <input id="name" type="text" class="form-control" id="name" placeholder="Name">
@@ -393,6 +392,11 @@
                 </div>
               </div>
               <button id="submit-btn" name="submit" type="submit" value=" Send" class="hidden-xs btn btn-default center-block">Submit</button>
+              <div class="row">
+                <div class="col-sm-offset-5 col-sm-2">
+                  <div id="form-messages" class="center-block text-center"></div>
+                </div>
+              </div>
               <!-- end desktop & tablet -->
 
               <!-- mobile -->
