@@ -133,7 +133,7 @@ $(function() {
 
   // About Us Arrow Functions for Desktop
   $(".aboutus-scroll").click(function(event){
-    $('html, body').animate({scrollTop: '+=1250px'}, 800);
+    $('html, body').animate({scrollTop: '+=' + breakpoint3 + 'px'}, 800);
   });
 
 }); // end document ready
