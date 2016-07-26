@@ -41,7 +41,7 @@ body {
 
 @media (max-width: 768px) {
   .full-screen-mobile {
-    height: 100vh;
+    height: 50vh;
   }
 }
 
@@ -62,7 +62,7 @@ body {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .vertical-center-bottom {

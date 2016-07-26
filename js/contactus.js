@@ -3,6 +3,8 @@ $(function() {
   var form = $('#contact-form');
   var formData = $(form).serialize();
   var formMessages = $('#form-messages');
+  var url = "http://www.chrysalismedical.com/emailapi/api/email";
+  var response = "Your message has been sent."
 
   $('#contact-form').on('submit', function(e) {
     e.preventDefault();
@@ -18,11 +20,11 @@ $(function() {
     var jsondata = {
         "UserEmail" : email,
         "UserFirstName" : name,
-        "UserLastName" : "",
-        "FromEmail" : "",
-        "ToEmail" : "Ohmmurugan.Sadasivam@nucleuscentral.com",
-        "ReplyToEmail" : "",
-        "CopyToEmail" : "",
+        "UserLastName" : "darryl",
+        "FromEmail" : "test@n24i.com",
+        "ToEmail" : "darryl.mendonez@nucleuscentral.com",
+        "ReplyToEmail" : "Ohmmurugan.Sadasivam@nucleuscentral.com",
+        "CopyToEmail" : "Ohmmurugan.Sadasivam@nucleuscentral.com",
         "Subject" : "Chrysalis Contacts",
         "EmailContent" : message
     };
@@ -30,8 +32,7 @@ $(function() {
     console.log(jsondata);
     $.ajax({
       type: "POST",
-      url: "http://www.chrysalismedical.com/emailapi/api/email",
-      contentType: "application/json; charset=utf-8",
+      url: url,
       data: jsondata,
       success: function (msg) {
           $(formMessages).removeClass('error');
@@ -40,6 +41,7 @@ $(function() {
           $('#name').val('');
           $('#email').val('');
           $('#message').val('');
+          console.log('success');
       },
       error: function (msg) {
         console.log('error');
