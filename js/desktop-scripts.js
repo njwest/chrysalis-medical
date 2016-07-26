@@ -46,13 +46,18 @@ $(function() {
     directionCheck();
     if (scrollingDown) {
 
-      // desktop navbar img appears when user begins to scroll down
+      // desktop & tablet navbar img appears when user begins to scroll down
       $('#desktop-navbar-img')
         .attr('data-wow-delay', '1.5s')
         .attr('data-user-scroll', 'true')
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
       $('#tablet-navbar-img')
+        .attr('data-wow-delay', '1.5s')
+        .attr('data-user-scroll', 'true')
+        .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
+
+      $('#home-arrow')
         .attr('data-wow-delay', '1.5s')
         .attr('data-user-scroll', 'true')
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
