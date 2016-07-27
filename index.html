@@ -72,9 +72,7 @@
                 </video>
               </div>
             </div>
-            <a class="smoothScroll hidden-xs hidden-sm aboutus-scroll">
-              <img id="home-arrow" class="img-responsive center-block animated wow fadeInDown" data-wow-delay="7s" src="img/chevron-down.png" alt="Down Arrow" />
-            </a> <!-- end desktop -->
+            <!-- end desktop -->
 
             <div id="end-of-home-desktop"></div> <!-- this div is necessary so 'About Us' nav link works properly for desktop -->
 
@@ -82,25 +80,32 @@
             <div class="visible-sm">
               <img id="chrysalis-logo-gif" class="img-responsive center-block" src="img/chrysalis-logo.gif" alt="Chrysalis" />
             </div>
-            <a href="#end-of-home" class="smoothScroll visible-sm">
-              <img class="img-responsive center-block animated wow fadeInDown" data-wow-delay="9.5s" src="img/chevron-down.png" alt="Down Arrow" />
-            </a> <!-- end tablet -->
 
             <!-- mobile -->
             <div class="full-screen-mobile visible-xs">
               <div class="vertical-center-top">
                 <img id="transformative-thinking-gif" class="img-responsive center-block" src="img/transformative-thinking.gif" alt="Transformative Thinking" />
               </div>
-              <a href="#aboutus1" class="smoothScroll"><img class="img-responsive visible-xs center-block" src="img/chevron-down.png" alt="Down Arrow" />flex</a>
+              <!-- <a href="#aboutus1" class="smoothScroll"><img class="img-responsive visible-xs center-block" src="img/chevron-down.png" alt="Down Arrow" />flex</a> -->
             </div>
           </div><!-- end mobile -->
+
+          <!-- desktop & mobile arrow -->
+          <a class="smoothScroll aboutus-scroll hidden-sm">
+            <img id="home-arrow" class="img-responsive center-block animated wow fadeInDown" data-wow-delay="7s" src="img/chevron-down.png" alt="Down Arrow" />
+          </a>
+
+          <!-- tablet arrow -->
+          <a class="smoothScroll aboutus-scroll visible-sm">
+            <img id="home-arrow-tablet" class="img-responsive center-block animated wow fadeInDown" data-wow-delay="9.5s" src="img/chevron-down.png" alt="Down Arrow" />
+          </a> <!-- end tablet -->
 
         </div>
       </div>
     </div> <!-- home -->
 
     <!-- about us desktop & tablet -->
-    <div id="aboutus-desktop" class="hidden-xs">
+    <div id="aboutus-desktop">
 
       <!-- about us 1 desktop -->
       <aside id="aboutus1-fixed" class="aboutus-fixed aboutus-fixed-container hide animated wow">
@@ -112,10 +117,10 @@
               Chrysalis Medical Communications is the newest company within the Nucleus Global family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.
             </p>
           </div>
-          <div class="col-sm-offset-2 col-sm-1 animated wow">
+          <div class="col-sm-offset-2 col-sm-1 animated wow hidden-xs">
             <img class="dimer img-responsive center-block align-right swaying" src="img/dimer-left.png" alt="Dimer" />
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 hidden-xs">
             <img class="dimer img-responsive align-left swaying" src="img/dimer-right.png" alt="Dimer" />
           </div>
         </div>
@@ -130,7 +135,7 @@
               As part of Nucleus Global, a company with 30 years of experience in medical communications, we also provide cutting-edge digital options supported by our in-house studio team, 3-D designers, and application developers to transform complex information into clear and impactful medical communications deliverables.
             </p>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6 hidden-xs">
             <img class="dimer img-responsive center-block floating" src="img/dimer-left.png" alt="" />
           </div>
         </div>
@@ -145,7 +150,7 @@
               Our experienced in-house scientific team all hold advanced degrees, and our dedicated client services team has decades of combined expertise in managing publication plans, advisory boards, patient education pieces, and more.
             </p>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6 hidden-xs">
             <img class="img-responsive" src="img/dna-green.png" alt="" />
           </div>
         </div>
@@ -154,7 +159,7 @@
 
 
     <!-- about us desktop & tablet chevron arrows -->
-    <div id=aboutus-desktop-arrows class="hidden-xs">
+    <div id="aboutus-desktop-arrows" class="hidden-xs hidden-sm">
 
       <!-- about us desktop arrows 1 -->
       <aside id="aboutus-desktop-arrows-1" class="row aboutus-arrow hide animated wow">
@@ -186,83 +191,7 @@
     </div> <!-- end aboutus desktop arrows -->
 
     <!-- about us mobile -->
-    <div id="aboutus-mobile" class="visible-xs container">
-      <!-- about us 1 mobile -->
-      <div id="aboutus1" class="full-screen-mobile">
-        <br />
-        <br />
-        <br />
-        <br />
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 animated wow fadeInUp" data-wow-delay="0.5s">
-            <h2 class="header">About Us</h2>
-            <h3 class="subheader">Who we are</h3>
-            <p class="primary-font">
-              Chrysalis Medical Communications is the newest company within the Nucleus Global family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.
-            </p>
-          </div>
-          <div class="hidden-xs col-sm-offset-1 col-sm-1 animated wow fadeInUp" data-wow-delay="0.5s">
-            <img class="dimer img-responsive center-block align-right swaying" src="img/dimer-left.png" alt="Dimer" />
-          </div>
-          <div class="hidden-xs col-sm-3 animated wow fadeInUp" data-wow-delay="0.5s">
-            <img class="dimer img-responsive align-left swaying" src="img/dimer-right.png" alt="Dimer" />
-          </div>
-        </div>
-        <div id="chevron-down-aboutus1" class="row">
-          <div class="col-md-12">
-            <a href="#aboutus2" class="smoothScroll"><img class="img-responsive visible-xs center-block" src="img/chevron-down.png" alt="Down Arrow" /></a>
-          </div>
-        </div>
-      </div> <!-- about us 1 mobile -->
 
-      <!-- about us 2 mobile -->
-      <div id="aboutus2" class="full-screen-mobile">
-        <br />
-        <br />
-        <br />
-        <br />
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 animated wow fadeIn" data-wow-delay="0.5s">
-            <h3 class="subheader">What we can do</h3>
-            <p class="primary-font">
-              As part of Nucleus Global, a company with 30 years of experience in medical communications, we also provide cutting-edge digital options supported by our in-house studio team, 3-D designers, and application developers to transform complex information into clear and impactful medical communications deliverables.
-            </p>
-          </div>
-          <div class="hidden-xs col-sm-6 animated wow fadeInUp" data-wow-delay="0.5s">
-            <img class="dimer img-responsive center-block floating" src="img/dimer-left.png" alt="" />
-          </div>
-        </div>
-        <div id="chevron-down-aboutus2" class="row">
-          <div class="col-md-12">
-            <a href="#aboutus3" class="smoothScroll"><img class="img-responsive visible-xs center-block" src="img/chevron-down.png" alt="Down Arrow" /></a>
-          </div>
-        </div>
-      </div> <!-- about us 2 mobile -->
-
-      <!-- about us 3 mobile -->
-      <div id="aboutus3" class="full-screen-mobile">
-        <br />
-        <br />
-        <br />
-        <br />
-        <div class="row animated wow fadeIn" data-wow-delay="0.5s">
-          <div class="col-xs-12 col-sm-6">
-            <h3 class="subheader">Our team</h3>
-            <p class="primary-font">
-              Our experienced in-house scientific team all hold advanced degrees, and our dedicated client services team has decades of combined expertise in managing publication plans, advisory boards, patient education pieces, and more.
-            </p>
-          </div>
-          <div class="hidden-xs col-sm-6">
-            <img class="img-responsive" src="img/dna-green.png" alt="" />
-          </div>
-        </div>
-        <div id="chevron-down-aboutus3" class="row">
-          <div class="col-md-12">
-            <a href="#howwework" class="smoothScroll"><img class="img-responsive visible-xs center-block" src="img/chevron-down.png" alt="Down Arrow" /></a>
-          </div>
-        </div>
-      </div> <!-- about us 3 mobile -->
-    </div> <!-- about us mobile -->
 
     <!-- how we work -->
     <div id="howwework" class="bg-gray full-screen-desktop vertical-center">

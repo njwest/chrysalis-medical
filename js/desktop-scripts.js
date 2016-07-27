@@ -63,6 +63,11 @@ $(function() {
         .attr('data-user-scroll', 'true')
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
+      $('#home-arrow-tablet')
+        .attr('data-wow-delay', '1.5s')
+        .attr('data-user-scroll', 'true')
+        .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
+
       if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
         $('#hero-video').removeClass('fadeIn').addClass('fadeOut');
         $('#aboutus1-fixed').removeClass('hide fadeOut').addClass('fadeIn');
