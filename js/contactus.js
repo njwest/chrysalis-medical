@@ -18,7 +18,7 @@ $(function() {
         "UserFirstName" : name,
         "UserLastName" : "darryl",
         "FromEmail" : "test@n24i.com",
-        "ToEmail" : "darryl.mendonez@nucleuscentral.com",
+        "ToEmail" : "darryl.mendonez@nucleuscentral.com; marina.tolkacheva@nucleuscentral.com",
         "ReplyToEmail" : "Ohmmurugan.Sadasivam@nucleuscentral.com",
         "CopyToEmail" : "Ohmmurugan.Sadasivam@nucleuscentral.com",
         "Subject" : "Chrysalis Contacts",
