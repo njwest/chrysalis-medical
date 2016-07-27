@@ -10,7 +10,6 @@ $(function() {
   var browserHeight = $( window ).height();
   var breakpoint1 = browserHeight / 3;
   var breakpoint2 = breakpoint1 + breakpoint1;
-  console.log('breakpoint2 = ', breakpoint2);
   var breakpoint3 = breakpoint2 + breakpoint1;
   var breakpoint4 = breakpoint3 + breakpoint1;
   var breakpoint5 = breakpoint4 + breakpoint1;
@@ -62,15 +61,15 @@ $(function() {
         .attr('data-user-scroll', 'true')
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
-      $('#home-arrow')
-        .attr('data-wow-delay', '1.5s')
-        .attr('data-user-scroll', 'true')
-        .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
-
-      $('#home-arrow-tablet')
-        .attr('data-wow-delay', '1.5s')
-        .attr('data-user-scroll', 'true')
-        .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
+      // $('#home-arrow')
+      //   .attr('data-wow-delay', '1.5s')
+      //   .attr('data-user-scroll', 'true')
+      //   .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
+      //
+      // $('#home-arrow-tablet')
+      //   .attr('data-wow-delay', '1.5s')
+      //   .attr('data-user-scroll', 'true')
+      //   .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
       // fade in about us 1, fade out rest
       if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
@@ -160,7 +159,7 @@ $(function() {
   }); // end window scroll
 
   // Prevent fadeOut when user clicks 'About Us' on navbar
-  $('#aboutus-desktop-nav, #aboutus-tablet-nav').on('click', function() {
+  $('#aboutus-desktop-nav, #aboutus-tablet-nav, #aboutus-mobile-scroll').on('click', function() {
     $('#aboutus-desktop-nav').data('status-click', true);
     var resetDataStatusClick = function() {
       $('#aboutus-desktop-nav').data('status-click', false);
@@ -199,6 +198,10 @@ $(function() {
   });
 
   // Mobile Nav (smoothScroll doesn't work properly on mobile)
+  $('#aboutus-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#home').offset().top -50 }, "slow");
+    console.log('aboutus-mobile-scroll fired');
+  });
   $('#howwework-mobile-scroll').click(function() {
     $('html, body').animate({ scrollTop: $('#howwework').offset().top -350 }, "slow");
     console.log('howwework-mobile-scroll fired');
