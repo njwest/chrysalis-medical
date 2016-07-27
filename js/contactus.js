@@ -16,7 +16,7 @@ $(function() {
     var jsondata = {
         "UserEmail" : email,
         "UserFirstName" : name,
-        "UserLastName" : "darryl",
+        "UserLastName" : "",
         "FromEmail" : "test@n24i.com",
         "ToEmail" : "darryl.mendonez@nucleuscentral.com; marina.tolkacheva@nucleuscentral.com",
         "ReplyToEmail" : "Ohmmurugan.Sadasivam@nucleuscentral.com",
@@ -25,7 +25,6 @@ $(function() {
         "EmailContent" : message
     };
 
-    console.log(jsondata);
     $.ajax({
       type: "POST",
       url: url,
@@ -38,26 +37,14 @@ $(function() {
           $('#name').val('');
           $('#email').val('');
           $('#message').val('');
-          console.log('success');
       },
       error: function (msg) {
         $(formMessages).removeClass('bg-success text-success');
         $(formMessages).addClass('bg-danger text-danger');
         $(formMessages).text(errorResponse);
         $(formMessages).append(exclamationError);
-        console.log('error');
       }
   });
 });
-
-    // if success
-  //   .done(function(response) {
-  //
-  //   })
-  //
-  //   // if error
-  //
-  //
-  // });
 
 }); // end document ready

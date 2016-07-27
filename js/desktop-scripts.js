@@ -24,6 +24,9 @@ $(function() {
   var breakpoint14 = breakpoint13 + breakpoint1;
   var breakpoint15 = breakpoint14 + breakpoint1;
   var breakpointHalf = breakpoint1 / 2;
+  var breakpointThird = breakpoint1 / 3;
+  var breakpointFourth = breakpoint1 / 4;
+  var breakpointFifth = breakpoint1 / 5;
   var previousScroll = 0;
   var scroll;
   var scrollingDown;
@@ -68,52 +71,75 @@ $(function() {
         .attr('data-user-scroll', 'true')
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
+      // fade in about us 1, fade out rest
       if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
-        $('#hero-video').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus1-fixed').removeClass('hide fadeOut').addClass('fadeIn');
-        $('#aboutus-desktop-arrows-1').removeClass('hide fadeOut').addClass('fadeIn');
+        $('#hero-video, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+          .removeClass('fadeIn')
+          .addClass('fadeOut');
+        $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
+          .removeClass('hide fadeOut')
+          .addClass('fadeIn');
       }
+      // fade in about us 2, fade out rest
       else if ((scroll >= breakpoint5) && (scroll < breakpoint7)) {
-        $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus-desktop-arrows-1').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus2-fixed').removeClass('hide fadeOut').addClass('fadeIn');
-        $('#aboutus-desktop-arrows-2').removeClass('hide fadeOut').addClass('fadeIn');
+        $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+          .removeClass('fadeIn')
+          .addClass('fadeOut');
+        $('#aboutus2-fixed, #aboutus-desktop-arrows-2')
+          .removeClass('hide fadeOut')
+          .addClass('fadeIn');
       }
+      // fade in about us 3, fade out rest
       else if ((scroll >= breakpoint9) && (scroll < breakpoint11)) {
-        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus-desktop-arrows-2').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus3-fixed').removeClass('hide fadeOut').addClass('fadeIn');
-        $('#aboutus-desktop-arrows-3').removeClass('hide fadeOut').addClass('fadeIn');
+        $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1').removeClass('fadeIn').addClass('fadeOut');
+        $('#aboutus3-fixed, #aboutus-desktop-arrows-3').removeClass('hide fadeOut').addClass('fadeIn');
       }
       else if ((scroll >= breakpoint13) && (scroll < breakpoint15)) {
-        $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus-desktop-arrows-3').removeClass('fadeIn').addClass('fadeOut');
+        $('#aboutus3-fixed, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+          .removeClass('fadeIn')
+          .addClass('fadeOut');
+        $('#aboutus-desktop-arrows-3')
+          .removeClass('fadeIn')
+          addClass('hide');
       }
 
     } // end scrolling down
 
     if (scrollingUp) {
+      // fade in about us 3, fade out rest
       if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
-        $('#aboutus3-fixed').removeClass('fadeOut').addClass('fadeIn');
-        $('#aboutus-desktop-arrows-3').removeClass('fadeOut').addClass('fadeIn');
+        $('#aboutus3-fixed, #aboutus-desktop-arrows-3')
+          .removeClass('fadeOut')
+          .addClass('fadeIn');
+        $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+          .removeClass('fadeIn')
+          .addClass('fadeOut');
       }
+      // fade in about us 2, fade out rest
       else if ((scroll < breakpoint11) && (scroll >= breakpoint9)) {
-        $('#aboutus3-fixed').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus-desktop-arrows-3').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus2-fixed').removeClass('fadeOut').addClass('fadeIn');
-        $('#aboutus-desktop-arrows-2').removeClass('fadeOut').addClass('fadeIn');
+        $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+          .removeClass('fadeIn')
+          .addClass('fadeOut');
+        $('#aboutus2-fixed, #aboutus-desktop-arrows-2')
+          .removeClass('fadeOut')
+          .addClass('fadeIn');
       }
       else if ((scroll < breakpoint7) && (scroll >= breakpoint5)) {
-        $('#aboutus2-fixed').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus-desktop-arrows-2').removeClass('fadeIn').addClass('fadeOut');
-        $('#aboutus1-fixed').removeClass('fadeOut').addClass('fadeIn');
-        $('#aboutus-desktop-arrows-1').removeClass('fadeOut').addClass('fadeIn');
+        $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+          .removeClass('fadeIn')
+          .addClass('fadeOut');
+        $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
+          .removeClass('fadeOut')
+          .addClass('fadeIn');
       }
       else if ((scroll < breakpoint3) && (scroll >= breakpoint1)) {
         if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
-          $('#aboutus1-fixed').removeClass('fadeIn').addClass('fadeOut');
-          $('#aboutus-desktop-arrows-1').removeClass('fadeIn').addClass('fadeOut');
-          $('#hero-video').removeClass('fadeOut').addClass('fadeIn');
+          $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+            .removeClass('fadeIn')
+            .addClass('fadeOut');
+          $('#hero-video')
+            .removeClass('fadeOut')
+            .addClass('fadeIn');
         }
       }
     } // end scrolling up
@@ -130,7 +156,7 @@ $(function() {
 
   // About Us Arrow Functions for Desktop
   $(".aboutus-scroll").click(function(event){
-    $('html, body').animate({scrollTop: '+=' + breakpoint3 + 'px'}, 800);
+    $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint1 + breakpointThird + breakpointFourth + breakpointFifth + breakpointFifth) + 'px'}, 800);
   });
   $("#aboutus-scroll3").click(function(event){
     $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint5 + breakpoint1 + breakpointHalf) + 'px'}, 800);
