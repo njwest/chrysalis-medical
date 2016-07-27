@@ -48,7 +48,6 @@ $(function() {
   // Animations during user scrolls
   $(window).scroll(function() {
     scroll = $(window).scrollTop();
-    console.log('scroll = ', scroll);
     directionCheck();
     if (scrollingDown) {
 
@@ -198,5 +197,12 @@ $(function() {
     $("html, body").animate({ scrollTop: breakpoint2 }, "slow");
     return false;
   });
+
+  // Mobile Nav (smoothScroll doesn't work properly on mobile)
+  $('#howwework-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#howwework').offset().top -350 }, "slow");
+    console.log('howwework-mobile-scroll fired');
+  });
+
 
 }); // end document ready
