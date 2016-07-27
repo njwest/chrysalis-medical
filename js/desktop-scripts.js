@@ -148,6 +148,15 @@ $(function() {
             .addClass('fadeIn');
         }
       }
+      // fade in home, fade out rest when user is at about us 1 and clicks on home in tablet
+      else if (scroll === 0) {
+        $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+          .removeClass('fadeIn')
+          .addClass('fadeOut');
+        $('#hero-video')
+          .removeClass('fadeOut')
+          .addClass('fadeIn');
+      }
     } // end scrolling up
   }); // end window scroll
 
