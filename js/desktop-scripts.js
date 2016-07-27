@@ -76,41 +76,34 @@ $(function() {
       if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
         $('#hero-video, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeIn')
-          .addClass('fadeOut')
-          .css({'z-index':'-1'});
+          .addClass('fadeOut');
         $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('hide fadeOut')
-          .addClass('fadeIn')
-          .css({'z-index':'100'});
+          .addClass('fadeIn');
       }
       // fade in about us 2, fade out rest
       else if ((scroll >= breakpoint5) && (scroll < breakpoint7)) {
         $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeIn')
-          .addClass('fadeOut')
-          .css({'z-index':'-1'});
+          .addClass('fadeOut');
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2')
           .removeClass('hide fadeOut')
-          .addClass('fadeIn')
-          .css({'z-index':'100'});
+          .addClass('fadeIn');
       }
       // fade in about us 3, fade out rest
       else if ((scroll >= breakpoint9) && (scroll < breakpoint11)) {
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
-          .addClass('fadeOut')
-          .css({'z-index':'-1'});
+          .addClass('fadeOut');
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('hide fadeOut')
-          .addClass('fadeIn')
-          .css({'z-index':'100'});
+          .addClass('fadeIn');
       }
       // fade out all
       else if ((scroll >= breakpoint13) && (scroll < breakpoint15)) {
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
-          .addClass('fadeOut')
-          .css({'z-index':'-1'});
+          .addClass('fadeOut');
       }
 
     } // end scrolling down
@@ -120,47 +113,38 @@ $(function() {
       if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
-          .addClass('fadeOut')
-          .css({'z-index':'-1'});
+          .addClass('fadeOut');
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeOut')
-          .addClass('fadeIn')
-          .css({'z-index':'100'});
+          .addClass('fadeIn');
       }
       // fade in about us 2, fade out rest
       else if ((scroll < breakpoint11) && (scroll >= breakpoint9)) {
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
-          .addClass('fadeOut')
-          .css({'z-index':'-1'});
+          .addClass('fadeOut');
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2')
           .removeClass('fadeOut')
-          .addClass('fadeIn')
-          .css({'z-index':'100'});
+          .addClass('fadeIn');
       }
       // fade in about us 1, fade out rest
       else if ((scroll < breakpoint7) && (scroll >= breakpoint5)) {
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeIn')
-          .addClass('fadeOut')
-          .css({'z-index':'-1'});
+          .addClass('fadeOut');
         $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeOut')
-          .addClass('fadeIn')
-          .css({'z-index':'100'});
+          .addClass('fadeIn');
       }
       // fade in home, fade out rest
       else if ((scroll < breakpoint3) && (scroll >= breakpoint1)) {
         if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
           $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
             .removeClass('fadeIn')
-            .addClass('fadeOut')
-            .css({'z-index':'-1'});
+            .addClass('fadeOut');
           $('#hero-video')
             .removeClass('fadeOut')
-            .addClass('fadeIn')
-            .css({'z-index':'100'});
-          console.log('if fired');
+            .addClass('fadeIn');
         }
       }
     } // end scrolling up
