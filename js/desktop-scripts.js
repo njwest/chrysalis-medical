@@ -156,7 +156,7 @@ $(function() {
           .addClass('fadeIn');
       }
     } // end scrolling up
-    
+
   }); // end window scroll
 
   // Prevent fadeOut when user clicks 'About Us' on navbar
@@ -215,6 +215,5 @@ $(function() {
     $('html, body').animate({ scrollTop: $('#contactus').offset().top -350 }, "slow");
     console.log('contactus-mobile-scroll fired');
   });
-
 
 }); // end document ready
