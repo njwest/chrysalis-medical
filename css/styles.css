@@ -275,50 +275,6 @@ swaying
   }
 }
 
-/*
-==============================================
-floating and swaying
-==============================================
-*/
-.floating-and-swaying {
-  animation-name: floating-and-swaying;
-  -webkit-animation-name: floating-and-swaying;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-}
-
-@keyframes floating-and-swaying {
-  0% {
-    transform: translateX(0%);
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateX(8%);
-    transform: translateY(8%);
-  }
-  100% {
-    transform: translateX(0%);
-    transform: translateY(0%);
-  }
-}
-
-@-webkit-keyframes floating-and-swaying {
-  0% {
-    -webkit-transform: translateX(0%);
-    -webkit-transform: translateX(0%);
-  }
-  50% {
-    -webkit-transform: translateX(8%);
-    -webkit-transform: translateX(8%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-    -webkit-transform: translateX(0%);
-  }
-}
-
 #aboutus-desktop {
   height: 400vh;
 }
@@ -336,7 +292,7 @@ floating and swaying
   z-index: 100;
 }
 
-.aboutus-scroll {
+#home-arrow-anchor, #aboutus1-arrow-anchor, #aboutus2-arrow-anchor, #aboutus3-arrow-anchor {
   cursor: pointer;
 }
 
