@@ -136,4 +136,10 @@ $(function() {
     $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint5 + breakpoint1 + breakpointHalf) + 'px'}, 800);
   });
 
+  // Home nav button scrolls to very top of page
+  $("a[href='#home']").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+
 }); // end document ready
