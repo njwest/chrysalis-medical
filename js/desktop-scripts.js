@@ -138,7 +138,7 @@ $(function() {
 
   // Home nav button scrolls to very top of page
   $("a[href='#home']").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "fast");
+    $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
 
