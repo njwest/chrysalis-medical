@@ -17,12 +17,10 @@ $(function() {
     if ($(this).attr('data-arrow') === 'down') {
       $(this).attr('data-arrow', 'up');
       $('#mobile-arrow').removeClass('fa-chevron-down').addClass('fa-chevron-up');
-      console.log('if fired');
     }
     else if ($(this).attr('data-arrow') === 'up') {
       $(this).attr('data-arrow', 'down');
       $('#mobile-arrow').removeClass('fa-chevron-up').addClass('fa-chevron-down');
-      console.log('else if fired');
     }
   });
 
