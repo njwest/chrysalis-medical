@@ -153,6 +153,10 @@ body {
   background-color: transparent;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 #desktop-navbar-img, #tablet-navbar-img {
   width: 100px;
 }
@@ -291,10 +295,6 @@ swaying
   top: 65%;
   left: 49%;
   z-index: 100;
-}
-
-#home-arrow-anchor, #aboutus1-arrow-anchor, #aboutus2-arrow-anchor, #aboutus3-arrow-anchor {
-  cursor: pointer;
 }
 
 .aboutus-fixed-container {

@@ -10,6 +10,7 @@ $(function() {
   var browserHeight = $( window ).height();
   var breakpoint1 = browserHeight / 3;
   var breakpoint2 = breakpoint1 + breakpoint1;
+  console.log('breakpoint2 = ', breakpoint2);
   var breakpoint3 = breakpoint2 + breakpoint1;
   var breakpoint4 = breakpoint3 + breakpoint1;
   var breakpoint5 = breakpoint4 + breakpoint1;
@@ -151,7 +152,7 @@ $(function() {
   }); // end window scroll
 
   // Prevent fadeOut when user clicks 'About Us' on navbar
-  $('#aboutus-desktop-nav').on('click', function() {
+  $('#aboutus-desktop-nav, #aboutus-tablet-nav').on('click', function() {
     $('#aboutus-desktop-nav').data('status-click', true);
     var resetDataStatusClick = function() {
       $('#aboutus-desktop-nav').data('status-click', false);
@@ -160,29 +161,32 @@ $(function() {
   });
 
   // About Us Arrow Functions for Desktop
-  $("#home-arrow-anchor").click(function(event){
-    $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint3) + 'px'}, 800);
-    console.log('home arrow distance = ', parseFloat(breakpoint3));
-  });
-  $("#aboutus1-arrow-anchor").click(function(event){
-    $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint3) + 'px'}, 800);
-    console.log('aboutus1 arrow distance = ', parseFloat(breakpoint3));
-  });
-  $("#aboutus2-arrow-anchor").click(function(event){
-    $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint3 + breakpointHalf) + 'px'}, 800);
-    console.log('aboutus 2 distance = ', parseFloat(breakpoint3 + breakpointHalf));
-  });
-  $("#aboutus3-arrow-anchor").click(function(event){
-    $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint5 + breakpointHalf) + 'px'}, 800);
-    console.log('aboutus 3 distance = ', parseFloat(breakpoint5 + breakpointHalf));
-  });
+  // $("#home-arrow-anchor").click(function(event){
+  //   $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint3) + 'px'}, 800);
+  //   console.log('home arrow distance = ', parseFloat(breakpoint3));
+  // });
+  // $("#aboutus1-arrow-anchor").click(function(event){
+  //   $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint3) + 'px'}, 800);
+  //   console.log('aboutus1 arrow distance = ', parseFloat(breakpoint3));
+  // });
+  // $("#aboutus2-arrow-anchor").click(function(event){
+  //   $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint3 + breakpointHalf) + 'px'}, 800);
+  //   console.log('aboutus 2 distance = ', parseFloat(breakpoint3 + breakpointHalf));
+  // });
+  // $("#aboutus3-arrow-anchor").click(function(event){
+  //   $('html, body').animate({scrollTop: '+=' + parseFloat(breakpoint5 + breakpointHalf) + 'px'}, 800);
+  //   console.log('aboutus 3 distance = ', parseFloat(breakpoint5 + breakpointHalf));
+  // });
 
   // Home nav button scrolls to very top of page
   $("a[href='#home']").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
-    // $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
-    //   .removeClass('fadeIn')
-    //   .addClass('fadeOut');
+    return false;
+  });
+
+  // About Us nav button scrolls correctly for tablet
+  $("#aboutus-tablet-nav").click(function() {
+    $("html, body").animate({ scrollTop: breakpoint2 }, "slow");
     return false;
   });
 
