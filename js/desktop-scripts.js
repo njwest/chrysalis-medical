@@ -156,6 +156,7 @@ $(function() {
           .addClass('fadeIn');
       }
     } // end scrolling up
+    
   }); // end window scroll
 
   // Prevent fadeOut when user clicks 'About Us' on navbar
