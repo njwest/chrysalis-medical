@@ -203,6 +203,14 @@ $(function() {
     $('html, body').animate({ scrollTop: $('#howwework').offset().top -350 }, "slow");
     console.log('howwework-mobile-scroll fired');
   });
+  $('#expertise-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#expertise').offset().top -350 }, "slow");
+    console.log('expertise-mobile-scroll fired');
+  });
+  $('#contactus-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#contactus').offset().top -350 }, "slow");
+    console.log('contactus-mobile-scroll fired');
+  });
 
 
 }); // end document ready
