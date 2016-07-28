@@ -134,7 +134,7 @@ $(function() {
             .css('color', green);
       }
       // contact us nav turns green
-      else if ((scroll >= breakpoint21) && (scroll < breakpoint23)) {
+      else if ((scroll >= breakpoint20) && (scroll < breakpoint23)) {
           $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
             .css('color', blue);
           $("a[href='#contactus']")
@@ -145,7 +145,7 @@ $(function() {
 
     if (scrollingUp) {
       // expertise nav turns green
-      if ((scroll < breakpoint21) && (scroll >= breakpoint18)) {
+      if ((scroll < breakpoint20) && (scroll >= breakpoint18)) {
           $("a[href='#contactus'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
             .css('color', blue);
           $("a[href='#expertise']")
@@ -153,7 +153,7 @@ $(function() {
           console.log('expertise green fired');
       }
       // how we work nav turns green
-      else if ((scroll < breakpoint18) && (scroll >= breakpoint16)) {
+      else if ((scroll < breakpoint17) && (scroll >= breakpoint16)) {
           $("a[href='#expertise'], a[href='#contactus'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
             .css('color', blue);
           $("a[href='#howwework']")
