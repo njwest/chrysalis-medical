@@ -208,4 +208,6 @@ $(function() {
     return false;
   });
 
+  // Lock orientation to portait mode in tablet
+
 }); // end document ready
