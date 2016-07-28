@@ -48,13 +48,13 @@ body {
 
 @media (min-width: 992px) {
   .full-screen-desktop {
-    height: 100vh;
+    height: 75vh;
   }
 }
 
 .vertical-center {
-  min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 50vh; /* These two lines are counted as one :-)       */
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
   display: flex;
   align-items: center;
 }
