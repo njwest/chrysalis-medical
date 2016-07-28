@@ -58,13 +58,13 @@ $(function() {
   (function msieversion() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
+    var ieVersionNumber = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)));
 
-    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer Version is < 11
+    if (ieVersionNumber < 11 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer Version is < 11
     {
       console.log('This browser is internet explorer.');
       console.log('ua = ', ua);
-      console.log('Internet Explorer Version = ', msie);
-      console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+      console.log('Internet Explorer Version = ', parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
       $('#aboutus-desktop').addClass('hide');
       $('#static-version').removeClass('hide').addClass('show');
       console.log('if fired');
