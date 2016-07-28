@@ -63,7 +63,8 @@ $(function() {
     {
       console.log('This browser is internet explorer.');
       console.log('ua = ', ua);
-      console.log('Internet Explorer Version = ', msie)
+      console.log('Internet Explorer Version = ', msie);
+      console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
       $('#aboutus-desktop').addClass('hide');
       $('#static-version').removeClass('hide').addClass('show');
       console.log('if fired');
