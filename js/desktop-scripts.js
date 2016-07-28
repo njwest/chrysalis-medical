@@ -61,8 +61,9 @@ $(function() {
 
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer Version is < 11
     {
+      console.log('This browser is internet explorer.');
       console.log('ua = ', ua);
-      console.log('msie = ', msie)
+      console.log('Internet Explorer Version = ', msie)
       $('#aboutus-desktop').addClass('hide');
       $('#static-version').removeClass('hide').addClass('show');
       console.log('if fired');
