@@ -193,7 +193,7 @@ $(function() {
   });
   // About Us nav button scrolls to About Us 1
   $("a[href='#aboutus']").click(function() {
-    $("html, body").animate({ scrollTop: $('#howwework').offset().top -4000 }, "slow");
+    $("html, body").animate({ scrollTop: $('#howwework').offset().top -3500 }, "slow");
     $('#home, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
       .removeClass('fadeIn')
       .addClass('fadeOut');
