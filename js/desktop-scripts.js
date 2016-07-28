@@ -73,7 +73,7 @@ $(function() {
 
       // fade in about us 1, fade out rest
       if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
-        $('#hero-video, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+        $('#home, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeIn')
           .addClass('fadeOut');
         $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
@@ -141,7 +141,7 @@ $(function() {
           $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
             .removeClass('fadeIn')
             .addClass('fadeOut');
-          $('#hero-video')
+          $('#home')
             .removeClass('fadeOut')
             .addClass('fadeIn');
         }
@@ -151,7 +151,7 @@ $(function() {
         $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        $('#hero-video')
+        $('#home')
           .removeClass('fadeOut')
           .addClass('fadeIn');
       }
@@ -196,24 +196,6 @@ $(function() {
   $("#aboutus-tablet-nav").click(function() {
     $("html, body").animate({ scrollTop: breakpoint2 }, "slow");
     return false;
-  });
-
-  // Mobile Nav (smoothScroll doesn't work properly on mobile)
-  $('#aboutus-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#home').offset().top -50 }, "slow");
-    console.log('aboutus-mobile-scroll fired');
-  });
-  $('#howwework-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#howwework').offset().top -350 }, "slow");
-    console.log('howwework-mobile-scroll fired');
-  });
-  $('#expertise-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#expertise').offset().top -350 }, "slow");
-    console.log('expertise-mobile-scroll fired');
-  });
-  $('#contactus-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#contactus').offset().top -350 }, "slow");
-    console.log('contactus-mobile-scroll fired');
   });
 
 }); // end document ready

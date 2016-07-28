@@ -1,5 +1,11 @@
 #aboutus-desktop {
-  height: 400vh;
+  height: 500vh;
+}
+
+#home {
+  position: fixed;
+  top: 80px;
+  z-index: -1;
 }
 
 .aboutus-fixed {

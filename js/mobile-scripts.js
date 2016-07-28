@@ -34,4 +34,22 @@ $(function() {
     }
   });
 
+  // Mobile Nav (smoothScroll doesn't work properly on mobile)
+  $('#aboutus-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#home').offset().top -75 }, "slow");
+    console.log('aboutus-mobile-scroll fired');
+  });
+  $('#howwework-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#howwework').offset().top -80 }, "slow");
+    console.log('howwework-mobile-scroll fired');
+  });
+  $('#expertise-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#expertise').offset().top -80 }, "slow");
+    console.log('expertise-mobile-scroll fired');
+  });
+  $('#contactus-mobile-scroll').click(function() {
+    $('html, body').animate({ scrollTop: $('#contactus').offset().top -80 }, "slow");
+    console.log('contactus-mobile-scroll fired');
+  });
+
 }); // end document ready function
