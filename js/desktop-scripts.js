@@ -194,7 +194,12 @@ $(function() {
   // About Us nav button scrolls to About Us 1
   $("a[href='#aboutus']").click(function() {
     $("html, body").animate({ scrollTop: $('#howwework').offset().top -4000 }, "slow");
-    console.log('aboutus click fired');
+    $('#home, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+      .removeClass('fadeIn')
+      .addClass('fadeOut');
+    $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
+      .removeClass('hide fadeOut')
+      .addClass('fadeIn');
     return false;
   });
   // About Us nav button scrolls correctly for tablet
