@@ -54,6 +54,26 @@ $(function() {
   var green = '#A4B447';
   var blue = '#28779F';
 
+  // Check for Internet Explorer
+  (function msieversion() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer Version is < 11
+    {
+      console.log('ua = ', ua);
+      console.log('msie = ', msie)
+      $('#aboutus-desktop').addClass('hide');
+      $('#static-version').removeClass('hide').addClass('show');
+      console.log('if fired');
+    }
+    else  // If another browser, return 0
+    {
+      console.log('This browser is not internet explorer.');
+    }
+    return false;
+  })();
+
   // Greenify 'Home' link in navbar on load
   $("a[href='#home']")
     .css('color', green);
@@ -150,7 +170,6 @@ $(function() {
             .css('color', blue);
           $("a[href='#expertise']")
             .css('color', green);
-          console.log('expertise green fired');
       }
       // how we work nav turns green
       else if ((scroll < breakpoint17) && (scroll >= breakpoint16)) {
@@ -158,7 +177,6 @@ $(function() {
             .css('color', blue);
           $("a[href='#howwework']")
             .css('color', green);
-          console.log('howe we work green fired');
       }
       // fade in about us 3, fade out rest
       else if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {

@@ -43,6 +43,11 @@
   cursor: pointer;
 }
 
+nav>li {
+  outline: none;
+  border: none; /* eventually, IE specific, not sure */
+}
+
 .navbar-default {
   background: rgba(255,255,255,0.5);
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.04);

@@ -71,7 +71,7 @@
     <div id="aboutus-desktop">
 
       <!-- home -->
-      <div id="home" class="aboutus-fixed-container animated wow">
+      <div id="home" class="aboutus-fixed-container animated wow hide">
         <div class="row">
           <div class="col-md-12">
 
@@ -95,20 +95,8 @@
               <div class="vertical-center-top">
                 <img id="transformative-thinking-gif" class="img-responsive center-block" src="img/transformative-thinking.gif" alt="Transformative Thinking" />
               </div>
-              <!-- <a href="#aboutus1" class="smoothScroll"><img class="img-responsive visible-xs center-block" src="img/chevron-down.png" alt="Down Arrow" />flex</a> -->
             </div>
           </div> <!-- end mobile -->
-
-          <!-- desktop & mobile arrow -->
-          <!-- <a id="home-arrow-anchor" class="smoothScroll hidden-sm">
-            <img id="home-arrow" class="img-responsive center-block animated wow fadeInDown" data-wow-delay="7s" src="img/chevron-down.png" alt="Down Arrow" />
-          </a> -->
-
-          <!-- tablet arrow -->
-          <!-- <a class="smoothScroll aboutus-scroll visible-sm">
-            <img id="home-arrow-tablet" class="img-responsive center-block animated wow fadeInDown" data-wow-delay="9.5s" src="img/chevron-down.png" alt="Down Arrow" />
-          </a> -->
-          <!-- end tablet -->
 
         </div>
       </div> <!-- home -->
@@ -172,39 +160,99 @@
       </aside> <!-- about us 3 desktop -->
     </div> <!-- about us desktop -->
 
+    <!-- Unfixed version of Home and About us for Internet Explorer -->
+    <div id="unfixed-version" class="container hide">
 
-    <!-- about us desktop & tablet chevron arrows -->
-    <!-- <div id="aboutus-desktop-arrows" class="hidden-xs hidden-sm"> -->
+      <!-- home -->
+      <div id="static-version">
+        <div class="row">
+          <div class="col-md-12">
 
-      <!-- about us desktop arrows 1 -->
-      <!-- <aside id="aboutus-desktop-arrows-1" class="row aboutus-arrow hide animated wow">
-        <div class="col-sm-12">
-          <a id="aboutus1-arrow-anchor" class="smoothScroll hidden-xs">
-            <img class="img-responsive center-block" src="img/chevron-down.png" alt="Down Arrow" />
-          </a>
+            <!-- desktop -->
+            <div id="hero-video" class="hidden-xs hidden-sm animated wow">
+              <div class="video-container">
+                <video autoplay>
+                  <source src="video/hero-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                </video>
+              </div>
+            </div>
+            <!-- end desktop -->
+
+            <!-- tablet -->
+            <div class="visible-sm">
+              <img id="chrysalis-logo-gif" class="img-responsive center-block" src="img/chrysalis-logo.gif" alt="Chrysalis" />
+            </div> <!-- end tablet -->
+
+            <!-- mobile -->
+            <div class="full-screen-mobile visible-xs">
+              <div class="vertical-center-top">
+                <img id="transformative-thinking-gif" class="img-responsive center-block" src="img/transformative-thinking.gif" alt="Transformative Thinking" />
+              </div>
+            </div>
+          </div> <!-- end mobile -->
+
         </div>
-      </aside> -->
+      </div> <!-- home -->
 
-      <!-- about us desktop arrows 2 -->
-      <!-- <aside id="aboutus-desktop-arrows-2" class="row aboutus-arrow hide animated wow">
-        <div class="col-sm-12">
-          <a id="aboutus2-arrow-anchor" class="smoothScroll hidden-xs">
-            <img class="img-responsive center-block" src="img/chevron-down.png" alt="Down Arrow" />
-          </a>
+      <!-- about us 1 desktop -->
+      <aside id="aboutus1-fixed">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2 id="aboutus-title" class="header">About Us</h2>
+            <h3 class="subheader">Who we are</h3>
+            <p class="primary-font hidden-xs">
+              Chrysalis Medical Communications is the newest company within the Nucleus Global family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.
+            </p>
+            <p class="secondary-font visible-xs">
+              Chrysalis Medical Communications is the newest company within the Nucleus Global family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.
+            </p>
+          </div>
+          <div class="col-sm-offset-2 col-sm-1 animated wow hidden-xs">
+            <img class="dimer img-responsive center-block align-right swaying" src="img/dimer-left.png" alt="Dimer" />
+          </div>
+          <div class="col-sm-3 hidden-xs">
+            <img class="dimer img-responsive align-left swaying" src="img/dimer-right.png" alt="Dimer" />
+          </div>
         </div>
-      </aside> -->
+      </aside> <!-- end about us 1 desktop -->
 
-      <!-- about us desktop arrows 3 -->
-      <!-- <aside id="aboutus-desktop-arrows-3" class="row aboutus-arrow hide animated wow">
-        <div class="col-sm-12">
-          <a id="aboutus3-arrow-anchor" class="smoothScroll hidden-xs">
-            <img class="img-responsive center-block" src="img/chevron-down.png" alt="Down Arrow" />
-          </a>
+      <!-- about us 2 desktop -->
+      <aside id="aboutus2-fixed">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="subheader">What we can do</h3>
+            <p class="primary-font hidden-xs">
+              As part of Nucleus Global, a company with 30 years of experience in medical communications, we also provide cutting-edge digital options supported by our in-house studio team, 3-D designers, and application developers to transform complex information into clear and impactful medical communications deliverables.
+            </p>
+            <p class="secondary-font visible-xs">
+              As part of Nucleus Global, a company with 30 years of experience in medical communications, we also provide cutting-edge digital options supported by our in-house studio team, 3-D designers, and application developers to transform complex information into clear and impactful medical communications deliverables.
+            </p>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+            <img class="dimer img-responsive center-block floating" src="img/dimer-left.png" alt="" />
+          </div>
         </div>
-      </aside> -->
+      </aside> <!-- about us 2 desktop -->
 
-    <!-- </div>  -->
-    <!-- end aboutus desktop arrows -->
+      <!-- about us 3 desktop -->
+      <aside id="aboutus3-fixed">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="subheader">Our team</h3>
+            <p class="primary-font hidden-xs">
+              Our experienced in-house scientific team all hold advanced degrees, and our dedicated client services team has decades of combined expertise in managing publication plans, advisory boards, patient education pieces, and more.
+            </p>
+            <p class="secondary-font visible-xs">
+              Our experienced in-house scientific team all hold advanced degrees, and our dedicated client services team has decades of combined expertise in managing publication plans, advisory boards, patient education pieces, and more.
+            </p>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+            <img class="img-responsive" src="img/dna-green.png" alt="" />
+          </div>
+        </div>
+      </aside> <!-- about us 3 desktop -->
+
+    </div> <!-- static-version -->
 
     <!-- how we work -->
     <div id="howwework" class="bg-gray full-screen-desktop vertical-center">
