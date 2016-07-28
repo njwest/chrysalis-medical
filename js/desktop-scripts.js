@@ -93,7 +93,7 @@ $(function() {
         $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('hide fadeOut')
           .addClass('fadeIn');
-        $("a[href='#home']")
+        $("a[href='#home'], a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
           .css('color', blue);
         $("#aboutus-desktop-nav, #aboutus-tablet-nav")
           .css('color', green);
@@ -121,21 +121,21 @@ $(function() {
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-          $("#aboutus-desktop-nav, #aboutus-tablet-nav")
+          $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home'], a[href='#expertise'], a[href='#contactus']")
             .css('color', blue);
           $("a[href='#howwework']")
             .css('color', green);
       }
       // expertise nav turns green
       else if ((scroll >= breakpoint17) && (scroll < breakpoint19)) {
-          $("a[href='#howwework']")
+          $("a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home'], a[href='#contactus']")
             .css('color', blue);
           $("a[href='#expertise']")
             .css('color', green);
       }
       // contact us nav turns green
       else if ((scroll >= breakpoint21) && (scroll < breakpoint23)) {
-          $("a[href='#expertise']")
+          $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
             .css('color', blue);
           $("a[href='#contactus']")
             .css('color', green);
@@ -144,18 +144,34 @@ $(function() {
     } // end scrolling down
 
     if (scrollingUp) {
+      // expertise nav turns green
+      if ((scroll < breakpoint21) && (scroll >= breakpoint18)) {
+          $("a[href='#contactus'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
+            .css('color', blue);
+          $("a[href='#expertise']")
+            .css('color', green);
+          console.log('expertise green fired');
+      }
+      // how we work nav turns green
+      else if ((scroll < breakpoint18) && (scroll >= breakpoint16)) {
+          $("a[href='#expertise'], a[href='#contactus'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
+            .css('color', blue);
+          $("a[href='#howwework']")
+            .css('color', green);
+          console.log('howe we work green fired');
+      }
       // fade in about us 3, fade out rest
-      if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
+      else if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
           .addClass('fadeOut');
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeOut')
           .addClass('fadeIn');
+        $("a[href='#howwework'], a[href='#expertise'], a[href='#contactus'], a[href='#home']")
+          .css('color', blue);
         $("#aboutus-desktop-nav, #aboutus-tablet-nav")
           .css('color', green);
-        $("a[href='#howwework']")
-          .css('color', blue);
       }
       // fade in about us 2, fade out rest
       else if ((scroll < breakpoint11) && (scroll >= breakpoint9)) {
@@ -184,7 +200,7 @@ $(function() {
           $('#home')
             .removeClass('fadeOut')
             .addClass('fadeIn');
-          $("#aboutus-desktop-nav, #aboutus-tablet-nav")
+          $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
             .css('color', blue);
           $("a[href='#home']")
             .css('color', green);
@@ -198,7 +214,7 @@ $(function() {
         $('#home')
           .removeClass('fadeOut')
           .addClass('fadeIn');
-        $("#aboutus-desktop-nav, #aboutus-tablet-nav")
+        $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
           .css('color', blue);
         $("a[href='#home']")
           .css('color', green);
