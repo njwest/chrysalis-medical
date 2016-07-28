@@ -36,7 +36,7 @@ $(function() {
 
   // Mobile Nav (smoothScroll doesn't work properly on mobile)
   $('#aboutus-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#home').offset().top -75 }, "slow");
+    $('html, body').animate({ scrollTop: $('#howwework').offset().top -4000 }, "slow");
     console.log('aboutus-mobile-scroll fired');
   });
   $('#howwework-mobile-scroll').click(function() {
