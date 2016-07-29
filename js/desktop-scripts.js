@@ -104,7 +104,7 @@ $(function() {
           .removeClass('hide fadeOut')
           .addClass('fadeIn');
       }
-      // fade out all
+      // how we work turns green
       else if ((scroll >= breakpoint13) && (scroll < breakpoint15)) {
         // $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
         //   .removeClass('fadeIn')
