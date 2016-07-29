@@ -52,32 +52,9 @@ $(function() {
   var green = '#A4B447';
   var blue = '#28779F';
 
-  // Check for Internet Explorer
-  var internetExplorerCheck = false;
-  (function msieversion() {
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-    var ieVersionNumber = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)));
-
-    if (ieVersionNumber < 11 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer Version is < 11
-    {
-      internetExplorerCheck = true;
-      $('#aboutus-desktop').addClass('hide');
-      $('#static-version').removeClass('hide').addClass('show');
-      console.log('This is Internet Explorer Version = ', ieVersionNumber);
-      console.log('Animations are disabled');
-    }
-    else {
-      console.log('This is not an Internet Explorer browser. Animations are enabled.')
-    }
-    return false;
-  })();
-
   // Greenify 'Home' link in navbar on load
-  if (internetExplorerCheck === false) {
-    $("#home-desk-tab > a")
-      .css('color', green);
-  }
+  $("#home-desk-tab > a")
+    .css('color', green);
 
   // Animations during user scrolls
   $(window).scroll(function() {
@@ -104,12 +81,10 @@ $(function() {
         $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('hide fadeOut')
           .addClass('fadeIn');
-        if (internetExplorerCheck === false) {
-          $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
-            .css('color', blue);
-          $("#aboutus-desktop-nav, #aboutus-tablet-nav")
-            .css('color', green);
-        }
+        $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
+          .css('color', blue);
+        $("#aboutus-desktop-nav, #aboutus-tablet-nav")
+          .css('color', green);
       }
       // fade in about us 2, fade out rest
       else if ((scroll >= breakpoint5) && (scroll < breakpoint7)) {
@@ -134,30 +109,24 @@ $(function() {
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        if (internetExplorerCheck === false) {
-          $("#aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#expertise'], a[href='#contactus']")
-            .css('color', blue);
-          $("a[href='#howwework']")
-            .css('color', green);
-        }
+        $("#aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#expertise'], a[href='#contactus']")
+          .css('color', blue);
+        $("a[href='#howwework']")
+          .css('color', green);
       }
       // expertise nav turns green
       else if ((scroll >= breakpoint17) && (scroll < breakpoint19)) {
-        if (internetExplorerCheck === false) {
-          $("a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#contactus']")
-            .css('color', blue);
-          $("a[href='#expertise']")
-            .css('color', green);
-        }
+        $("a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#contactus']")
+          .css('color', blue);
+        $("a[href='#expertise']")
+          .css('color', green);
       }
       // contact us nav turns green
       else if ((scroll >= breakpoint20) && (scroll < breakpoint23)) {
-        if (internetExplorerCheck === false) {
-          $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
-            .css('color', blue);
-          $("a[href='#contactus']")
-            .css('color', green);
-        }
+        $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
+          .css('color', blue);
+        $("a[href='#contactus']")
+          .css('color', green);
       }
 
     } // end scrolling down
@@ -165,21 +134,17 @@ $(function() {
     if (scrollingUp) {
       // expertise nav turns green
       if ((scroll < breakpoint20) && (scroll >= breakpoint18)) {
-        if (internetExplorerCheck === false) {
-          $("a[href='#contactus'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
-            .css('color', blue);
-          $("a[href='#expertise']")
-            .css('color', green);
-        }
+        $("a[href='#contactus'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
+          .css('color', blue);
+        $("a[href='#expertise']")
+          .css('color', green);
       }
       // how we work nav turns green
       else if ((scroll < breakpoint17) && (scroll >= breakpoint16)) {
-        if (internetExplorerCheck === false) {
-          $("a[href='#expertise'], a[href='#contactus'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
-            .css('color', blue);
-          $("a[href='#howwework']")
-            .css('color', green);
-        }
+        $("a[href='#expertise'], a[href='#contactus'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
+          .css('color', blue);
+        $("a[href='#howwework']")
+          .css('color', green);
       }
       // fade in about us 3, fade out rest
       else if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
@@ -189,12 +154,10 @@ $(function() {
         $('#aboutus3-fixed, #aboutus-desktop-arrows-3')
           .removeClass('fadeOut')
           .addClass('fadeIn');
-        if (internetExplorerCheck === false) {
-          $("a[href='#howwework'], a[href='#expertise'], a[href='#contactus'], #home-desk-tab > a")
-            .css('color', blue);
-          $("#aboutus-desktop-nav, #aboutus-tablet-nav")
-            .css('color', green);
-        }
+        $("a[href='#howwework'], a[href='#expertise'], a[href='#contactus'], #home-desk-tab > a")
+          .css('color', blue);
+        $("#aboutus-desktop-nav, #aboutus-tablet-nav")
+          .css('color', green);
       }
       // fade in about us 2, fade out rest
       else if ((scroll < breakpoint11) && (scroll >= breakpoint9)) {
@@ -223,12 +186,10 @@ $(function() {
           $('#home')
             .removeClass('fadeOut')
             .addClass('fadeIn');
-          if (internetExplorerCheck === false) {
-            $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
-              .css('color', blue);
-            $("#home-desk-tab > a")
-              .css('color', green);
-          }
+          $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
+            .css('color', blue);
+          $("#home-desk-tab > a")
+            .css('color', green);
         }
       }
       // fade in home, fade out rest when user is at about us 1 and clicks on home in tablet
@@ -239,12 +200,10 @@ $(function() {
         $('#home')
           .removeClass('fadeOut')
           .addClass('fadeIn');
-        if (internetExplorerCheck === false) {
-          $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
-            .css('color', blue);
-          $("#home-desk-tab > a")
-            .css('color', green);
-        }
+        $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
+          .css('color', blue);
+        $("#home-desk-tab > a")
+          .css('color', green);
       }
     } // end scrolling up
 
@@ -273,12 +232,10 @@ $(function() {
     $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
       .removeClass('hide fadeOut')
       .addClass('fadeIn');
-    if (internetExplorerCheck === false) {
-      $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
-        .css('color', blue);
-      $("#aboutus-desktop-nav, #aboutus-tablet-nav")
-        .css('color', green)
-    }
+    $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
+      .css('color', blue);
+    $("#aboutus-desktop-nav, #aboutus-tablet-nav")
+      .css('color', green)
     return false;
   });
   // About Us nav button scrolls correctly for tablet
@@ -286,7 +243,5 @@ $(function() {
     $("html, body").animate({ scrollTop: breakpoint2 }, "slow");
     return false;
   });
-
-  // Lock orientation to portait mode in tablet
 
 }); // end document ready
