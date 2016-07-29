@@ -106,9 +106,9 @@ $(function() {
       }
       // fade out all
       else if ((scroll >= breakpoint13) && (scroll < breakpoint15)) {
-        $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
-          .removeClass('fadeIn')
-          .addClass('fadeOut');
+        // $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+        //   .removeClass('fadeIn')
+        //   .addClass('fadeOut');
         $("#aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#expertise'], a[href='#contactus']")
           .css('color', blue);
         $("a[href='#howwework']")
@@ -133,21 +133,21 @@ $(function() {
 
     if (scrollingUp) {
       // expertise nav turns green
-      if ((scroll < breakpoint20) && (scroll >= breakpoint18)) {
+      if ((scroll < breakpoint21) && (scroll >= breakpoint18)) {
         $("a[href='#contactus'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
           .css('color', blue);
         $("a[href='#expertise']")
           .css('color', green);
       }
       // how we work nav turns green
-      else if ((scroll < breakpoint17) && (scroll >= breakpoint16)) {
+      else if ((scroll < breakpoint18) && (scroll >= breakpoint16)) {
         $("a[href='#expertise'], a[href='#contactus'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
           .css('color', blue);
         $("a[href='#howwework']")
           .css('color', green);
       }
       // fade in about us 3, fade out rest
-      else if ((scroll < breakpoint14) && (scroll >= breakpoint13)) {
+      else if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
           .addClass('fadeOut');
