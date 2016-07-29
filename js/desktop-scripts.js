@@ -1,5 +1,30 @@
 /* Scripts for desktop and tablet view */
 
+var browserHeight = $( window ).height();
+var breakpoint1 = browserHeight / 3;
+var breakpoint2 = breakpoint1 + breakpoint1;
+var breakpoint3 = breakpoint2 + breakpoint1;
+var breakpoint4 = breakpoint3 + breakpoint1;
+var breakpoint5 = breakpoint4 + breakpoint1;
+var breakpoint6 = breakpoint5 + breakpoint1;
+var breakpoint7 = breakpoint6 + breakpoint1;
+var breakpoint8 = breakpoint7 + breakpoint1;
+var breakpoint9 = breakpoint8 + breakpoint1;
+var breakpoint10 = breakpoint9 + breakpoint1;
+var breakpoint11 = breakpoint10 + breakpoint1;
+var breakpoint12 = breakpoint11 + breakpoint1;
+var breakpoint13 = breakpoint12 + breakpoint1;
+var breakpoint14 = breakpoint13 + breakpoint1;
+var breakpoint15 = breakpoint14 + breakpoint1;
+var breakpoint16 = breakpoint15 + breakpoint1;
+var breakpoint17 = breakpoint16 + breakpoint1;
+var breakpoint18 = breakpoint17 + breakpoint1;
+var breakpoint19 = breakpoint18 + breakpoint1;
+var breakpoint20 = breakpoint19 + breakpoint1;
+var breakpoint21 = breakpoint20 + breakpoint1;
+var breakpoint22 = breakpoint21 + breakpoint1;
+var breakpoint23 = breakpoint22 + breakpoint1;
+
 // Start at top of page on refresh - Necessary for animation to work properly
 $(window).on('beforeunload', function() {
   $(window).scrollTop(0);
@@ -7,30 +32,7 @@ $(window).on('beforeunload', function() {
 
 $(function() {
 
-  var browserHeight = $( window ).height();
-  var breakpoint1 = browserHeight / 3;
-  var breakpoint2 = breakpoint1 + breakpoint1;
-  var breakpoint3 = breakpoint2 + breakpoint1;
-  var breakpoint4 = breakpoint3 + breakpoint1;
-  var breakpoint5 = breakpoint4 + breakpoint1;
-  var breakpoint6 = breakpoint5 + breakpoint1;
-  var breakpoint7 = breakpoint6 + breakpoint1;
-  var breakpoint8 = breakpoint7 + breakpoint1;
-  var breakpoint9 = breakpoint8 + breakpoint1;
-  var breakpoint10 = breakpoint9 + breakpoint1;
-  var breakpoint11 = breakpoint10 + breakpoint1;
-  var breakpoint12 = breakpoint11 + breakpoint1;
-  var breakpoint13 = breakpoint12 + breakpoint1;
-  var breakpoint14 = breakpoint13 + breakpoint1;
-  var breakpoint15 = breakpoint14 + breakpoint1;
-  var breakpoint16 = breakpoint15 + breakpoint1;
-  var breakpoint17 = breakpoint16 + breakpoint1;
-  var breakpoint18 = breakpoint17 + breakpoint1;
-  var breakpoint19 = breakpoint18 + breakpoint1;
-  var breakpoint20 = breakpoint19 + breakpoint1;
-  var breakpoint21 = breakpoint20 + breakpoint1;
-  var breakpoint22 = breakpoint21 + breakpoint1;
-  var breakpoint23 = breakpoint22 + breakpoint1;
+
   var previousScroll = 0;
   var scroll;
   var scrollingDown;
@@ -68,7 +70,7 @@ $(function() {
 
   // Greenify 'Home' link in navbar on load
   if (internetExplorerCheck === false) {
-    $("a[href='#home']")
+    $("#home-desk-tab > a")
       .css('color', green);
   }
 
@@ -98,7 +100,7 @@ $(function() {
           .removeClass('hide fadeOut')
           .addClass('fadeIn');
         if (internetExplorerCheck === false) {
-          $("a[href='#home'], a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
+          $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
             .css('color', blue);
           $("#aboutus-desktop-nav, #aboutus-tablet-nav")
             .css('color', green);
@@ -128,7 +130,7 @@ $(function() {
           .removeClass('fadeIn')
           .addClass('fadeOut');
         if (internetExplorerCheck === false) {
-          $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home'], a[href='#expertise'], a[href='#contactus']")
+          $("#aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#expertise'], a[href='#contactus']")
             .css('color', blue);
           $("a[href='#howwework']")
             .css('color', green);
@@ -137,7 +139,7 @@ $(function() {
       // expertise nav turns green
       else if ((scroll >= breakpoint17) && (scroll < breakpoint19)) {
         if (internetExplorerCheck === false) {
-          $("a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home'], a[href='#contactus']")
+          $("a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#contactus']")
             .css('color', blue);
           $("a[href='#expertise']")
             .css('color', green);
@@ -146,7 +148,7 @@ $(function() {
       // contact us nav turns green
       else if ((scroll >= breakpoint19) && (scroll < breakpoint23)) {
         if (internetExplorerCheck === false) {
-          $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
+          $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
             .css('color', blue);
           $("a[href='#contactus']")
             .css('color', green);
@@ -159,7 +161,7 @@ $(function() {
       // expertise nav turns green
       if ((scroll < breakpoint20) && (scroll >= breakpoint18)) {
         if (internetExplorerCheck === false) {
-          $("a[href='#contactus'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
+          $("a[href='#contactus'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
             .css('color', blue);
           $("a[href='#expertise']")
             .css('color', green);
@@ -168,7 +170,7 @@ $(function() {
       // how we work nav turns green
       else if ((scroll < breakpoint17) && (scroll >= breakpoint16)) {
         if (internetExplorerCheck === false) {
-          $("a[href='#expertise'], a[href='#contactus'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
+          $("a[href='#expertise'], a[href='#contactus'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
             .css('color', blue);
           $("a[href='#howwework']")
             .css('color', green);
@@ -183,7 +185,7 @@ $(function() {
           .removeClass('fadeOut')
           .addClass('fadeIn');
         if (internetExplorerCheck === false) {
-          $("a[href='#howwework'], a[href='#expertise'], a[href='#contactus'], a[href='#home']")
+          $("a[href='#howwework'], a[href='#expertise'], a[href='#contactus'], #home-desk-tab > a")
             .css('color', blue);
           $("#aboutus-desktop-nav, #aboutus-tablet-nav")
             .css('color', green);
@@ -219,7 +221,7 @@ $(function() {
           if (internetExplorerCheck === false) {
             $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
               .css('color', blue);
-            $("a[href='#home']")
+            $("#home-desk-tab > a")
               .css('color', green);
           }
         }
@@ -235,7 +237,7 @@ $(function() {
         if (internetExplorerCheck === false) {
           $("#aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#expertise'], a[href='#contactus'], a[href='#howwework']")
             .css('color', blue);
-          $("a[href='#home']")
+          $("#home-desk-tab > a")
             .css('color', green);
         }
       }
@@ -253,7 +255,7 @@ $(function() {
   });
 
   // Home nav button scrolls to very top of page
-  $("a[href='#home']").click(function() {
+  $("#home-desk-tab > a").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
@@ -267,7 +269,7 @@ $(function() {
       .removeClass('hide fadeOut')
       .addClass('fadeIn');
     if (internetExplorerCheck === false) {
-      $("a[href='#home'], a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
+      $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
         .css('color', blue);
       $("#aboutus-desktop-nav, #aboutus-tablet-nav")
         .css('color', green)
