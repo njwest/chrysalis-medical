@@ -146,7 +146,7 @@ $(function() {
         }
       }
       // contact us nav turns green
-      else if ((scroll >= breakpoint19) && (scroll < breakpoint23)) {
+      else if ((scroll >= breakpoint20) && (scroll < breakpoint23)) {
         if (internetExplorerCheck === false) {
           $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a")
             .css('color', blue);
