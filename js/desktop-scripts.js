@@ -147,7 +147,7 @@ $(function() {
           .css('color', green);
       }
       // fade in about us 3, fade out rest
-      else if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
+      else if ((scroll < breakpoint14) && (scroll >= breakpoint13)) {
         $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
           .removeClass('fadeIn')
           .addClass('fadeOut');
