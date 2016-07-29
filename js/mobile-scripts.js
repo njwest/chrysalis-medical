@@ -32,13 +32,13 @@ $(function() {
   });
 
   // Push body down when mobile nav drawer opens
-  // $('button.navbar-toggle').click(function() {
-  //   if ($('body').css('padding-top') === '80px') {
-  //       $('body').css('padding-top', '+=350');
-  //   } else {
-  //       $('body').css('padding-top', '80px');
-  //   }
-  // });
+  $('button.navbar-toggle, #home, .aboutus-fixed').click(function() {
+    if ($('body, #home, .aboutus-fixed').css('padding-top') === '80px') {
+        $('body, #home, .aboutus-fixed').css('padding-top', '+=350');
+    } else {
+        $('body, #home, .aboutus-fixed').css('padding-top', '80px');
+    }
+  });
 
   // Mobile Nav (smoothScroll doesn't work properly on mobile)
   $('#aboutus-mobile-scroll').click(function() {
