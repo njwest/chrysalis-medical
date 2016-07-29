@@ -64,6 +64,11 @@ $(function() {
       internetExplorerCheck = true;
       $('#aboutus-desktop').addClass('hide');
       $('#static-version').removeClass('hide').addClass('show');
+      console.log('This is Internet Explorer Version = ', ieVersionNumber);
+      console.log('Animations are disabled');
+    }
+    else {
+      console.log('This is not an Internet Explorer browser. Animations are enabled.')
     }
     return false;
   })();
