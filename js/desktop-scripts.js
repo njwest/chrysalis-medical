@@ -31,10 +31,6 @@ $(function() {
   var breakpoint21 = breakpoint20 + breakpoint1;
   var breakpoint22 = breakpoint21 + breakpoint1;
   var breakpoint23 = breakpoint22 + breakpoint1;
-  var breakpointHalf = breakpoint1 / 2;
-  var breakpointThird = breakpoint1 / 3;
-  var breakpointFourth = breakpoint1 / 4;
-  var breakpointFifth = breakpoint1 / 5;
   var previousScroll = 0;
   var scroll;
   var scrollingDown;
@@ -64,15 +60,8 @@ $(function() {
     if (ieVersionNumber < 11 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer Version is < 11
     {
       internetExplorerCheck = true;
-      console.log('This browser is internet explorer.');
-      console.log('Internet Explorer Version = ', parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
-      console.log('var internetExplorerCheck = ', internetExplorerCheck);
       $('#aboutus-desktop').addClass('hide');
       $('#static-version').removeClass('hide').addClass('show');
-    }
-    else  // If another browser
-    {
-      console.log('This browser is not internet explorer.');
     }
     return false;
   })();
@@ -283,7 +272,6 @@ $(function() {
       $("#aboutus-desktop-nav, #aboutus-tablet-nav")
         .css('color', green)
     }
-    console.log('a href aboutus fired');
     return false;
   });
   // About Us nav button scrolls correctly for tablet
