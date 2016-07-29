@@ -70,7 +70,7 @@ $(function() {
       $('#aboutus-desktop').addClass('hide');
       $('#static-version').removeClass('hide').addClass('show');
     }
-    else  // If another browser, return 0
+    else  // If another browser
     {
       console.log('This browser is not internet explorer.');
     }
@@ -99,16 +99,6 @@ $(function() {
         .attr('data-wow-delay', '1.5s')
         .attr('data-user-scroll', 'true')
         .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
-
-      // $('#home-arrow')
-      //   .attr('data-wow-delay', '1.5s')
-      //   .attr('data-user-scroll', 'true')
-      //   .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
-      //
-      // $('#home-arrow-tablet')
-      //   .attr('data-wow-delay', '1.5s')
-      //   .attr('data-user-scroll', 'true')
-      //   .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
 
       // fade in about us 1, fade out rest
       if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
@@ -165,7 +155,7 @@ $(function() {
         }
       }
       // contact us nav turns green
-      else if ((scroll >= breakpoint20) && (scroll < breakpoint23)) {
+      else if ((scroll >= breakpoint19) && (scroll < breakpoint23)) {
         if (internetExplorerCheck === false) {
           $("a[href='#expertise'], a[href='#howwework'], #aboutus-desktop-nav, #aboutus-tablet-nav, a[href='#home']")
             .css('color', blue);
@@ -280,13 +270,20 @@ $(function() {
   });
   // About Us nav button scrolls to About Us 1
   $("a[href='#aboutus']").click(function() {
-    $("html, body").animate({ scrollTop: $('#howwework').offset().top -5000 }, "slow");
+    $("html, body").animate({ scrollTop: $('#howwework').offset().top -3000 }, "slow");
     $('#home, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
       .removeClass('fadeIn')
       .addClass('fadeOut');
     $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
       .removeClass('hide fadeOut')
       .addClass('fadeIn');
+    if (internetExplorerCheck === false) {
+      $("a[href='#home'], a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
+        .css('color', blue);
+      $("#aboutus-desktop-nav, #aboutus-tablet-nav")
+        .css('color', green)
+    }
+    console.log('a href aboutus fired');
     return false;
   });
   // About Us nav button scrolls correctly for tablet
