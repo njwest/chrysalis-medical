@@ -169,12 +169,6 @@ body {
   }
 }
 
-.navbar-default .navbar-nav > li {
-  outline: none;
-  border: none;
-  /* eventually, IE specific, not sure */
-}
-
 .navbar-default .navbar-nav > li > a {
   color: #28779F;
   padding-top: 35px;
