@@ -5,7 +5,9 @@ $(function() {
   // Allow gif to animate on page reload
   $("#transformative-thinking-gif").attr("src", "img/transformative-thinking.gif?" + Math.random());
   $("#chrysalis-logo-gif").attr("src", "img/chrysalis-logo.gif?" + Math.random());
-  var delayTransformativeGif = $("#transformative-thinking-gif").removeClass('hide')addClass('show');
+  var delayTransformativeGif = function() {
+    $("#transformative-thinking-gif").removeClass('hide')addClass('show');
+  }
   setTimeout(delayTransformativeGif, 2000);
 
   // Auto-close mobile nav on user click
