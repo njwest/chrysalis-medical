@@ -25,13 +25,25 @@ var breakpoint20 = breakpoint19 + breakpoint1;
 var breakpoint21 = breakpoint20 + breakpoint1;
 var breakpoint22 = breakpoint21 + breakpoint1;
 var breakpoint23 = breakpoint22 + breakpoint1;
+window.dataEmailClicked = false;
 
 // Start at top of page on refresh - Necessary for animation to work properly
 $(window).on('beforeunload', function() {
-  if ($('*[data-email-clicked]').data('email-clicked') !== true) { // So page doesn't refresh when user clicks on email links
+  if (window.dataEmailClicked !== true) { // So page doesn't refresh when user clicks on email links
     $(window).scrollTop(0);
   }
+  else {
+    var resetWindowDataEmailClicked = function() {
+      window.dataEmailClicked = false;
+    }
+    setTimeout(resetWindowDataEmailClicked, 1000);
+  }
 });
+
+  $('*[data-email-clicked]').on('click', function() {
+    window.dataEmailClicked = true;
+    console.log('this = ', $(this).data('email-clicked'));
+  });
 
 $(function() {
 
