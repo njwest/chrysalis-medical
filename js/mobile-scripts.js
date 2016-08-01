@@ -41,6 +41,9 @@ $(function() {
   });
 
   // Mobile Nav (smoothScroll doesn't work properly on mobile)
+  $('#home-mobile').click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
   $('#aboutus-mobile-scroll').click(function() {
     $('html, body').animate({ scrollTop: $('#howwework').offset().top -breakpoint13 }, "slow");
   });

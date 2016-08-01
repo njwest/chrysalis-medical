@@ -50,6 +50,9 @@ body {
   .full-screen-desktop {
     height: 100vh;
   }
+  .full-screen-desktop > .container {
+    // padding-bottom: 65px;
+  }
 }
 
 .vertical-center {
