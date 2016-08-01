@@ -25,6 +25,7 @@ $(function() {
         "EmailContent" : message
     };
 
+    // Check for blank fields before submitting ajax request
     if ((name === "") || (email === "") || (message === "")) {
       $(formMessages).removeClass('bg-success text-success bounceIn');
       $(formMessages).addClass('bg-danger text-danger shake');
@@ -32,7 +33,7 @@ $(function() {
       $(formMessages).append(exclamationError);
       setTimeout(function() {
         $(formMessages).removeClass('shake');
-      }, 250);
+      }, 1000);
     }
     else {
       $.ajax({
@@ -49,7 +50,7 @@ $(function() {
             $('#message').val('');
             setTimeout(function() {
               $(formMessages).removeClass('bounceIn');
-            }, 250);
+            }, 1000);
         },
         error: function (msg) {
           $(formMessages).removeClass('bg-success text-success bounceIn');
@@ -58,7 +59,7 @@ $(function() {
           $(formMessages).append(exclamationError);
           setTimeout(function() {
             $(formMessages).removeClass('shake');
-          }, 250);
+          }, 1000);
         }
       });
     }
