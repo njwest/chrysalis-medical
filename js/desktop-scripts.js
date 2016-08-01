@@ -27,7 +27,9 @@ var breakpoint23 = breakpoint22 + breakpoint1;
 
 // Start at top of page on refresh - Necessary for animation to work properly
 $(window).on('beforeunload', function() {
-  $(window).scrollTop(0);
+  if ($('*[data-email-clicked]').data('email-clicked') !== true) {
+    $(window).scrollTop(0);
+  }
 });
 
 $(function() {
