@@ -1,6 +1,7 @@
 /* Scripts for desktop and tablet view */
 
 // Global Variables accessable to all script files
+var log = console.log.bind(console);
 var browserHeight = $( window ).height();
 var breakpoint1 = browserHeight / 3;
 var breakpoint2 = breakpoint1 + breakpoint1;
@@ -31,19 +32,18 @@ window.dataEmailClicked = false;
 $(window).on('beforeunload', function() {
   if (window.dataEmailClicked !== true) { // So page doesn't refresh when user clicks on email links
     $(window).scrollTop(0);
+    $("video").hide(); // Hides black box before video plays on Safari, IE 11, and Firefox
   }
   else {
-    var resetWindowDataEmailClicked = function() {
+    setTimeout(function() {
       window.dataEmailClicked = false;
-    }
-    setTimeout(resetWindowDataEmailClicked, 1000);
+    }, 1000);
   }
 });
 
 // Don't scroll to top when user clicks email link
 $('*[data-email-clicked]').on('click', function() {
   window.dataEmailClicked = true;
-  console.log('this = ', $(this).data('email-clicked'));
 });
 
 $(function() {
