@@ -1,5 +1,6 @@
 /* Scripts for desktop and tablet view */
 
+// Global Variables accessable to all script files
 var browserHeight = $( window ).height();
 var breakpoint1 = browserHeight / 3;
 var breakpoint2 = breakpoint1 + breakpoint1;
@@ -27,13 +28,12 @@ var breakpoint23 = breakpoint22 + breakpoint1;
 
 // Start at top of page on refresh - Necessary for animation to work properly
 $(window).on('beforeunload', function() {
-  if ($('*[data-email-clicked]').data('email-clicked') !== true) {
+  if ($('*[data-email-clicked]').data('email-clicked') !== true) { // So page doesn't refresh when user clicks on email links
     $(window).scrollTop(0);
   }
 });
 
 $(function() {
-
 
   var previousScroll = 0;
   var scroll;
