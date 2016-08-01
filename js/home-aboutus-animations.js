@@ -40,10 +40,11 @@ $(window).on('beforeunload', function() {
   }
 });
 
-  $('*[data-email-clicked]').on('click', function() {
-    window.dataEmailClicked = true;
-    console.log('this = ', $(this).data('email-clicked'));
-  });
+// Don't scroll to top when user clicks email link
+$('*[data-email-clicked]').on('click', function() {
+  window.dataEmailClicked = true;
+  console.log('this = ', $(this).data('email-clicked'));
+});
 
 $(function() {
 

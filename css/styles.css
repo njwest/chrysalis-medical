@@ -345,6 +345,10 @@ swaying
   border-color: white;
 }
 
+#footer {
+  background-color: white;
+}
+
 .footer-text {
   font-family: helvetica;
   color: gray;
