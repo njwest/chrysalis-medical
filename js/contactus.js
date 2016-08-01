@@ -2,11 +2,9 @@ $(function() {
 
   var formMessages = $('#form-messages');
   var url = "http://www.chrysalismedical.com/emailapi/api/email";
-  var successResponse = "Your message has been sent. ";
-  var checkmark = '<i class="fa fa-check" aria-hidden="true"></i>';
-  var errorResponse = "An error has occurred. Please try again. ";
-  var exclamationError = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i>';
-  var blankFieldError = "Please fill out all fields before clicking 'Submit'. "
+  var successResponse = "<i class='fa fa-check' aria-hidden='true'></i> Your message has been sent.";
+  var errorResponse = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> An error has occurred. Please try again.";
+  var blankFieldError = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please fill out all fields before clicking 'Submit'."
 
   $('#contact-form').on('submit', function(e) {
     e.preventDefault();
@@ -29,8 +27,7 @@ $(function() {
     if ((name === "") || (email === "") || (message === "")) {
       $(formMessages).removeClass('bg-success text-success bounceIn');
       $(formMessages).addClass('bg-danger text-danger shake');
-      $(formMessages).text(blankFieldError);
-      $(formMessages).append(exclamationError);
+      $(formMessages).html(blankFieldError);
       setTimeout(function() {
         $(formMessages).removeClass('shake');
       }, 1000);
@@ -43,8 +40,7 @@ $(function() {
         success: function (msg) {
             $(formMessages).removeClass('bg-danger text-danger shake ');
             $(formMessages).addClass('bg-success text-success bounceIn');
-            $(formMessages).text(successResponse);
-            $(formMessages).append(checkmark);
+            $(formMessages).html(successResponse);
             $('#name').val('');
             $('#email').val('');
             $('#message').val('');
@@ -55,8 +51,7 @@ $(function() {
         error: function (msg) {
           $(formMessages).removeClass('bg-success text-success bounceIn');
           $(formMessages).addClass('bg-danger text-danger shake');
-          $(formMessages).text(errorResponse);
-          $(formMessages).append(exclamationError);
+          $(formMessages).html(errorResponse);
           setTimeout(function() {
             $(formMessages).removeClass('shake');
           }, 1000);
