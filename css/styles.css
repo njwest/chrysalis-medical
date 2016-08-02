@@ -79,6 +79,12 @@ body {
   border-color: #A4B447;
 }
 
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
@@ -171,6 +177,7 @@ body {
 
 .navbar-default .navbar-nav > li > a {
   color: #28779F;
+  padding-top: 33px;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-nav > li > a:active {

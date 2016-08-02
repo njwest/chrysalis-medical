@@ -99,7 +99,7 @@ $(function() {
     breakpoint21 = breakpoint20 + breakpoint1;
     breakpoint22 = breakpoint21 + breakpoint1;
     breakpoint23 = breakpoint22 + breakpoint1;
-    
+
     scroll = $(window).scrollTop();
     directionCheck();
     if (scrollingDown) {

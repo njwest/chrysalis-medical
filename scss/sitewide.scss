@@ -80,6 +80,12 @@ body {
   border-color: $green;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 // fadeInUp
 @-webkit-keyframes fadeInUp {
   from {
