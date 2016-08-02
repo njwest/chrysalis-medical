@@ -35,6 +35,7 @@ $(window).on('beforeunload', function() {
     $("video").hide(); // Hides black box before video plays on Safari, IE 11, and Firefox
   }
   else {
+    // reset back to false
     setTimeout(function() {
       window.dataEmailClicked = false;
     }, 1000);
