@@ -25,12 +25,15 @@ $(function() {
 
     // Check for blank fields before submitting ajax request
     if ((name === "") || (email === "") || (message === "")) {
-      $(formMessages).removeClass('bg-success text-success bounceIn');
+      $(formMessages).removeClass('bg-success text-success bounceIn zoomOut');
       $(formMessages).addClass('bg-danger text-danger shake');
       $(formMessages).html(blankFieldError);
       setTimeout(function() {
         $(formMessages).removeClass('shake');
       }, 1000);
+      setTimeout(function() {
+        $(formMessages).addClass('zoomOut');
+      }, 10000);
     }
     else {
       $.ajax({
@@ -38,7 +41,7 @@ $(function() {
         url: url,
         data: jsondata,
         success: function (msg) {
-            $(formMessages).removeClass('bg-danger text-danger shake ');
+            $(formMessages).removeClass('bg-danger text-danger shake zoomOut');
             $(formMessages).addClass('bg-success text-success bounceIn');
             $(formMessages).html(successResponse);
             $('#name').val('');
@@ -47,14 +50,20 @@ $(function() {
             setTimeout(function() {
               $(formMessages).removeClass('bounceIn');
             }, 1000);
+            setTimeout(function() {
+              $(formMessages).addClass('zoomOut');
+            }, 10000);
         },
         error: function (msg) {
-          $(formMessages).removeClass('bg-success text-success bounceIn');
+          $(formMessages).removeClass('bg-success text-success bounceIn zoomOut');
           $(formMessages).addClass('bg-danger text-danger shake');
           $(formMessages).html(errorResponse);
           setTimeout(function() {
             $(formMessages).removeClass('shake');
           }, 1000);
+          setTimeout(function() {
+            $(formMessages).addClass('zoomOut');
+          }, 10000);
         }
       });
     }
