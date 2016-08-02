@@ -4,7 +4,16 @@ $(function() {
   var url = "http://www.chrysalismedical.com/emailapi/api/email";
   var successResponse = "<i class='fa fa-check' aria-hidden='true'></i> Your message has been sent.";
   var errorResponse = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> An error has occurred. Please try again.";
-  var blankFieldError = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please fill out all fields before clicking 'Submit'."
+  var blankFieldError = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please fill out all fields before clicking 'Submit'.";
+  var removeShake = function() {
+    $(formMessages).removeClass('shake');
+  };
+  var removeBounceIn = function() {
+    $(formMessages).removeClass('bounceIn');
+  };
+  var addZoomOut = function() {
+    $(formMessages).addClass('zoomOut');
+  };
 
   $('#contact-form').on('submit', function(e) {
     e.preventDefault();
@@ -29,10 +38,10 @@ $(function() {
       $(formMessages).addClass('bg-danger text-danger shake');
       $(formMessages).html(blankFieldError);
       setTimeout(function() {
-        $(formMessages).removeClass('shake');
+        removeShake();
       }, 1000);
       setTimeout(function() {
-        $(formMessages).addClass('zoomOut');
+        addZoomOut();
       }, 10000);
     }
     else {
@@ -48,10 +57,10 @@ $(function() {
             $('#email').val('');
             $('#message').val('');
             setTimeout(function() {
-              $(formMessages).removeClass('bounceIn');
+              removeBounceIn();
             }, 1000);
             setTimeout(function() {
-              $(formMessages).addClass('zoomOut');
+              addZoomOut();
             }, 10000);
         },
         error: function (msg) {
@@ -59,10 +68,10 @@ $(function() {
           $(formMessages).addClass('bg-danger text-danger shake');
           $(formMessages).html(errorResponse);
           setTimeout(function() {
-            $(formMessages).removeClass('shake');
+            removeShake();
           }, 1000);
           setTimeout(function() {
-            $(formMessages).addClass('zoomOut');
+            addZoomOut();
           }, 10000);
         }
       });

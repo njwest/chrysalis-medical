@@ -45,7 +45,7 @@ $(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $('#aboutus-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#howwework').offset().top -breakpoint13 }, "slow");
+    $('html, body').animate({ scrollTop: $('#howwework').offset().top -(breakpoint12 + breakpointFifth + breakpointFifth) }, "slow");
   });
   $('#howwework-mobile-scroll').click(function() {
     $('html, body').animate({ scrollTop: $('#howwework').offset().top -breakpointFourth }, "slow");
