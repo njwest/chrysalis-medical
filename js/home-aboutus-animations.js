@@ -72,6 +72,15 @@ $(function() {
   $("#home-desk-tab > a")
     .css('color', green);
 
+  // Prevent fadeOut when user clicks 'About Us' on navbar
+  $('#aboutus-desktop-nav, #aboutus-tablet-nav, #aboutus-mobile-scroll').on('click', function() {
+    $('#aboutus-desktop-nav, #aboutus-tablet-nav, #aboutus-mobile-scroll').data('status-click', true);
+    var resetDataStatusClick = function() {
+      $('#aboutus-desktop-nav').data('status-click', false);
+    };
+    setTimeout(resetDataStatusClick, 1000);
+  });
+
   // Animations during user scrolls
   $(window).scroll(function() {
 
@@ -118,10 +127,10 @@ $(function() {
 
       // fade in about us 1, fade out rest
       if ((scroll >= breakpoint1) && (scroll < breakpoint3)) {
-        $('#home, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+        $('#home, #aboutus2-fixed, #aboutus3-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
+        $('#aboutus1-fixed')
           .removeClass('hide fadeOut')
           .addClass('fadeIn');
         $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")
@@ -131,25 +140,25 @@ $(function() {
       }
       // fade in about us 2, fade out rest
       else if ((scroll >= breakpoint5) && (scroll < breakpoint7)) {
-        $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+        $('#aboutus1-fixed, #aboutus3-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        $('#aboutus2-fixed, #aboutus-desktop-arrows-2')
+        $('#aboutus2-fixed')
           .removeClass('hide fadeOut')
           .addClass('fadeIn');
       }
       // fade in about us 3, fade out rest
       else if ((scroll >= breakpoint9) && (scroll < breakpoint11)) {
-        $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+        $('#aboutus2-fixed, #aboutus1-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        $('#aboutus3-fixed, #aboutus-desktop-arrows-3')
+        $('#aboutus3-fixed')
           .removeClass('hide fadeOut')
           .addClass('fadeIn');
       }
       // fade out all
       else if ((scroll >= breakpoint13) && (scroll < breakpoint15)) {
-        $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+        $('#aboutus3-fixed, #aboutus2-fixed, #aboutus1-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
         $("#aboutus-desktop-nav, #aboutus-tablet-nav, #home-desk-tab > a, a[href='#expertise'], a[href='#contactus']")
@@ -191,10 +200,10 @@ $(function() {
       }
       // fade in about us 3, fade out rest
       else if ((scroll < breakpoint15) && (scroll >= breakpoint13)) {
-        $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+        $('#aboutus2-fixed, #aboutus1-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        $('#aboutus3-fixed, #aboutus-desktop-arrows-3')
+        $('#aboutus3-fixed')
           .removeClass('fadeOut')
           .addClass('fadeIn');
         $("a[href='#howwework'], a[href='#expertise'], a[href='#contactus'], #home-desk-tab > a")
@@ -204,26 +213,26 @@ $(function() {
       }
       // fade in about us 2, fade out rest
       else if ((scroll < breakpoint11) && (scroll >= breakpoint9)) {
-        $('#aboutus3-fixed, #aboutus-desktop-arrows-3, #aboutus1-fixed, #aboutus-desktop-arrows-1')
+        $('#aboutus3-fixed, #aboutus1-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        $('#aboutus2-fixed, #aboutus-desktop-arrows-2')
+        $('#aboutus2-fixed')
           .removeClass('fadeOut')
           .addClass('fadeIn');
       }
       // fade in about us 1, fade out rest
       else if ((scroll < breakpoint7) && (scroll >= breakpoint5)) {
-        $('#aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+        $('#aboutus2-fixed, #aboutus3-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
-        $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
+        $('#aboutus1-fixed')
           .removeClass('fadeOut')
           .addClass('fadeIn');
       }
       // fade in home, fade out rest
       else if ((scroll < breakpoint3) && (scroll >= breakpoint1)) {
         if ($('#aboutus-desktop-nav').data('status-click') !== true) { // Prevent fadeOut when user clicks 'About Us' on navbar
-          $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+          $('#aboutus1-fixed, #aboutus2-fixed, #aboutus3-fixed')
             .removeClass('fadeIn')
             .addClass('fadeOut');
           $('#home')
@@ -237,7 +246,7 @@ $(function() {
       }
       // fade in home, fade out rest when user is at about us 1 and clicks on home in tablet
       else if (scroll === 0) {
-        $('#aboutus1-fixed, #aboutus-desktop-arrows-1, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+        $('#aboutus1-fixed, #aboutus2-fixed, #aboutus3-fixed')
           .removeClass('fadeIn')
           .addClass('fadeOut');
         $('#home')
@@ -252,15 +261,6 @@ $(function() {
 
   }); // end window scroll
 
-  // Prevent fadeOut when user clicks 'About Us' on navbar
-  $('#aboutus-desktop-nav, #aboutus-tablet-nav, #aboutus-mobile-scroll').on('click', function() {
-    $('#aboutus-desktop-nav').data('status-click', true);
-    var resetDataStatusClick = function() {
-      $('#aboutus-desktop-nav').data('status-click', false);
-    };
-    setTimeout(resetDataStatusClick, 2000);
-  });
-
   // Home nav button scrolls to very top of page
   $("#home-desk-tab > a, .scroll-to-top").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -269,10 +269,10 @@ $(function() {
   // About Us nav button scrolls to About Us 1
   $("a[href='#aboutus']").click(function() {
     $("html, body").animate({ scrollTop: $('#howwework').offset().top -breakpoint12 }, "slow");
-    $('#home, #aboutus2-fixed, #aboutus-desktop-arrows-2, #aboutus3-fixed, #aboutus-desktop-arrows-3')
+    $('#home, #aboutus2-fixed, #aboutus3-fixed')
       .removeClass('fadeIn')
       .addClass('fadeOut');
-    $('#aboutus1-fixed, #aboutus-desktop-arrows-1')
+    $('#aboutus1-fixed')
       .removeClass('hide fadeOut')
       .addClass('fadeIn');
     $("#home-desk-tab > a, a[href='#howwework'], a[href='#expertise'], a[href='#contactus']")

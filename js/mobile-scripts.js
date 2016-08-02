@@ -40,12 +40,18 @@ $(function() {
   //   }
   // });
 
-  // Mobile Nav (smoothScroll doesn't work properly on mobile)
+  // Mobile Nav (smoothScroll doesn't work properly on mobile so it has to be done manually)
   $('#home-mobile').click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
   $('#aboutus-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#howwework').offset().top -(breakpoint12 + breakpointFifth + breakpointFifth) }, "slow");
+    $('html, body').animate({ scrollTop: $('#howwework').offset().top -(breakpoint13 + breakpointFifth) }, "slow");
+    $('#aboutus2-fixed, #aboutus3-fixed')
+      .removeClass('fadeIn')
+      .addClass('fadeOut');
+    $('#aboutus1-fixed')
+      .removeClass('fadeOut')
+      .addClass('fadeIn');
   });
   $('#howwework-mobile-scroll').click(function() {
     $('html, body').animate({ scrollTop: $('#howwework').offset().top -breakpointFourth }, "slow");
