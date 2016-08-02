@@ -1,4 +1,4 @@
-/* Scripts for desktop and tablet view */
+/* Scripts for Home and About Us Animations */
 
 // Global Variables accessable to all script files
 var log = console.log.bind(console);
@@ -73,6 +73,33 @@ $(function() {
 
   // Animations during user scrolls
   $(window).scroll(function() {
+
+    // Variables must be redeclared in case user changes browser size
+    browserHeight = $( window ).height();
+    breakpoint1 = browserHeight / 3;
+    breakpoint2 = breakpoint1 + breakpoint1;
+    breakpoint3 = breakpoint2 + breakpoint1;
+    breakpoint4 = breakpoint3 + breakpoint1;
+    breakpoint5 = breakpoint4 + breakpoint1;
+    breakpoint6 = breakpoint5 + breakpoint1;
+    breakpoint7 = breakpoint6 + breakpoint1;
+    breakpoint8 = breakpoint7 + breakpoint1;
+    breakpoint9 = breakpoint8 + breakpoint1;
+    breakpoint10 = breakpoint9 + breakpoint1;
+    breakpoint11 = breakpoint10 + breakpoint1;
+    breakpoint12 = breakpoint11 + breakpoint1;
+    breakpoint13 = breakpoint12 + breakpoint1;
+    breakpoint14 = breakpoint13 + breakpoint1;
+    breakpoint15 = breakpoint14 + breakpoint1;
+    breakpoint16 = breakpoint15 + breakpoint1;
+    breakpoint17 = breakpoint16 + breakpoint1;
+    breakpoint18 = breakpoint17 + breakpoint1;
+    breakpoint19 = breakpoint18 + breakpoint1;
+    breakpoint20 = breakpoint19 + breakpoint1;
+    breakpoint21 = breakpoint20 + breakpoint1;
+    breakpoint22 = breakpoint21 + breakpoint1;
+    breakpoint23 = breakpoint22 + breakpoint1;
+    
     scroll = $(window).scrollTop();
     directionCheck();
     if (scrollingDown) {
