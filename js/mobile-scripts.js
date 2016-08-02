@@ -1,11 +1,5 @@
 /* Scripts for mobile view */
 
-var breakpointHalf = breakpoint1 / 2;
-var breakpointThird = breakpoint1 / 3;
-var breakpointFourth = breakpoint1 / 4;
-var breakpointFifth = breakpoint1 / 5;
-
-
 $(function() {
 
   // Allow gif to animate on page reload
@@ -46,12 +40,6 @@ $(function() {
   });
   $('#aboutus-mobile-scroll').click(function() {
     $('html, body').animate({ scrollTop: $('#howwework').offset().top -(breakpoint13 + breakpointFifth) }, "slow");
-    $('#aboutus2-fixed, #aboutus3-fixed')
-      .removeClass('fadeIn')
-      .addClass('fadeOut');
-    $('#aboutus1-fixed')
-      .removeClass('fadeOut')
-      .addClass('fadeIn');
   });
   $('#howwework-mobile-scroll').click(function() {
     $('html, body').animate({ scrollTop: $('#howwework').offset().top -breakpointFourth }, "slow");
