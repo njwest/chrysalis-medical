@@ -14,9 +14,12 @@ $(function() {
     before: function(i, panels) {
       var ref = panels[i].attr('data-section-name');
       log('ref = ', ref);
-      if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $('.static').removeClass('panel fullpage-section');
-      }
+      (function($, viewport){
+        if ( (viewport.is('xs')) || (viewport.is('sm')) ) {
+          $('.static').removeClass('panel fullpage-section');
+          log('static function fired');
+        }
+      })(jQuery, ResponsiveBootstrapToolkit);
       if (ref === 'Home'){
         $('#hero-row').removeClass('fadeOut').addClass('fadeIn');
         $('#aboutus1-row').removeClass('fadeInUp').addClass('fadeOut');
