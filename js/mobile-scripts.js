@@ -3,8 +3,8 @@
 $(function() {
 
   // Allow gif to animate on page reload
-  $("#transformative-thinking-gif").attr("src", "img/transformative-thinking.gif?" + Math.random());
-  $("#chrysalis-logo-gif").attr("src", "img/chrysalis-logo.gif?" + Math.random());
+  // $("#transformative-thinking-gif").attr("src", "img/transformative-thinking.gif?" + Math.random());
+  // $("#chrysalis-logo-gif").attr("src", "img/chrysalis-logo.gif?" + Math.random());
 
   // Auto-close mobile nav on user click
   $('.nav a').on('click', function(){
@@ -35,20 +35,20 @@ $(function() {
   // });
 
   // Mobile Nav (smoothScroll doesn't work properly on mobile so it has to be done manually)
-  $('#home-mobile').click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-  });
-  $('#aboutus-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#howwework').offset().top -(breakpoint13 + breakpointFifth) }, "slow");
-  });
-  $('#howwework-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#howwework').offset().top -breakpointFourth }, "slow");
-  });
-  $('#expertise-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#expertise').offset().top -breakpointFourth }, "slow");
-  });
-  $('#contactus-mobile-scroll').click(function() {
-    $('html, body').animate({ scrollTop: $('#contactus').offset().top -breakpointFourth }, "slow");
-  });
+  // $('#home-mobile').click(function() {
+  //   $("html, body").animate({ scrollTop: 0 }, "slow");
+  // });
+  // $('#aboutus-mobile-scroll').click(function() {
+  //   $('html, body').animate({ scrollTop: $('#howwework').offset().top -(breakpoint13 + breakpointFifth) }, "slow");
+  // });
+  // $('#howwework-mobile-scroll').click(function() {
+  //   $('html, body').animate({ scrollTop: $('#howwework').offset().top -breakpointFourth }, "slow");
+  // });
+  // $('#expertise-mobile-scroll').click(function() {
+  //   $('html, body').animate({ scrollTop: $('#expertise').offset().top -breakpointFourth }, "slow");
+  // });
+  // $('#contactus-mobile-scroll').click(function() {
+  //   $('html, body').animate({ scrollTop: $('#contactus').offset().top -breakpointFourth }, "slow");
+  // });
 
 }); // end document ready function
