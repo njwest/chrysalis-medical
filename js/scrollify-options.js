@@ -7,19 +7,17 @@ $(function() {
   // Greenify 'Home' link in navbar on load
   $("#home-desk-tab > a").css('color', green);
 
-
+  (function($, viewport){
+    if ( (viewport.is('xs')) || (viewport.is('sm')) ) {
+      $('.static').removeClass('panel fullpage-section');
+      log('static function fired');
+    }
+  })(jQuery, ResponsiveBootstrapToolkit);
 
   $.scrollify({
     section : ".fullpage-section",
     before: function(i, panels) {
       var ref = panels[i].attr('data-section-name');
-      log('ref = ', ref);
-      (function($, viewport){
-        if ( (viewport.is('xs')) || (viewport.is('sm')) ) {
-          $('.static').removeClass('panel fullpage-section');
-          log('static function fired');
-        }
-      })(jQuery, ResponsiveBootstrapToolkit);
       if (ref === 'Home'){
         $('#hero-row').removeClass('fadeOut').addClass('fadeIn');
         $('#aboutus1-row').removeClass('fadeInUp').addClass('fadeOut');
