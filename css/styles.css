@@ -202,6 +202,10 @@ body {
   margin-bottom: 85%;
 }
 
+#hero-video {
+  margin-top: 80px;
+}
+
 .dimer {
   max-width: 100px;
 }
@@ -284,12 +288,6 @@ swaying
 
 #aboutus-desktop {
   height: 500vh;
-}
-
-#home {
-  position: fixed;
-  top: 80px;
-  z-index: -1;
 }
 
 .aboutus-fixed {
