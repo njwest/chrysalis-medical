@@ -4,17 +4,19 @@ var blue = '#28779F';
 
 $(function() {
 
-  var fadeOutHero = function() {
-    $('#hero-video').addClass('fadeOut');
-  };
   // Greenify 'Home' link in navbar on load
   $("#home-desk-tab > a").css('color', green);
+
+
 
   $.scrollify({
     section : ".fullpage-section",
     before: function(i, panels) {
       var ref = panels[i].attr('data-section-name');
       log('ref = ', ref);
+      if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('.static').removeClass('panel fullpage-section');
+      }
       if (ref === 'Home'){
         $('#hero-row').removeClass('fadeOut').addClass('fadeIn');
         $('#aboutus1-row').removeClass('fadeInUp').addClass('fadeOut');
