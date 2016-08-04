@@ -21,12 +21,7 @@ $(window).scroll(function() {
   if (scrollingDown) {
 
     // desktop & tablet navbar img appears when user begins to scroll down
-    $('#desktop-navbar-img')
-      .attr('data-wow-delay', '1.5s')
-      .attr('data-user-scroll', 'true')
-      .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');
-
-    $('#tablet-navbar-img')
+    $('#desktop-navbar-img, #tablet-navbar-img, #hero-arrow')
       .attr('data-wow-delay', '1.5s')
       .attr('data-user-scroll', 'true')
       .attr('style', '-webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s');

@@ -7,7 +7,6 @@ $(function() {
   // Disable scrollify on mobile and tablet
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     $.scrollify.disable();
-    log('scrollify disabled');
     $('.hide').removeClass('hide').addClass('fadeIn');
   }
 
@@ -16,7 +15,6 @@ $(function() {
     // Greenify on load except mobile nav
     if ( viewport.is('xs') === false) {
       $('#home-desk-tab > a').css('color', green);
-      log('home greenified on load');
     }
   })(jQuery, ResponsiveBootstrapToolkit);
 
@@ -24,7 +22,6 @@ $(function() {
   // Recalculate browser size on resize
   $( window ).resize(function() {
     $.scrollify.update();
-    log('window resized');
   });
 
   $.scrollify({
