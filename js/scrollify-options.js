@@ -5,7 +5,7 @@ $(function() {
   var blue = '#28779F';
 
   // Disable scrollify on mobile and tablet
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     $.scrollify.disable();
     $('.hide').removeClass('hide').addClass('fadeIn');
   }
@@ -13,7 +13,7 @@ $(function() {
   // Greenify 'Home' link in navbar on load
   (function($, viewport){
     // Greenify on load except mobile nav
-    if ( viewport.is('xs') === false) {
+    if ( (viewport.is('xs') === false) || ( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) === false) ) {
       $('#home-desk-tab > a').css('color', green);
     }
   })(jQuery, ResponsiveBootstrapToolkit);
