@@ -3,7 +3,6 @@
 /* Variables */
 /* Styles */
 body {
-  padding-top: 80px;
   font-family: "Helvetica";
 }
 
@@ -48,10 +47,25 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  .full-screen-desktop-contactus {
+    height: 95vh;
+  }
+}
+
 .vertical-center {
   min-height: 100%;
   /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.vertical-center-contactus {
+  min-height: 95%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 95vh;
   /* These two lines are counted as one :-)       */
   display: flex;
   align-items: center;
@@ -219,7 +233,7 @@ body {
 }
 
 .navbar-default {
-  background: rgba(255, 255, 255, 0.5);
+  background: white;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.04);
   border: none;
   margin-bottom: 0;
@@ -255,10 +269,10 @@ body {
 }
 
 #transformative-thinking-gif {
-  margin-bottom: 85%;
+  margin-bottom: 50%;
 }
 
-#hero-video, #chrysalis-logo-gif {
+#hero-video, #chrysalis-logo-gif, #transformative-thinking-gif {
   margin-top: 80px;
 }
 
@@ -266,11 +280,9 @@ body {
   max-width: 100px;
 }
 
-/*
-==============================================
+/*==============================================
 floating
-==============================================
-*/
+==============================================*/
 .floating {
   animation-name: floating;
   -webkit-animation-name: floating;
@@ -304,11 +316,9 @@ floating
   }
 }
 
-/*
-==============================================
+/*==============================================
 swaying
-==============================================
-*/
+==============================================*/
 .swaying {
   animation-name: swaying;
   -webkit-animation-name: swaying;
@@ -342,48 +352,6 @@ swaying
   }
 }
 
-#aboutus-desktop {
-  height: 500vh;
-}
-
-.aboutus-fixed {
-  position: fixed;
-  top: 25%;
-  z-index: -1;
-}
-
-.aboutus-arrow {
-  position: fixed;
-  top: 65%;
-  left: 49%;
-  z-index: 100;
-}
-
-.aboutus-fixed-container {
-  right: 15px;
-  left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .aboutus-fixed-container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .aboutus-fixed-container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .aboutus-fixed-container {
-    width: 1170px;
-  }
-}
-
 .circle-width {
   max-width: 100px;
 }
@@ -409,6 +377,7 @@ swaying
 
 #footer {
   background-color: white;
+  max-height: 30px;
 }
 
 .footer-text {
