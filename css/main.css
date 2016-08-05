@@ -255,6 +255,10 @@ body {
   color: #A4B447;
 }
 
+.greenHighlight {
+  color: #A4B447;
+}
+
 .navbar-default .navbar-toggle {
   border: none;
 }
