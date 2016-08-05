@@ -14,12 +14,9 @@ var directionCheck = function() {
     previousScroll = scroll;
   }
 };
-// Cache selectors
 var nav = $(".nav");
 var navHeight = 80;
-// All list items
 var menuItems = nav.find("a");
-// Anchors corresponding to menu items
 var scrollItems = menuItems.map(function(){
   var item = $($(this).attr("href"));
   if (item.length) {
