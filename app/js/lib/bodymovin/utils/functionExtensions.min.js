@@ -1,0 +1,1 @@
+function createElement(t,o,e){if(!o){var r=Object.create(t.prototype,e),p={};return r&&"[object Function]"===p.toString.call(r.init)&&r.init(),r}o.prototype=Object.create(t.prototype),o.prototype.constructor=o,o.prototype._parent=t.prototype}function extendPrototype(t,o){for(var e in t.prototype)t.prototype.hasOwnProperty(e)&&(o.prototype[e]=t.prototype[e])}

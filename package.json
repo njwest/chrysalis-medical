@@ -3,12 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-seed.git"
+  },
   "license": "MIT",
   "devDependencies": {
+    "body-parser": "^1.15.2",
     "bower": "^1.7.7",
     "browser-sync": "^2.18.5",
     "del": "^2.2.2",
+    "epilogue": "^0.7.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
@@ -23,6 +30,7 @@
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
     "karma-junit-reporter": "^0.4.1",
+    "morgan": "^1.7.0",
     "protractor": "^4.0.9"
   },
   "scripts": {
@@ -39,5 +47,33 @@
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor e2e-tests/protractor.conf.js",
     "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular-seed/issues"
+  },
+  "homepage": "https://github.com/angular/angular-seed#readme",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^2.2.2",
+    "browser-sync": "^2.18.5",
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "jasmine-core": "^2.5.2",
+    "http-server": "^0.9.0",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma": "^0.13.22",
+    "karma-junit-reporter": "^0.4.2",
+    "karma-jasmine": "^0.3.8",
+    "protractor": "^4.0.13",
+    "karma-firefox-launcher": "^0.1.7"
+  },
+  "author": ""
 }

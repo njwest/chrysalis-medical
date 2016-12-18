@@ -1,0 +1,30 @@
+.navbar-brand {
+  padding: 30px 15px 15px 15px;
+}
+
+.footer-font {
+  font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12pt;
+}
+
+/* Make footer flush to bottom
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+.footer {
+  padding-top: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: $white;
+  color: $gray;
+  border-color: $white;
+}

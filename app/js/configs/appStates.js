@@ -5,8 +5,8 @@ chrysalisApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider'
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider
-      .state('home', {
-        url: '/home',
+      .state('/', {
+        url: '/',
         templateUrl: 'views/home.html'
       })
 

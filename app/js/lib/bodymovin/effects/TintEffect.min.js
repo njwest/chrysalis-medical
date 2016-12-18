@@ -1,0 +1,1 @@
+var TintEffect=void 0;

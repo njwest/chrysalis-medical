@@ -1,3 +1,3 @@
-'use strict';
+"use strict";
 
-var chrysalisApp = angular.module('chrysalisApp', ['ui.router']);
+var chrysalisApp = angular.module("chrysalisApp",["ui.router"]);

@@ -1,0 +1,1 @@
+var CompExpressionInterface=function(){return function(e){function a(a){for(var r=0,t=e.layers.length;r<t;){if(e.layers[r].nm===a||e.layers[r].ind===a-1)return e.elements[r].layerInterface;r+=1}}return a.layer=a,a.pixelAspect=1,a.height=e.globalData.compSize.h,a.width=e.globalData.compSize.w,a.pixelAspect=1,a.frameDuration=1/e.globalData.frameRate,a}}();

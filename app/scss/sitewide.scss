@@ -1,0 +1,32 @@
+/* variables */
+$blue: #28779E;
+$green: #A4B345;
+$gray: #939598;
+$white: #ffffff;
+
+
+/* styles */
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: black;
+  font-size: 18pt;
+  // background: red;
+}
+
+@font-face {
+  font-family: SignPainter;
+  src: url("fonts/SignPainter.otf") format("opentype");
+}
+
+.sign-painter {
+  font-family: 'SignPainter', serif;
+  padding-left: 35px;
+  color: $white;
+  font-size: 40pt;
+}
+
+.page-title {
+  background-image: url('../img/paint-stroke.png');
+  width: 408px;
+  height: 50px;
+}

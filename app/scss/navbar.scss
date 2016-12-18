@@ -1,0 +1,33 @@
+.navbar {
+  min-height: 85px;
+}
+
+.navbar-default {
+  background-color: $white;
+  border-color: $white;
+}
+
+.nav-font {
+  font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 15pt;
+}
+
+// .nav-font-md {
+//   font-size: 20pt;
+// }
+//
+// .nav-font-sm {
+//   font-size: 15px;
+// }
+
+.navbar-default .navbar-nav>li>a {
+  color: $blue;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:active {
+  color: $green;
+}
+
+.navbar-nav>li>a {
+  padding-top: 30px;
+}

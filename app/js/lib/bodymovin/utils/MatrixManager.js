@@ -1,0 +1,1 @@
+function matrixManagerFunction(){var r=new Matrix,t=function(t,n,a,e,i){return r.reset().translate(e,i).rotate(t).scale(n,a).toCSS()},n=function(r){return t(r.tr.r[2],r.tr.s[0],r.tr.s[1],r.tr.p[0],r.tr.p[1])};return{getMatrix:n}}var MatrixManager=matrixManagerFunction;
