@@ -1,1 +1,0 @@
-var Expressions=function(){function e(e){e.renderer.compInterface=CompExpressionInterface(e.renderer),e.renderer.globalData.projectInterface.registerComposition(e.renderer)}var r={};return r.initExpressions=e,r}();expressionsPlugin=Expressions;
