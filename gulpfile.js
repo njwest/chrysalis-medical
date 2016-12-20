@@ -18,6 +18,13 @@ var gulp = require('gulp'),
 		// concat = require('gulp-concat'),
 		// del = require('del');
 
+var jsSource = [
+	// 'app/js/*.js',
+	'app/js/**/*.js',
+	'!app/js/**/*.min.js',
+	'!app/js/libs'
+];
+
 // ////////////////////////////////////////////////
 // Sass Tasks
 // ///////////////////////////////////////////////
@@ -34,10 +41,10 @@ gulp.task('sass', function() {
 // Script Tasks
 // ///////////////////////////////////////////////
 gulp.task('scripts', function() {
-  gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js', '!app/js/lib'])
+  gulp.src(jsSource)
 		.pipe(rename({suffix:'.min'}))
 		.pipe(uglify())
-		.pipe(gulp.dest('app/js'));
+		.pipe(gulp.dest('app/js/min'));
 });
 
 // ////////////////////////////////////////////////

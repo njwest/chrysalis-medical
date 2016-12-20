@@ -22,7 +22,7 @@ app.use(express.static(__dirname + "/app"));
 
 // routes ======================================================
 var route = require('./routes/route.js');
-route.routes(app); //pass our application into our routes
+route.routes(app); //pass application into routes
 
 app.listen(PORT, function() {
   console.log("Listening on PORT " + PORT);

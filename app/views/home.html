@@ -2,15 +2,8 @@
 <h2>Medical Communications</h2>
 <h3>Transformative thinking</h3>
 
-<div style="width:700px;height:394px;background-color:white;position: absolute;left:0;right:0;top:150px;bottom:0;margin:auto" id="bodymovin"></div>
-<script>
-  var animData = {
-    container: document.getElementById('bodymovin'),
-    animType: 'svg',
-    loop: true,
-    prerender: 'true',
-    autoplay: true,
-    path: 'js/lib/data.json'
-  };
-  var anim = bodymovin.loadAnimation(animData);
-</script>
+<div class="video-container">
+  <video autoplay>
+    <source src="videos/intro-animation.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  </video>
+</div>
