@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" ng-controller="navbarController as navbar">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -10,23 +10,12 @@
       </button>
       <a class="navbar-brand" href="/"><img class="img-responsive" src="img/chrysalis-logo.png" alt="Chrysalis" /></a>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right nav-font nav-font-md">
-        <li><a ui-sref="/">HOME</a></li>
-        <li><a ui-sref="about-us">ABOUT US</a></li>
-        <li><a ui-sref="how-we-work">HOW WE WORK</a></li>
-        <li><a ui-sref="expertise">EXPERTISE</a></li>
-        <li><a ui-sref="contact-us">CONTACT US</a></li>
+        <li ng-repeat="navItem in navbar.navItems" class="current-page-{{ navItem.active }}"><a ui-sref="{{ navItem.link }}">{{ navItem.name }}</a>
+        </li>
       </ul>
-      <!-- <ul class="nav navbar-nav navbar-right nav-font nav-font-sm visible-sm">
-        <li><a ui-sref="/">HOME</a></li>
-        <li><a ui-sref="about-us">ABOUT US</a></li>
-        <li><a ui-sref="how-we-work">HOW WE WORK</a></li>
-        <li><a ui-sref="expertise">EXPERTISE</a></li>
-        <li><a ui-sref="contact-us">CONTACT US</a></li>
-      </ul> -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
