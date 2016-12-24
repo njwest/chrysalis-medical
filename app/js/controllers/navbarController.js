@@ -31,7 +31,12 @@ chrysalisApp.controller('navbarController', ['$scope', function($scope) {
     }
   ];
 
-  navbar.currentPageCheck = function() {
-    // write function to change navItem to green to signify as active
-  }
+  // navbar.currentPageCheck = function() {
+  //   if (navbar.navItems.active === false) {
+  //     navbar.navItems.active = true;
+  //   }
+  // };
+  //
+  // console.log(navbar.navItems[1].active);
+
 }]);

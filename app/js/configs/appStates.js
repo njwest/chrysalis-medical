@@ -12,7 +12,8 @@ chrysalisApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider'
 
       .state('about-us', {
         url: '/about-us',
-        templateUrl: 'views/about-us.html'
+        templateUrl: 'views/about-us.html',
+        controller: 'aboutUsController'
       })
 
       .state('how-we-work', {
