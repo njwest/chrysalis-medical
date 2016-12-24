@@ -5,28 +5,20 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <p>
-      Chrysalis values the partnerships we have built with both our clients and our internal team members.<br />
+    <p ng-repeat="text in howWeWorkText">
+      {{ text }}
       <br />
-      Each day we strive to meet our 5 core values…<br />
       <br />
     </p>
+    <br />
     </div>
     <!-- lg-view -->
     <div class="row visible-lg">
-      <img class="img-responsive icons icons-lg" src="img/icons/icon-integrity.jpg" alt="Integrity" />
-      <img class="img-responsive icons icons-lg" src="img/icons/icon-sound-science.jpg" alt="Sound Science" />
-      <img class="img-responsive icons icons-lg" src="img/icons/icon-commitment.jpg" alt="Commitment" />
-      <img class="img-responsive icons icons-lg" src="img/icons/icon-passion.jpg" alt="Passion" />
-      <img class="img-responsive icons icons-lg" src="img/icons/icon-partnership.jpg" alt="Partnership" />
+      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-lg" src="img/icons/icon-{{ icon.fileName }}.jpg" alt="{{ icon.name }}" />
     </div> <!-- /lg-view -->
     <!-- md-view -->
     <div class="row visible-md">
-      <img class="img-responsive icons icons-md" src="img/icons/icon-integrity.jpg" alt="Integrity" />
-      <img class="img-responsive icons icons-md" src="img/icons/icon-sound-science.jpg" alt="Sound Science" />
-      <img class="img-responsive icons icons-md" src="img/icons/icon-commitment.jpg" alt="Commitment" />
-      <img class="img-responsive icons icons-md" src="img/icons/icon-passion.jpg" alt="Passion" />
-      <img class="img-responsive icons icons-md" src="img/icons/icon-partnership.jpg" alt="Partnership" />
+      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-md" src="img/icons/icon-{{ icon.fileName }}.jpg" alt="{{ icon.name }}" />
     </div> <!-- /md-view -->
     <!-- sm & xs -view -->
     <div class="row visible-sm visible-xs">
