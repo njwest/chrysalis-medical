@@ -9,7 +9,14 @@
       <div class="col-md-4">
         <img class="img-responsive center-block" ng-src="{{ profile.imgPath }}" alt="{{ profile.name }}" />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 visible-lg visible-md">
+        <h2 class="profile-painter">{{ profile.name }}</h2>
+        <h2>{{ profile.position }}</h2>
+        <p class="email-font">
+          {{ profile.email }}
+        </p>
+      </div>
+      <div class="col-md-6 text-center hidden-lg hidden-md">
         <h2 class="profile-painter">{{ profile.name }}</h2>
         <h2>{{ profile.position }}</h2>
         <p class="email-font">

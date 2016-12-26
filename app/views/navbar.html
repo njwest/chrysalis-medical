@@ -13,8 +13,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right nav-font nav-font-md">
-        <li ng-repeat="navItem in navItems" class="current-page-{{ navItem.active }}">
-          <a ui-sref="{{ navItem.link }}">{{ navItem.name }}</a>
+        <li ng-repeat="navItem in navItems" active="{{ navItems.active }}" class="current-page-{{ navItem.active }}">
+          <a ui-sref="{{ navItem.link }}" ng-click="classActive()">{{ navItem.name }}</a>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

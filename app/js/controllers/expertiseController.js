@@ -1,19 +1,9 @@
 'use strict';
 
-chrysalisApp.controller('ExpertiseController', ['$scope', function($scope) {
+chrysalisApp.controller('ExpertiseController', ['$scope', '$http', function($scope, $http) {
 
-  $scope.items = [
-    "Stategic Planning and Support",
-    "Publications Planning and Execution",
-    "External Expert Engagement",
-    "Scientific Event Management",
-    "Market Access and Health Economics Communications",
-    "Medical Education and Marketing Support",
-    "Internal Communications and Training",
-    "Creative Design",
-    "Digital Media Design",
-    "Clinical Trial Support",
-    "Continuing Medical Education"
-  ];
+  $http.get('data/expertiseItems.json').success(function(expertiseItemsData) {
+    $scope.items = expertiseItemsData;
+  });
 
 }]);

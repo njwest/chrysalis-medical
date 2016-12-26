@@ -1,21 +1,9 @@
 'use strict';
 
-chrysalisApp.controller('ContactUsController', ['$scope', function($scope) {
+chrysalisApp.controller('ContactUsController', ['$scope', '$http', function($scope, $http) {
 
-  $scope.profiles = [
-    {
-      name: "Stacey Everett",
-      position: "VP, Client Services",
-      email: "stacey.everett@chrysalismedical.com",
-      imgPath: "img/profiles/stacey-everett.png"
-    },
-    {
-      name: "Dan Hutta, PhD",
-      position: "VP, Scientific and Medical Services",
-      email: "daniel.hutta@chrysalismedical.com",
-      imgPath: "img/profiles/dan-hutta.png"
-    }
-
-  ];
+  $http.get('data/contactUsProfiles.json').success(function(contactUsProfilesData) {
+    $scope.profiles = contactUsProfilesData;
+  });
 
 }]);
