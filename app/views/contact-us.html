@@ -5,27 +5,15 @@
 </div>
 <div class="row">
   <div class="col-md-6">
-    <div class="row">
+    <div class="row" ng-repeat="profile in contactUs.profiles">
       <div class="col-md-4">
-        <img class="img-responsive center-block" src="img/profiles/stacey-everett.png" alt="Stacey Everett" />
+        <img class="img-responsive center-block" ng-src="{{ profile.imgPath }}" alt="{{ profile.name }}" />
       </div>
       <div class="col-md-6">
-        <h2 class="profile-painter">Stacey Everett</h2>
-        <h2>VP, Client Services</h2>
+        <h2 class="profile-painter">{{ profile.name }}</h2>
+        <h2>{{ profile.position }}</h2>
         <p class="email-font">
-          stacey.everett@chrysalismedical.com
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <img class="img-responsive center-block" src="img/profiles/dan-hutta.png" alt="Dan Hutta" />
-      </div>
-      <div class="col-md-6">
-        <h2 class="profile-painter">Dan Hutta, PhD</h2>
-        <h2>VP, Scientific and Medical Services</h2>
-        <p class="email-font">
-          daniel.hutta@chrysalismedical.com
+          {{ profile.email }}
         </p>
       </div>
     </div>

@@ -31,4 +31,5 @@ chrysalisApp.controller('howWeWorkController', ['$scope', function($scope) {
       imgPath: "img/icons/icon-partnership.jpg"
     }
   ];
+  
 }]);
