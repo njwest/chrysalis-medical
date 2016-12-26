@@ -14,15 +14,15 @@
     </div>
     <!-- lg-view -->
     <div class="row visible-lg">
-      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-lg" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+      <img ng-repeat="icon in HowWeWork.icons" class="img-responsive icons icons-lg" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
     </div> <!-- /lg-view -->
     <!-- md-view -->
     <div class="row visible-md">
-      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-md" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+      <img ng-repeat="icon in HowWeWork.icons" class="img-responsive icons icons-md" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
     </div> <!-- /md-view -->
     <!-- sm & xs -view -->
     <div class="row visible-sm visible-xs">
-      <div class="col-sm-4" ng-repeat="icon in howWeWork.icons | limitTo : 3">
+      <div class="col-sm-4" ng-repeat="icon in HowWeWork.icons | limitTo : 3">
         <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
       </div>
     </div>
@@ -30,7 +30,7 @@
       <div class="col-sm-2">
         <!-- col-sm-offset-2 -->
       </div>
-      <div class="col-sm-4" ng-repeat="icon in howWeWork.icons | limitTo : 2 : 2">
+      <div class="col-sm-4" ng-repeat="icon in HowWeWork.icons | limitTo : 2 : 2">
         <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
       </div>
     </div> <!-- /sm & xs -view -->

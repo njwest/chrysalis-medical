@@ -1,6 +1,6 @@
 'use strict';
 
-chrysalisApp.controller('aboutUsController', ['$scope', function($scope) {
+chrysalisApp.controller('AboutUsController', ['$scope', function($scope) {
 
   $scope.aboutUsText = [
     "Chrysalis Medical Communications is the newest company within the Nucleus Global family. We are a full-service agency dedicated to partnering with our clients to provide high-quality scientific and strategic medical communications support.",

@@ -1,6 +1,6 @@
 'use strict';
 
-chrysalisApp.controller('howWeWorkController', ['$scope', function($scope) {
+chrysalisApp.controller('HowWeWorkController', ['$scope', function($scope) {
 
   var howWeWork = this;
 
@@ -31,5 +31,5 @@ chrysalisApp.controller('howWeWorkController', ['$scope', function($scope) {
       imgPath: "img/icons/icon-partnership.jpg"
     }
   ];
-  
+
 }]);

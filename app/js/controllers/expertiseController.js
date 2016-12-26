@@ -1,6 +1,6 @@
 'use strict';
 
-chrysalisApp.controller('expertiseController', ['$scope', function($scope) {
+chrysalisApp.controller('ExpertiseController', ['$scope', function($scope) {
 
   $scope.items = [
     "Stategic Planning and Support",

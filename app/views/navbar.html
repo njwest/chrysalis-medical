@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" ng-controller="navbarController as navbar">
+<nav class="navbar navbar-default" ng-controller="NavbarController as Navbar">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -13,7 +13,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right nav-font nav-font-md">
-        <li ng-repeat="navItem in navbar.navItems" class="current-page-{{ navItem.active }}"><a ui-sref="{{ navItem.link }}">{{ navItem.name }}</a>
+        <li ng-repeat="navItem in Navbar.navItems" class="current-page-{{ navItem.active }}">
+          <a ui-sref="{{ navItem.link }}">{{ navItem.name }}</a>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

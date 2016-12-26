@@ -1,6 +1,6 @@
 'use strict';
 
-chrysalisApp.controller('contactUsController', ['$scope', function($scope) {
+chrysalisApp.controller('ContactUsController', ['$scope', function($scope) {
 
   var contactUs = this;
 

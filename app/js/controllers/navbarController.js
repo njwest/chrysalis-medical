@@ -1,6 +1,6 @@
 'use strict';
 
-chrysalisApp.controller('navbarController', ['$scope', function($scope) {
+chrysalisApp.controller('NavbarController', ['$scope', function($scope) {
   var navbar = this;
 
   navbar.navItems = [
@@ -31,12 +31,17 @@ chrysalisApp.controller('navbarController', ['$scope', function($scope) {
     }
   ];
 
-  // navbar.currentPageCheck = function() {
-  //   if (navbar.navItems.active === false) {
-  //     navbar.navItems.active = true;
-  //   }
-  // };
-  //
-  // console.log(navbar.navItems[1].active);
+  navbar.currentPageCheck = function() {
+    // if (navbar.navItems.active === false) {
+    //   navbar.navItems.active = true;
+    // }
+    var test = "test";
+    console.log(test);
+    console.log('Clicked!');
+    console.log('navItem = ', navItem);
+
+  };
+
+  console.log(navbar.navItems[1].active);
 
 }]);

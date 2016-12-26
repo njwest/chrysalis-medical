@@ -13,25 +13,25 @@ chrysalisApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider'
       .state('about-us', {
         url: '/about-us',
         templateUrl: 'views/about-us.html',
-        controller: 'aboutUsController'
+        controller: 'AboutUsController'
       })
 
       .state('how-we-work', {
         url: '/how-we-work',
         templateUrl: 'views/how-we-work.html',
-        controller: 'howWeWorkController as howWeWork'
+        controller: 'HowWeWorkController as HowWeWork'
       })
 
       .state('expertise', {
         url: '/expertise',
         templateUrl: 'views/expertise.html',
-        controller: 'expertiseController'
+        controller: 'ExpertiseController'
       })
 
       .state('contact-us', {
         url: '/contact-us',
         templateUrl: 'views/contact-us.html',
-        controller: 'contactUsController as contactUs'
+        controller: 'ContactUsController as ContactUs'
       });
 
       $locationProvider.html5Mode(true);
