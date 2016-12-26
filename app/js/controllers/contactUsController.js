@@ -4,7 +4,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', function($scope) {
 
   var contactUs = this;
 
-  contactUs.profiles = [
+  $scope.profiles = [
     {
       name: "Stacey Everett",
       position: "VP, Client Services",

@@ -3,7 +3,7 @@
 chrysalisApp.controller('NavbarController', ['$scope', function($scope) {
   var navbar = this;
 
-  navbar.navItems = [
+  $scope.navItems = [
     {
       name: "Home",
       link: "/",
@@ -41,7 +41,5 @@ chrysalisApp.controller('NavbarController', ['$scope', function($scope) {
     console.log('navItem = ', navItem);
 
   };
-
-  console.log(navbar.navItems[1].active);
 
 }]);

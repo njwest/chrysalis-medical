@@ -9,7 +9,7 @@ chrysalisApp.controller('HowWeWorkController', ['$scope', function($scope) {
     "Each day we strive to meet our 5 core values…"
   ];
 
-  howWeWork.icons = [
+  $scope.icons = [
     {
       name: "Integrity",
       imgPath: "img/icons/icon-integrity.jpg"
