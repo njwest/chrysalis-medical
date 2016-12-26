@@ -2,8 +2,6 @@
 
 chrysalisApp.controller('HowWeWorkController', ['$scope', function($scope) {
 
-  var howWeWork = this;
-
   $scope.howWeWorkText = [
     "Chrysalis values the partnerships we have built with both our clients and our internal team members.",
     "Each day we strive to meet our 5 core values…"

@@ -1,7 +1,6 @@
 'use strict';
 
 chrysalisApp.controller('NavbarController', ['$scope', function($scope) {
-  var navbar = this;
 
   $scope.navItems = [
     {
