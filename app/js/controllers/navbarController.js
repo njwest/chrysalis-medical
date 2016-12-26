@@ -11,7 +11,6 @@ chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', fun
     $scope.fixLink = function() {
       if ($scope.url === '/') {
         $scope.link = '/'
-        return $scope.link;
       }
       else {
         $scope.link = $scope.url.replace('/','');
