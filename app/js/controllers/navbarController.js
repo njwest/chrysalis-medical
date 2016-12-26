@@ -6,12 +6,14 @@ chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', fun
     $scope.navItems = navItemsData;
 
     // set class='active' when user types in url in address bar
-    $scope.url = $location.$$url;
-    $scope.link;
+    $scope.url = $location.$$url; // route with '/'
+    // route name without '/' except for home
     $scope.fixLink = function() {
       if ($scope.url === '/') {
-        $scope.link = '/'
+        // for homepage
+        $scope.link = '/';
       }
+      // for all other pages
       else {
         $scope.link = $scope.url.replace('/','');
       }
@@ -25,7 +27,7 @@ chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', fun
 
   });
 
-  // change class to active when user clicks on nav tab
+  // change class to active when user clicks on nav links
   $scope.currentPageCheck = function() {
     $scope.itemSelected = this;
     if ($scope.itemSelected.navItem.active === false) {
