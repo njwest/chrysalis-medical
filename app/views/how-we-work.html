@@ -14,30 +14,24 @@
     </div>
     <!-- lg-view -->
     <div class="row visible-lg">
-      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-lg" src="img/icons/icon-{{ icon.fileName }}.jpg" alt="{{ icon.name }}" />
+      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-lg" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
     </div> <!-- /lg-view -->
     <!-- md-view -->
     <div class="row visible-md">
-      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-md" src="img/icons/icon-{{ icon.fileName }}.jpg" alt="{{ icon.name }}" />
+      <img ng-repeat="icon in howWeWork.icons" class="img-responsive icons icons-md" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
     </div> <!-- /md-view -->
     <!-- sm & xs -view -->
     <div class="row visible-sm visible-xs">
-      <div class="col-sm-4">
-        <img class="img-responsive center-block" src="img/icons/icon-integrity.jpg" alt="Integrity" />
-      </div>
-      <div class="col-sm-4">
-        <img class="img-responsive center-block" src="img/icons/icon-sound-science.jpg" alt="Sound Science" />
-      </div>
-      <div class="col-sm-4">
-        <img class="img-responsive center-block" src="img/icons/icon-commitment.jpg" alt="Commitment" />
+      <div class="col-sm-4" ng-repeat="icon in howWeWork.icons | limitTo : 3">
+        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
       </div>
     </div>
     <div class="row visible-sm visible-xs">
-      <div class="col-sm-4 col-sm-offset-2">
-        <img class="img-responsive center-block" src="img/icons/icon-passion.jpg" alt="Passion" />
+      <div class="col-sm-2">
+        <!-- col-sm-offset-2 -->
       </div>
-      <div class="col-sm-4">
-        <img class="img-responsive center-block" src="img/icons/icon-partnership.jpg" alt="Partnership" />
+      <div class="col-sm-4" ng-repeat="icon in howWeWork.icons | limitTo : 2 : 2">
+        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
       </div>
     </div> <!-- /sm & xs -view -->
   </div>

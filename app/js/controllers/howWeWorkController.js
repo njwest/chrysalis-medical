@@ -12,23 +12,23 @@ chrysalisApp.controller('howWeWorkController', ['$scope', function($scope) {
   howWeWork.icons = [
     {
       name: "Integrity",
-      fileName: "integrity"
+      imgPath: "img/icons/icon-integrity.jpg"
     },
     {
       name: "Sound Science",
-      fileName: "sound-science"
+      imgPath: "img/icons/icon-sound-science.jpg"
     },
     {
       name: "Commitment",
-      fileName: "commitment"
+      imgPath: "img/icons/icon-commitment.jpg"
     },
     {
       name: "Passion",
-      fileName: "passion"
+      imgPath: "img/icons/icon-passion.jpg"
     },
     {
       name: "Partnership",
-      fileName: "partnership"
+      imgPath: "img/icons/icon-partnership.jpg"
     }
   ];
 }]);
