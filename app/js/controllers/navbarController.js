@@ -3,12 +3,13 @@
 chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 
   $http.get('data/navItems.json').success(function(navItemsData) {
+
     $scope.navItems = navItemsData;
 
     // set class='active' when user types in url in address bar
-    $scope.url = $location.$$url; // route with '/'
-    // route name without '/' except for home
-    $scope.fixLink = function() {
+    $scope.url = $location.$$url; // route name with '/'
+
+    $scope.fixLink = function() { // route name without '/' except for home
       if ($scope.url === '/') {
         // for homepage
         $scope.link = '/';
@@ -18,7 +19,9 @@ chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', fun
         $scope.link = $scope.url.replace('/','');
       }
     };
+
     $scope.fixLink();
+
     for (var i = 0; i < $scope.navItems.length; i++) {
       if ($scope.navItems[i].link === $scope.link) {
         $scope.navItems[i].active = true;
