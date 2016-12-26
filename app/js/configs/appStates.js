@@ -24,7 +24,8 @@ chrysalisApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider'
 
       .state('expertise', {
         url: '/expertise',
-        templateUrl: 'views/expertise.html'
+        templateUrl: 'views/expertise.html',
+        controller: 'expertiseController'
       })
 
       .state('contact-us', {
