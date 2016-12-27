@@ -24,15 +24,24 @@
     </div>
   </div>
   <div class="col-md-6">
-    <form id="contact-form">
+    <form id="contact-form" name="contactForm" novalidate>
       <div class="form-group">
-        <input id="name-input" type="name" class="form-control" placeholder="Name">
+        <input id="name-input" type="name" name="name" class="form-control" placeholder="Name" ng-model="contact.name" ng-required="true">
+        <div ng-show="contactForm.name.$touched && contactForm.name.$invalid" class="bg-danger">
+          <small class="text-danger">Enter a valid name</small>
+        </div>
       </div>
       <div class="form-group">
-        <input id="email-input" type="email" class="form-control" placeholder="Email">
+        <input id="email-input" type="email" name="email" class="form-control" placeholder="Email" ng-model="contact.email" ng-required="true">
+        <div ng-show="contactForm.email.$touched && contactForm.email.$invalid" class="bg-danger">
+          <small class="text-danger">Enter a valid email address</small>
+        </div>
       </div>
       <div class="form-group">
-        <textarea id="message-input" class="form-control" rows="12" placeholder="Message"></textarea>
+        <textarea id="message-input" name="message" class="form-control" rows="12" placeholder="Message" ng-model="contact.message" ng-required="true"></textarea>
+        <div ng-show="contactForm.message.$touched && contactForm.message.$invalid" class="bg-danger">
+          <small class="text-danger">Enter a valid message</small>
+        </div>
       </div>
       <button id="submit-btn" name="submit" type="submit" value="Send" class="btn btn-success pull-right">Submit</button>
       <div id="form-messages" class="center-block text-center animated"></div>

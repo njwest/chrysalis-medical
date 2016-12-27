@@ -18,3 +18,9 @@
   border-color: white;
   border-radius: 8px;
 }
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border: 1px solid $red-danger;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $red-bg-danger;
+  outline: 0 none;
+}
