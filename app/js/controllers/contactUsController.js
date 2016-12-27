@@ -43,6 +43,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   $scope.successResponse = "<i class='fa fa-check' aria-hidden='true'></i> Your message has been sent.";
   $scope.errorResponse = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> An error has occurred. Please try again.";
   $scope.blankFieldError = "<small><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please fill out all fields before clicking 'Submit'.</small>";
+  $scope.emailError = "<small><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please enter a valid email before clicking 'Submit'.</small>";
 
   // $scope.removeShake = function() {
   //   $scope.formMessages.removeClass('shake');
@@ -61,12 +62,19 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
 
     // Check for blank fields before submitting ajax request
     if (
-      ($scope.contact === undefined) || ($scope.contact.name === "") || ($scope.contact.email === "") || ($scope.contact.message === "")
+      ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
-
+      console.log($scope.contact);
       document.getElementById('form-messages').className = 'bg-danger text-danger shake wow';
-
-      document.getElementById('form-messages').innerHTML = $scope.blankFieldError;
+      if (
+        ($scope.contact === undefined) ||
+        ($scope.contact.name === undefined) || ($scope.contact.message === undefined)
+      ) {
+        document.getElementById('form-messages').innerHTML = $scope.blankFieldError;
+      }
+      else {
+        document.getElementById('form-messages').innerHTML = $scope.emailError;
+      }
 
       // $timeout(function() {
       //   $scope.removeShake();
