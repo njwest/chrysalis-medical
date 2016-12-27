@@ -24,3 +24,7 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $red-bg-danger;
   outline: 0 none;
 }
+
+.invalid-msg {
+  margin-top: 15px;
+}
