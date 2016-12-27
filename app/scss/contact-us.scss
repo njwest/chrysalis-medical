@@ -28,3 +28,11 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
 .invalid-msg {
   margin-top: 15px;
 }
+
+#form-messages {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  height: 55px;
+  font-size: 90%;
+}
