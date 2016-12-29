@@ -16,16 +16,19 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   ];
 
   // remove red border and invalid msgs after time delay
+  // name input
   $scope.resetNameInput = function() {
     $timeout(function() {
       $scope.formInputs[0].removeClass('ng-touched').addClass('ng-untouched');
     }, $scope.removeRedBorderDelayTimer);
   };
+  // email input
   $scope.resetEmailInput = function() {
     $timeout(function() {
       $scope.formInputs[1].removeClass('ng-touched').addClass('ng-untouched');
     }, $scope.removeRedBorderDelayTimer);
   };
+  // message input
   $scope.resetMessageInput = function() {
     $timeout(function() {
       $scope.formInputs[2].removeClass('ng-touched').addClass('ng-untouched');
@@ -65,7 +68,11 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
       console.log($scope.contact);
-      document.getElementById('form-messages').className = 'bg-danger text-danger shake wow';
+      document.getElementById('form-messages').className = 'bg-danger text-danger';
+      document.getElementById('submit-btn').className = 'animated shake';
+      $timeout(function() {
+        document.getElementById('submit-btn').className = '';
+      }, 2000);
       if (
         ($scope.contact === undefined) ||
         ($scope.contact.name === undefined) || ($scope.contact.message === undefined)
@@ -75,6 +82,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       else {
         document.getElementById('form-messages').innerHTML = $scope.emailError;
       }
+
 
       // $timeout(function() {
       //   $scope.removeShake();
