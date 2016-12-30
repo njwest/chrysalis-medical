@@ -10,16 +10,13 @@ chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', fun
     $scope.url = $location.$$url; // route name with '/'
 
     $scope.fixLink = function() { // route name without '/' except for home
-      if ($scope.url === '/') {
-        // for homepage
+      if ($scope.url === '/') { // for homepage
         $scope.link = '/';
       }
-      // for all other pages
-      else {
+      else { // for all other pages
         $scope.link = $scope.url.replace('/','');
       }
     };
-
     $scope.fixLink();
 
     for (var i = 0; i < $scope.navItems.length; i++) {
