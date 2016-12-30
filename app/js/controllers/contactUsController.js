@@ -6,8 +6,8 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     $scope.profiles = contactUsProfilesData;
   });
 
-  // $scope.fadeOutTimeDelay = 3000;
   $scope.removeRedBorderDelayTimer = 5000;
+  $scope.removeShakeClassDelayTimer = 1250;
 
   $scope.formInputs = [
     angular.element( document.querySelector( '#name-input' ) ),
@@ -16,19 +16,16 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   ];
 
   // remove red border and invalid msgs after time delay
-  // name input
   $scope.resetNameInput = function() {
     $timeout(function() {
       $scope.formInputs[0].removeClass('ng-touched').addClass('ng-untouched');
     }, $scope.removeRedBorderDelayTimer);
   };
-  // email input
   $scope.resetEmailInput = function() {
     $timeout(function() {
       $scope.formInputs[1].removeClass('ng-touched').addClass('ng-untouched');
     }, $scope.removeRedBorderDelayTimer);
   };
-  // message input
   $scope.resetMessageInput = function() {
     $timeout(function() {
       $scope.formInputs[2].removeClass('ng-touched').addClass('ng-untouched');
@@ -48,94 +45,96 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   $scope.blankFieldError = "<small><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please fill out all fields before clicking 'Submit'.</small>";
   $scope.emailError = "<small><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please enter a valid email before clicking 'Submit'.</small>";
 
-  // $scope.removeShake = function() {
-  //   $scope.formMessages.removeClass('shake');
-  // };
-  // $scope.removeBounceIn = function() {
-  //   $scope.formMessages.removeClass('bounceIn');
-  // };
-  // $scope.addZoomOut = function() {
-  //   $scope.formMessages.addClass('zoomOut');
-  // };
+  $scope.removeShake = function() {
+    document.getElementById('submit-btn').className = 'btn btn-success pull-right';
+  };
+  $scope.removeBounceIn = function() {
+    $scope.formMessages.className = 'bounceIn';
+  };
+  $scope.addZoomOut = function() {
+    $scope.formMessages.className = 'zoomOut';
+  };
 
   $scope.submit = function() {
     console.log('submit button clicked');
     $scope.$watch('contact.name', function(val) {
     });
 
-    // Check for blank fields before submitting ajax request
+    // check for blank fields or invalid email before submitting ajax request
     if (
       ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
       console.log($scope.contact);
-      document.getElementById('form-messages').className = 'bg-danger text-danger';
-      document.getElementById('submit-btn').className = 'animated shake';
-      $timeout(function() {
-        document.getElementById('submit-btn').className = '';
-      }, 2000);
-      if (
+      document.getElementById('form-messages').className = 'bg-danger text-danger'; // show error msg
+      document.getElementById('submit-btn').className = 'btn btn-success pull-right animated shake';
+
+      $timeout(function() { // shake submit btn on error
+        $scope.removeShake();
+        // document.getElementById('submit-btn').className = 'btn btn-success pull-right';
+      }, $scope.removeShakeClassDelayTimer); // remove shake animation class
+
+      // $timeout(function() { // fadeOut error msg after 5 seconds
+      //   document.getElementById('form-messages').className = 'bg-danger text-danger animated fadeOut';
+      // }, $scope.removeRedBorderDelayTimer);
+
+      if ( // show blank field error
         ($scope.contact === undefined) ||
         ($scope.contact.name === undefined) || ($scope.contact.message === undefined)
       ) {
         document.getElementById('form-messages').innerHTML = $scope.blankFieldError;
       }
-      else {
+      else { // show email error
         document.getElementById('form-messages').innerHTML = $scope.emailError;
       }
 
-
-      // $timeout(function() {
-      //   $scope.removeShake();
-      // }, 1000);
-      //
       // $timeout(function() {
       //   $scope.addZoomOut();
       // }, 10000);
 
-    } // /if statement
+    } // /check for blank fields or invalid email
 
-    // else {
-    // $scope.jsondata = {
-    //     "UserEmail" : $scope.contact.email,
-    //     "UserName" : $scope.contact.name,
-    //     "FromEmail" : "test@n24i.com",
-    //     "ToEmail" : "darryl.mendonez@nucleuscentral.com;",
-    //     "ReplyToEmail" : "",
-    //     "CopyToEmail" : "",
-    //     "Subject" : "Chrysalis Contacts",
-    //     "EmailContent" : $scope.contact.message
-    // };
-    //   $.ajax({
-    //     type: "POST",
-    //     url: url,
-    //     data: jsondata,
-    //     success: function (msg) {
-    //         $(formMessages).removeClass('bg-danger text-danger shake zoomOut');
-    //         $(formMessages).addClass('bg-success text-success bounceIn');
-    //         $(formMessages).html(successResponse);
-    //         $('#name').val('');
-    //         $('#email').val('');
-    //         $('#message').val('');
-    //         setTimeout(function() {
-    //           removeBounceIn();
-    //         }, 1000);
-    //         setTimeout(function() {
-    //           addZoomOut();
-    //         }, 10000);
-    //     },
-    //     error: function (msg) {
-    //       $(formMessages).removeClass('bg-success text-success bounceIn zoomOut');
-    //       $(formMessages).addClass('bg-danger text-danger shake');
-    //       $(formMessages).html(errorResponse);
-    //       setTimeout(function() {
-    //         removeShake();
-    //       }, 1000);
-    //       setTimeout(function() {
-    //         addZoomOut();
-    //       }, 10000);
-    //     }
-    //   });
-    // }
+    else {
+    $scope.jsondata = {
+        "UserEmail" : $scope.contact.email,
+        "UserName" : $scope.contact.name,
+        "FromEmail" : "test@n24i.com",
+        "ToEmail" : "darryl.mendonez@nucleuscentral.com;",
+        "ReplyToEmail" : "",
+        "CopyToEmail" : "",
+        "Subject" : "Chrysalis Contacts",
+        "EmailContent" : $scope.contact.message
+    };
+      $.ajax({
+        type: "POST",
+        url: $scope.url,
+        data: $scope.jsondata,
+        success: function (msg) {
+            document.getElementById('form-messages').className = 'bg-danger text-danger shake zoomOut';
+            document.getElementById('form-messages').className = 'bg-success text-success bounceIn';
+            document.getElementById('form-messages').innerHTML = $scope.successResponse;
+            document.getElementById.('name-input').value = '';
+            document.getElementById.('email.input').value = '';
+            document.getElementById.('message-input').value = '';
+            setTimeout(function() {
+              $scope.removeBounceIn();
+            }, 1000);
+            setTimeout(function() {
+              $scope.addZoomOut();
+            }, 10000);
+        },
+        error: function (msg) {
+          document.getElementById('form-messages').className = 'bg-success text-success bounceIn zoomOut';
+          document.getElementById('form-messages').className = 'bg-danger text-danger shake';
+            document.getElementById('form-messages').innerHTML = $scope.errorResponse;
+          setTimeout(function() {
+            $scope.removeShake();
+          }, 1000);
+          setTimeout(function() {
+            $scope.addZoomOut();
+          }, 10000);
+        }
+      });
+    }
 
   }; // /submit btn
 
