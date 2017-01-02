@@ -3,8 +3,12 @@
 <!-- content -->
 <div class="row">
   <div class="col-md-8">
-    <p ng-repeat="paragraph in aboutUsText">
+    <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow" data-wow-delay="{{ animationTimeDelay[$index] }}" >
       {{ paragraph }}
     </p>
   </div>
 </div>
+
+<script>
+  new WOW().init();
+</script>

@@ -2,10 +2,22 @@
 
 chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$timeout', function($scope, $http, $log, $timeout) {
 
+  // get profile data
   $http.get('data/contactUsProfiles.json').success(function(contactUsProfilesData) {
     $scope.profiles = contactUsProfilesData;
   });
 
+  // animations
+  $scope.initialDelay = 0.3;
+  $scope.delayInterval = 0.7;
+  $scope.formDelay = $scope.delayInterval + 0.8 + "s";
+
+  $scope.animationTimeDelay = [
+    $scope.initialDelay + "s",
+    ($scope.initialDelay + $scope.delayInterval) + "s",
+  ];
+
+  // form
   $scope.removeRedBorderDelayTimer = 5000;
   $scope.removeShakeClassDelayTimer = 1250;
 
@@ -93,48 +105,48 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
 
     } // /check for blank fields or invalid email
 
-    else {
-    $scope.jsondata = {
-        "UserEmail" : $scope.contact.email,
-        "UserName" : $scope.contact.name,
-        "FromEmail" : "test@n24i.com",
-        "ToEmail" : "darryl.mendonez@nucleuscentral.com;",
-        "ReplyToEmail" : "",
-        "CopyToEmail" : "",
-        "Subject" : "Chrysalis Contacts",
-        "EmailContent" : $scope.contact.message
-    };
-      $.ajax({
-        type: "POST",
-        url: $scope.url,
-        data: $scope.jsondata,
-        success: function (msg) {
-            document.getElementById('form-messages').className = 'bg-danger text-danger shake zoomOut';
-            document.getElementById('form-messages').className = 'bg-success text-success bounceIn';
-            document.getElementById('form-messages').innerHTML = $scope.successResponse;
-            document.getElementById.('name-input').value = '';
-            document.getElementById.('email.input').value = '';
-            document.getElementById.('message-input').value = '';
-            setTimeout(function() {
-              $scope.removeBounceIn();
-            }, 1000);
-            setTimeout(function() {
-              $scope.addZoomOut();
-            }, 10000);
-        },
-        error: function (msg) {
-          document.getElementById('form-messages').className = 'bg-success text-success bounceIn zoomOut';
-          document.getElementById('form-messages').className = 'bg-danger text-danger shake';
-            document.getElementById('form-messages').innerHTML = $scope.errorResponse;
-          setTimeout(function() {
-            $scope.removeShake();
-          }, 1000);
-          setTimeout(function() {
-            $scope.addZoomOut();
-          }, 10000);
-        }
-      });
-    }
+    // else {
+    // $scope.jsondata = {
+    //     "UserEmail" : $scope.contact.email,
+    //     "UserName" : $scope.contact.name,
+    //     "FromEmail" : "test@n24i.com",
+    //     "ToEmail" : "darryl.mendonez@nucleuscentral.com;",
+    //     "ReplyToEmail" : "",
+    //     "CopyToEmail" : "",
+    //     "Subject" : "Chrysalis Contacts",
+    //     "EmailContent" : $scope.contact.message
+    // };
+    //   $.ajax({
+    //     type: "POST",
+    //     url: $scope.url,
+    //     data: $scope.jsondata,
+    //     success: function (msg) {
+    //         document.getElementById('form-messages').className = 'bg-danger text-danger shake zoomOut';
+    //         document.getElementById('form-messages').className = 'bg-success text-success bounceIn';
+    //         document.getElementById('form-messages').innerHTML = $scope.successResponse;
+    //         document.getElementById.('name-input').value = '';
+    //         document.getElementById.('email.input').value = '';
+    //         document.getElementById.('message-input').value = '';
+    //         setTimeout(function() {
+    //           $scope.removeBounceIn();
+    //         }, 1000);
+    //         setTimeout(function() {
+    //           $scope.addZoomOut();
+    //         }, 10000);
+    //     },
+    //     error: function (msg) {
+    //       document.getElementById('form-messages').className = 'bg-success text-success bounceIn zoomOut';
+    //       document.getElementById('form-messages').className = 'bg-danger text-danger shake';
+    //         document.getElementById('form-messages').innerHTML = $scope.errorResponse;
+    //       setTimeout(function() {
+    //         $scope.removeShake();
+    //       }, 1000);
+    //       setTimeout(function() {
+    //         $scope.addZoomOut();
+    //       }, 10000);
+    //     }
+    //   });
+    // }
 
   }; // /submit btn
 
