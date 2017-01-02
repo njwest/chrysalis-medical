@@ -13,7 +13,7 @@ chrysalisApp.controller('ExpertiseController', ['$scope', '$http', function($sco
     $scope.initialDelay + "s",
     $scope.initialDelay + "s",
     $scope.initialDelay + "s",
-    ($scope.initialDelay + $scope.delayInterval) + "s",
+    $scope.initialDelay + "s",
     ($scope.initialDelay + $scope.delayInterval) + "s",
     ($scope.initialDelay + $scope.delayInterval) + "s",
     ($scope.initialDelay + $scope.delayInterval) + "s",
