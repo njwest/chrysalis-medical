@@ -1,11 +1,14 @@
 .expertise-item {
   background-image: url('../img/bar.png');
-  width: 600px;
-  height: 50px;
+  width: 100%;
   background-repeat: no-repeat;
 }
 
 .expertise-item-text {
   padding-left: 20px;
   padding-top: 10px;
+}
+
+.panel-default {
+  border: none;
 }

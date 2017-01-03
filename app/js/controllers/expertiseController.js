@@ -1,6 +1,6 @@
 'use strict';
 
-chrysalisApp.controller('ExpertiseController', ['$scope', '$http', function($scope, $http) {
+chrysalisApp.controller('ExpertiseController', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 
   $http.get('data/expertiseItems.json').success(function(expertiseItemsData) {
     $scope.items = expertiseItemsData;
@@ -22,5 +22,14 @@ chrysalisApp.controller('ExpertiseController', ['$scope', '$http', function($sco
     ($scope.initialDelay + ($scope.delayInterval * 2)) + "s",
     ($scope.initialDelay + ($scope.delayInterval * 2)) + "s"
   ];
+
+  // start video after text animations complete
+  $scope.videoSection = '<video autoplay class="responsive-video"><source id="expertise-video" src="videos/dna-green-segment.mp4" type="video/mp4"; codecs="avc1.42E01E, mp4a.40.2" /></video>'
+
+  console.log('video time delay = ', ($scope.initialDelay + ($scope.delayInterval * 3) ));
+
+  $timeout(function () {
+    document.getElementById('expertise-video-container').innerHTML = $scope.videoSection;
+  }, (($scope.initialDelay + ($scope.delayInterval * 2) )) * 1000 );
 
 }]);

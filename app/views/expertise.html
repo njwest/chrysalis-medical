@@ -1,18 +1,19 @@
 <!-- content -->
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-sm-8">
     <!-- title -->
     <div ng-include="'views/title.html'"></div>
-    <div ng-repeat="item in items" class="expertise-item fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index] }}">
+    <div ng-repeat="item in items" class="expertise-item fadeInDown wow hidden-sm hidden-xs" data-wow-delay="{{ animationTimeDelay[$index] }}">
       <div class="expertise-item-text">
         {{ item }}
       </div>
     </div>
+    <div ng-repeat="item in items" class="panel panel-default fadeInDown wow hidden-md hidden-lg" data-wow-delay="{{ animationTimeDelay[$index] }}">
+      {{ item }}
+    </div>
   </div>
-  <div class="col-md-4">
-    <video autoplay class="responsive-video">
-      <source src="videos/dna-green-segment.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-    </video>
+  <div id="expertise-video-container" class="col-sm-4 hidden-xs">
+    <!-- video injected after text animations -->
   </div>
 </div>
 
