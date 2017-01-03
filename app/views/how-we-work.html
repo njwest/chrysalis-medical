@@ -18,20 +18,32 @@
     <div class="row visible-md">
       <img ng-repeat="icon in icons" class="img-responsive icons icons-md fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}" />
     </div> <!-- /md-view -->
-    <!-- sm & xs -view -->
-    <div class="row visible-sm visible-xs">
+    <!-- sm view -->
+    <div class="row visible-sm">
       <div ng-repeat="icon in icons | limitTo : 3" class="col-sm-4 fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index + 1] }}">
         <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
       </div>
     </div>
-    <div class="row visible-sm visible-xs">
+    <div class="row visible-sm">
       <div class="col-sm-2">
         <!-- col-sm-offset-2 -->
       </div>
       <div ng-repeat="icon in icons | limitTo : 2 : 2" class="col-sm-4 fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index + 4] }}">
         <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
       </div>
-    </div> <!-- /sm & xs -view -->
+    </div> <!-- /sm view -->
+    <!-- xs -view -->
+    <div class="row visible-xs">
+      <div ng-repeat="icon in icons | limitTo : 2" class="col-xs-6  fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index + 1] }}">
+        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+      </div>
+      <div ng-repeat="icon in icons | limitTo : 2 : 2" class="col-xs-6  fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index + 3] }}">
+        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+      </div>
+      <div ng-repeat="icon in icons | limitTo : 1 : 4" class="col-xs-6 col-xs-offset-3 fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index + 5] }}">
+        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+      </div>
+    </div> <!-- /xs -view -->
   </div>
 </div>
 

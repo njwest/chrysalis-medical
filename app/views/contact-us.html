@@ -27,21 +27,12 @@
     <form id="contact-form" name="contactForm" novalidate ng-submit="submit()">
       <div class="form-group">
         <input id="name-input" type="name" name="name" class="form-control" placeholder="Name" ng-model="contact.name" ng-required="true" ng-blur="resetNameInput()">
-        <!-- <div id="invalid-msg-name" ng-show="contactForm.name.$touched && contactForm.name.$invalid" class="invalid-msg bg-danger">
-          <small class="text-danger">Enter a valid name</small>
-        </div> -->
       </div>
       <div class="form-group">
         <input id="email-input" type="email" name="email" class="form-control" placeholder="Email" ng-model="contact.email" ng-required="true" ng-blur="resetEmailInput()">
-        <!-- <div ng-show="contactForm.email.$touched && contactForm.email.$invalid" class="invalid-msg bg-danger">
-          <small class="text-danger">Enter a valid email address</small>
-        </div> -->
       </div>
       <div class="form-group">
         <textarea id="message-input" name="message" class="form-control" rows="12" placeholder="Message" ng-model="contact.message" ng-required="true" ng-blur="resetMessageInput()"></textarea>
-        <!-- <div ng-show="contactForm.message.$touched && contactForm.message.$invalid" class="invalid-msg bg-danger">
-          <small class="text-danger">Enter a valid message</small>
-        </div> -->
       </div>
       <div class="row">
         <div class="col-md-9">

@@ -76,6 +76,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     if (
       ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
+      console.log('if statement fired');
       console.log($scope.contact);
       document.getElementById('form-messages').className = 'bg-danger text-danger'; // show error msg
       document.getElementById('submit-btn').className = 'btn btn-success pull-right animated shake';
@@ -103,50 +104,86 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       //   $scope.addZoomOut();
       // }, 10000);
 
-    } // /check for blank fields or invalid email
+    } // end if statement
 
-    // else {
-    // $scope.jsondata = {
-    //     "UserEmail" : $scope.contact.email,
-    //     "UserName" : $scope.contact.name,
-    //     "FromEmail" : "test@n24i.com",
-    //     "ToEmail" : "darryl.mendonez@nucleuscentral.com;",
-    //     "ReplyToEmail" : "",
-    //     "CopyToEmail" : "",
-    //     "Subject" : "Chrysalis Contacts",
-    //     "EmailContent" : $scope.contact.message
-    // };
-    //   $.ajax({
-    //     type: "POST",
-    //     url: $scope.url,
-    //     data: $scope.jsondata,
-    //     success: function (msg) {
-    //         document.getElementById('form-messages').className = 'bg-danger text-danger shake zoomOut';
-    //         document.getElementById('form-messages').className = 'bg-success text-success bounceIn';
-    //         document.getElementById('form-messages').innerHTML = $scope.successResponse;
-    //         document.getElementById.('name-input').value = '';
-    //         document.getElementById.('email.input').value = '';
-    //         document.getElementById.('message-input').value = '';
-    //         setTimeout(function() {
-    //           $scope.removeBounceIn();
-    //         }, 1000);
-    //         setTimeout(function() {
-    //           $scope.addZoomOut();
-    //         }, 10000);
-    //     },
-    //     error: function (msg) {
-    //       document.getElementById('form-messages').className = 'bg-success text-success bounceIn zoomOut';
-    //       document.getElementById('form-messages').className = 'bg-danger text-danger shake';
-    //         document.getElementById('form-messages').innerHTML = $scope.errorResponse;
-    //       setTimeout(function() {
-    //         $scope.removeShake();
-    //       }, 1000);
-    //       setTimeout(function() {
-    //         $scope.addZoomOut();
-    //       }, 10000);
-    //     }
-    //   });
-    // }
+    else {
+      console.log('else statement fired');
+
+      $scope.contactData = {
+          "UserEmail" : $scope.contact.email,
+          "UserName" : $scope.contact.name,
+          "FromEmail" : "test@n24i.com",
+          "ToEmail" : "darryl.mendonez@nucleuscentral.com;",
+          "ReplyToEmail" : "",
+          "CopyToEmail" : "",
+          "Subject" : "Chrysalis Contacts",
+          "EmailContent" : $scope.contact.message
+      };
+      console.log('contactData = ', $scope.contactData);
+
+      var request = {
+        method: 'POST',
+        url: $scope.url,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: $scope.contactData
+      };
+
+
+
+
+      $http(request).success(function(){
+        console.log('Email Sent');
+        // document.getElementsByClassName('form-control').reset();
+
+      }).error(function(){
+        console.log('Email not sent');
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // $.ajax({
+      //   type: "POST",
+      //   url: $scope.url,
+      //   data: $scope.contactData,
+      //   success: function (msg) {
+      //       document.getElementById('form-messages').className = 'bg-danger text-danger shake zoomOut';
+      //       document.getElementById('form-messages').className = 'bg-success text-success bounceIn';
+      //       document.getElementById('form-messages').innerHTML = $scope.successResponse;
+      //       document.getElementById.('name-input').value = '';
+      //       document.getElementById.('email.input').value = '';
+      //       document.getElementById.('message-input').value = '';
+      //       setTimeout(function() {
+      //         $scope.removeBounceIn();
+      //       }, 1000);
+      //       setTimeout(function() {
+      //         $scope.addZoomOut();
+      //       }, 10000);
+      //   },
+      //   error: function (msg) {
+      //     document.getElementById('form-messages').className = 'bg-success text-success bounceIn zoomOut';
+      //     document.getElementById('form-messages').className = 'bg-danger text-danger shake';
+      //       document.getElementById('form-messages').innerHTML = $scope.errorResponse;
+      //     setTimeout(function() {
+      //       $scope.removeShake();
+      //     }, 1000);
+      //     setTimeout(function() {
+      //       $scope.addZoomOut();
+      //     }, 10000);
+      //   }
+      // });
+    }
 
   }; // /submit btn
 
