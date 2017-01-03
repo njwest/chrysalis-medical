@@ -1,11 +1,16 @@
-<!-- title -->
-<div ng-include="'views/title.html'"></div>
 <!-- content -->
 <div class="row">
   <div class="col-md-8">
+    <!-- title -->
+    <div ng-include="'views/title.html'"></div>
     <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow" data-wow-delay="{{ animationTimeDelay[$index] }}" >
       {{ paragraph }}
     </p>
+  </div>
+  <div class="col-md-4">
+    <video autoplay class="responsive-video">
+      <source src="videos/dna-green-segment.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+    </video>
   </div>
 </div>
 
