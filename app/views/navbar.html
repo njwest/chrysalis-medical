@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><img class="img-responsive" src="img/chrysalis-logo.png" alt="Chrysalis" /></a>
+      <a class="navbar-brand" href="/" ng-click="currentPageCheck()"><img class="img-responsive" src="img/chrysalis-logo.png" alt="Chrysalis" /></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,6 +17,6 @@
           <a ui-sref="{{ navItem.link }}" ng-click="currentPageCheck()">{{ navItem.name }}</a>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div> <!-- /.navbar-collapse -->
+  </div> <!-- /.container-fluid -->
 </nav>
