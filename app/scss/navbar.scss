@@ -42,3 +42,12 @@
   color: $green;
   background-color: white;
 }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+}
+
+#navbar-brand-logo {
+  position: relative;
+  top: -15px;
+}

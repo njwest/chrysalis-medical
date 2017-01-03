@@ -33,3 +33,7 @@ body {
   height: 70px;
   background-repeat: no-repeat;
 }
+
+video {
+  z-index: -1;
+}
