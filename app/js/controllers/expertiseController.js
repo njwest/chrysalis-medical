@@ -23,11 +23,4 @@ chrysalisApp.controller('ExpertiseController', ['$scope', '$http', '$timeout', f
     ($scope.initialDelay + ($scope.delayInterval * 2)) + "s"
   ];
 
-  // start video after text animations complete
-  $scope.videoSection = '<video autoplay class="responsive-video"><source id="expertise-video" src="videos/dna-blue-segment.mp4" type="video/mp4"; codecs="avc1.42E01E, mp4a.40.2" /></video>';
-
-  $timeout(function () {
-    document.getElementById('expertise-video-container').innerHTML = $scope.videoSection;
-  }, (($scope.initialDelay + ($scope.delayInterval * 2) )) * 1000 );
-
 }]);
