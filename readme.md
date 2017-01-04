@@ -4,7 +4,7 @@
 Website for Chrysalis Medical Communications
 
 #Installation
-To launch cd into root folder from terminal, type **node server.js**, and hit enter
+To launch, cd into root folder from terminal, type **node server.js**, and hit enter
 
 #Edit code
 Launch another session of terminal, cd into root folder, type in **gulp**, and hit enter. This will allow you to make changes to the html, scss, and js files. Once you make changes, just refresh the browser to view the changes. gulpfile.js will inject the changes without you having to restart the server.
