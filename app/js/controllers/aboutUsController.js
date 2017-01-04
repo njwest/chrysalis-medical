@@ -17,10 +17,10 @@ chrysalisApp.controller('AboutUsController', ['$scope', '$http', '$timeout', fun
   ];
 
   // start video after text animations complete
-  $scope.videoSection = '<video autoplay class="responsive-video"><source id="about-us-video" src="videos/dna-green-segment.mp4" type="video/mp4"; codecs="avc1.42E01E, mp4a.40.2" /></video>';
-
-  $timeout(function () {
-    document.getElementById('about-us-video-container').innerHTML = $scope.videoSection;
-  }, (($scope.initialDelay + ($scope.delayInterval * 2) )) * 1000 );
+  // $scope.videoSection = '<video autoplay class="responsive-video"><source id="about-us-video" src="videos/dna-green-segment.mp4" type="video/mp4"; codecs="avc1.42E01E, mp4a.40.2" /></video>';
+  //
+  // $timeout(function () {
+  //   document.getElementById('about-us-video-container').innerHTML = $scope.videoSection;
+  // }, (($scope.initialDelay + ($scope.delayInterval * 2) )) * 1000 );
 
 }]);

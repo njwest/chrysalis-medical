@@ -12,8 +12,16 @@
       {{ paragraph }}
     </p>
   </div>
-  <div id="about-us-video-container" class="col-sm-4 hidden-xs hidden-sm">
+  <!-- md & lg view -->
+  <div id="about-us-video-container" class="col-md-4 hidden-xs hidden-sm dna-segment-video">
     <!-- video injected after text animations -->
+    <video autoplay class="responsive-video">
+      <source id="about-us-video" src="videos/dna-green-segment.mp4" type="video/mp4"; codecs="avc1.42E01E, mp4a.40.2" />
+    </video>
+  </div>
+  <!-- sm view -->
+  <div class="col-sm-4 visible-sm">
+    <img src="img/dna-green-segment.png" class="img-responsive dna-segment-img" alt="">
   </div>
 </div>
 
