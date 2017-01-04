@@ -30,8 +30,8 @@ chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', fun
   // change class to active when user clicks on nav links
   $scope.currentPageCheck = function() {
     $scope.itemSelected = this;
-    // mark unselected items innactive
-    if ( ($scope.itemSelected.navItem === undefined) || ($scope.itemSelected.navItem.active === false) || ($scope.itemSelected.navItem === undefined) ) {
+    // mark unselected items inactive
+    if ( ($scope.itemSelected.navItem === undefined) || ($scope.itemSelected.navItem.active === false) ) {
       for (var i = 0; i < $scope.navItems.length; i++) {
         if ($scope.navItems[i].active === true) {
           $scope.navItems[i].active = false;
