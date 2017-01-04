@@ -18,7 +18,7 @@ Environments
 
 #Production
 
-http://www.chrysalis.com
+http://www.chrysalismedical.com
 Login credentials
 Database info (name, host, credentials)
 
@@ -28,7 +28,7 @@ Login credentials
 Database info (name, host, credentials)
 
 #Staging
-http://creativestage.nucleusclient.com/chrysalis-site/
+http://staging.chrysalismedical.com
 Login credentials: N/A
 Database info (name, host, credentials)
 
