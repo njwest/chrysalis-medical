@@ -2,12 +2,17 @@
 <div class="row">
   <div class="col-sm-8">
     <!-- title -->
+    <!-- md & lg view -->
     <div ng-include="'views/title.html'"></div>
-    <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow" data-wow-delay="{{ animationTimeDelay[$index] }}" >
+    <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow hidden-xs hidden-sm" data-wow-delay="{{ animationTimeDelay[$index] }}" >
+      {{ paragraph }}
+    </p>
+    <!-- xs & sm view with no animations -->
+    <p ng-repeat="paragraph in aboutUsText" class="visible-xs visible-sm" >
       {{ paragraph }}
     </p>
   </div>
-  <div id="about-us-video-container" class="col-sm-4 hidden-xs">
+  <div id="about-us-video-container" class="col-sm-4 hidden-xs hidden-sm">
     <!-- video injected after text animations -->
   </div>
 </div>

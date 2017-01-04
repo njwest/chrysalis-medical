@@ -3,12 +3,14 @@
   <div class="col-sm-8">
     <!-- title -->
     <div ng-include="'views/title.html'"></div>
+    <!-- md & lg view -->
     <div ng-repeat="item in items" class="expertise-item fadeInDown wow hidden-sm hidden-xs" data-wow-delay="{{ animationTimeDelay[$index] }}">
       <div class="expertise-item-text">
         {{ item }}
       </div>
     </div>
-    <div ng-repeat="item in items" class="panel panel-default fadeInDown wow hidden-md hidden-lg" data-wow-delay="{{ animationTimeDelay[$index] }}">
+    <!-- xs & sm view with no animations -->
+    <div ng-repeat="item in items" class="panel panel-default hidden-md hidden-lg" data-wow-delay="{{ animationTimeDelay[$index] }}">
       {{ item }}
     </div>
   </div>
