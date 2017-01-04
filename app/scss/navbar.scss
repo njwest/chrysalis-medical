@@ -11,6 +11,10 @@
   border-color: $white;
 }
 
+.nav > li > a { // remove dotted border that appears on firefox
+  outline:none;
+}
+
 .nav-font {
   font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 15pt;
