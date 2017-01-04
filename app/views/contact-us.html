@@ -18,12 +18,21 @@
     </div>
   </div>
   <!-- xs & sm view with no animations -->
-  <div class="col-sm-6 visible-xs visible-sm">
+  <div class="col-sm-12 visible-xs visible-sm">
     <div ng-repeat="profile in profiles" class="row">
       <div class="col-sm-4">
         <img class="img-responsive center-block" ng-src="{{ profile.imgPath }}" alt="{{ profile.name }}" />
       </div>
-      <div class="col-sm-6 text-center">
+      <!-- xs view -->
+      <div class="col-sm-8 text-center hidden-sm">
+        <h2 class="profile-painter">{{ profile.name }}</h2>
+        <h2>{{ profile.position }}</h2>
+        <p class="email-font">
+          {{ profile.email }}
+        </p>
+      </div>
+      <!-- sm view -->
+      <div class="col-sm-8 hidden-xs">
         <h2 class="profile-painter">{{ profile.name }}</h2>
         <h2>{{ profile.position }}</h2>
         <p class="email-font">
