@@ -17,15 +17,10 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     ($scope.initialDelay + $scope.delayInterval) + "s",
   ];
 
-  // remove animations for xs and sm
-  // if angular.element( document.querySelector( '#contact-form-div' ) )
-
-
-  // if ($('#desktopTest').is(':hidden')) {
-  //   // device is == eXtra Small
-  // } else {
-  //     // device is >= SMaller
-  // }
+  // remove animations for mobile devices
+  if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    document.getElementById('contact-form-div').className = "col-md-6";
+  }
 
   // form
   $scope.removeRedBorderDelayTimer = 5000;
