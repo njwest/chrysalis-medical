@@ -20,13 +20,9 @@
   font-size: 15pt;
 }
 
-// .nav-font-md {
-//   font-size: 20pt;
-// }
-//
-// .nav-font-sm {
-//   font-size: 15px;
-// }
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #ffffff;
+}
 
 .navbar-default .navbar-nav>li>a {
   color: $blue;

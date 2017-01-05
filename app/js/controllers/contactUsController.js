@@ -18,9 +18,9 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   ];
 
   // remove animations for mobile devices
-  if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    document.getElementById('contact-form-div').className = "col-md-6";
-  }
+  // if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  //   document.getElementById('contact-form-div').className = "col-md-6";
+  // }
 
   // form
   $scope.removeRedBorderDelayTimer = 5000;
@@ -65,12 +65,12 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   $scope.removeShake = function() {
     document.getElementById('submit-btn').className = 'btn btn-success pull-right';
   };
-  $scope.removeBounceIn = function() {
-    $scope.formMessages.className = 'bounceIn';
-  };
-  $scope.addZoomOut = function() {
-    $scope.formMessages.className = 'zoomOut';
-  };
+  // $scope.removeBounceIn = function() {
+  //   $scope.formMessages.className = 'bounceIn';
+  // };
+  // $scope.addZoomOut = function() {
+  //   $scope.formMessages.className = 'zoomOut';
+  // };
 
   $scope.submit = function() {
     console.log('submit button clicked');
@@ -81,8 +81,6 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     if (
       ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
-      console.log('if statement fired');
-      console.log($scope.contact);
       document.getElementById('form-messages').className = 'bg-danger text-danger'; // show error msg
       document.getElementById('submit-btn').className = 'btn btn-success pull-right animated shake';
 
