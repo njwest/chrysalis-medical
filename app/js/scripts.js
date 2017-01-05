@@ -12,7 +12,7 @@ $(window).load(function() {
   // console.log('viewportWidth = ', viewportWidth);
   if (viewportWidth < 992) {
     $("#contact-form-div").removeClass("fadeInDown wow");
-    $("#top-nav").removeAttr("box-shadow");
+    $("#top-nav").removeClass("box-shadow");
   }
 
   $(window).resize(function () {
