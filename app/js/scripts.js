@@ -12,7 +12,6 @@ $(window).load(function() {
   // console.log('viewportWidth = ', viewportWidth);
   if ( (viewportWidth < 992) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ) {
     $("#contact-form-div").removeClass("fadeInDown wow").removeAttr("data-wow-delay");
-    $("#top-nav").removeClass("box-shadow");
   }
 
   $(window).resize(function () {

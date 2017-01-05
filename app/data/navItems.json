@@ -2,26 +2,31 @@
   {
     "name":"Home",
     "link":"/",
-    "active":false
+    "active":false,
+    "titleImage":""
   },
   {
     "name":"About Us",
     "link":"about-us",
-    "active":false
+    "active":false,
+    "titleImage":"img/titles/about-us.png"
   },
   {
     "name":"How We Work",
     "link":"how-we-work",
-    "active":false
+    "active":false,
+    "titleImage":"img/titles/how-we-work.png"
   },
   {
     "name":"Expertise",
     "link":"expertise",
-    "active":false
+    "active":false,
+    "titleImage":"img/titles/expertise.png"
   },
   {
     "name":"Contact Us",
     "link":"contact-us",
-    "active":false
+    "active":false,
+    "titleImage":"img/titles/contact-us.png"
   }
 ]

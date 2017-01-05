@@ -2,8 +2,8 @@
 <div class="row">
   <div class="col-sm-8">
     <!-- title -->
-    <!-- md & lg view -->
     <div ng-include="'views/title.html'"></div>
+    <!-- md & lg view -->
     <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow hidden-xs hidden-sm" data-wow-delay="{{ animationTimeDelay[$index] }}" >
       {{ paragraph }}
     </p>
