@@ -11,7 +11,7 @@ $(window).load(function() {
   var viewportWidth = $(window).width();
   // console.log('viewportWidth = ', viewportWidth);
   if ( (viewportWidth < 992) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ) {
-    $("#contact-form-div").removeClass("fadeInDown wow");
+    $("#contact-form-div").removeClass("fadeInDown wow").removeAttr("data-wow-delay");
     $("#top-nav").removeClass("box-shadow");
   }
 
@@ -19,10 +19,10 @@ $(window).load(function() {
     viewportWidth = $(window).width();
     // console.log('viewportWidth resized to = ', viewportWidth);
     if (viewportWidth < 992) {
-      $("#contact-form-div").removeClass("fadeInDown wow");
+      $("#contact-form-div").removeClass("fadeInDown wow").removeAttr("data-wow-delay");
     }
     else {
-      $("#contact-form-div").addClass("fadeInDown wow");
+      $("#contact-form-div").addClass("fadeInDown wow").attr("data-wow-delay", "{{ formDelay }}");
     }
   });
 });
