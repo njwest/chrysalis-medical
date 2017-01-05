@@ -10,7 +10,7 @@ $(window).load(function() {
 
   var viewportWidth = $(window).width();
   // console.log('viewportWidth = ', viewportWidth);
-  if (viewportWidth < 992) {
+  if ( (viewportWidth < 992) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
     $("#contact-form-div").removeClass("fadeInDown wow");
     $("#top-nav").removeClass("box-shadow");
   }
