@@ -17,11 +17,6 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     ($scope.initialDelay + $scope.delayInterval) + "s",
   ];
 
-  // remove animations for mobile devices
-  // if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  //   document.getElementById('contact-form-div').className = "col-md-6";
-  // }
-
   // form
   $scope.removeRedBorderDelayTimer = 5000;
   $scope.removeShakeClassDelayTimer = 1250;
