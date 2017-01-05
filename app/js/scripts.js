@@ -9,12 +9,15 @@ $(window).on('beforeunload', function() {
 $(window).load(function() {
 
   var viewportWidth = $(window).width();
+  // console.log('viewportWidth = ', viewportWidth);
   if (viewportWidth < 992) {
     $("#contact-form-div").removeClass("fadeInDown wow");
     $("#top-nav").removeAttr("box-shadow");
   }
 
   $(window).resize(function () {
+    viewportWidth = $(window).width();
+    // console.log('viewportWidth resized to = ', viewportWidth);
     if (viewportWidth < 992) {
       $("#contact-form-div").removeClass("fadeInDown wow");
     }
