@@ -13,8 +13,9 @@
         <img class="img-responsive center-block" ng-src="{{ profile.imgPath }}" alt="{{ profile.name }}" />
       </div>
       <div class="col-md-6">
-        <h2 class="profile-painter">{{ profile.name }}</h2>
-        <h2>{{ profile.position }}</h2>
+        <!-- <h2 class="profile-painter">{{ profile.name }}</h2> -->
+        <img src="{{ profile.imgNamePath }}" class="img-responsive" alt="{{ profile.name }}" />
+        <h3>{{ profile.position }}</h3>
         <p class="email-font">
           <a href="mailto:{{ profile.email }}">
             {{ profile.email }}
@@ -31,8 +32,9 @@
       </div>
       <!-- xs view -->
       <div class="col-sm-8 text-center hidden-sm">
-        <h2 class="profile-painter">{{ profile.name }}</h2>
-        <h2>{{ profile.position }}</h2>
+        <!-- <h2 class="profile-painter">{{ profile.name }}</h2> -->
+        <img src="{{ profile.imgNamePath }}" class="img-responsive center-block" alt="{{ profile.name }}" />
+        <h3>{{ profile.position }}</h3>
         <p class="email-font">
           <a href="mailto:{{ profile.email }}">
             {{ profile.email }}
@@ -41,8 +43,9 @@
       </div>
       <!-- sm view -->
       <div class="col-sm-8 hidden-xs">
-        <h2 class="profile-painter">{{ profile.name }}</h2>
-        <h2>{{ profile.position }}</h2>
+        <!-- <h2 class="profile-painter">{{ profile.name }}</h2> -->
+        <img src="{{ profile.imgNamePath }}" class="img-responsive" alt="{{ profile.name }}" />
+        <h3>{{ profile.position }}</h3>
         <p class="email-font">
           <a href="mailto:{{ profile.email }}">
             {{ profile.email }}

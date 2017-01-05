@@ -3,12 +3,14 @@
     "name":"Stacey Everett",
     "position":"VP, Client Services",
     "email":"stacey.everett@chrysalismedical.com",
-    "imgPath":"img/profiles/stacey-everett.png"
+    "imgPath":"img/profiles/stacey-everett.png",
+    "imgNamePath":"img/profiles/stacey-everett-name.png"
   },
   {
     "name":"Dan Hutta, PhD",
     "position":"VP, Scientific and Medical Services",
     "email":"daniel.hutta@chrysalismedical.com",
-    "imgPath":"img/profiles/dan-hutta.png"
+    "imgPath":"img/profiles/dan-hutta.png",
+    "imgNamePath":"img/profiles/dan-hutta-name.png"
   }
 ]
