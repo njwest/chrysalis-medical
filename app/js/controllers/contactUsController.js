@@ -81,10 +81,6 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         $scope.removeBtnAnimationClass();
       }, $scope.removeBtnAnimationClassDelayTimer); // remove shake animation class
 
-      // $timeout(function() { // fadeOut error msg after 5 seconds
-      //   document.getElementById('form-messages').className = 'bg-danger text-danger animated fadeOut';
-      // }, $scope.removeRedBorderDelayTimer);
-
       if ( // show blank field error
         ($scope.contact === undefined) ||
         ($scope.contact.name === undefined) || ($scope.contact.message === undefined)
@@ -97,10 +93,6 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         $timeout($scope.zoomOutDanger, 5000);
         $timeout($scope.removeZoomOut, 6000);
       }
-
-      // $timeout(function() {
-      //   $scope.addZoomOut();
-      // }, 10000);
 
     } // end if statement
 
@@ -136,57 +128,15 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         $timeout(function() { // pulse submit btn on error
           $scope.removeBtnAnimationClass();
         }, $scope.removeBtnAnimationClassDelayTimer); // remove pulse animation class
-        // write function to reset input values to ""
+        document.getElementById('name-input').value = '';
+        document.getElementById('email-input').value = '';
+        document.getElementById('message-input').value = '';
         $timeout($scope.zoomOutSuccess, 5000);
         $timeout($scope.removeZoomOut, 6000);
       }).error(function(){
         console.log('Email not sent');
       });
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // $.ajax({
-      //   type: "POST",
-      //   url: $scope.url,
-      //   data: $scope.contactData,
-      //   success: function (msg) {
-      //       document.getElementById('form-messages').className = 'bg-danger text-danger shake zoomOut';
-      //       document.getElementById('form-messages').className = 'bg-success text-success bounceIn';
-      //       document.getElementById('form-messages').innerHTML = $scope.successResponse;
-      //       document.getElementById.('name-input').value = '';
-      //       document.getElementById.('email.input').value = '';
-      //       document.getElementById.('message-input').value = '';
-      //       setTimeout(function() {
-      //         $scope.removeBounceIn();
-      //       }, 1000);
-      //       setTimeout(function() {
-      //         $scope.addZoomOut();
-      //       }, 10000);
-      //   },
-      //   error: function (msg) {
-      //     document.getElementById('form-messages').className = 'bg-success text-success bounceIn zoomOut';
-      //     document.getElementById('form-messages').className = 'bg-danger text-danger shake';
-      //       document.getElementById('form-messages').innerHTML = $scope.errorResponse;
-      //     setTimeout(function() {
-      //       $scope.removeBtnAnimationClass();
-      //     }, 1000);
-      //     setTimeout(function() {
-      //       $scope.addZoomOut();
-      //     }, 10000);
-      //   }
-      // });
     }
-
   }; // /submit btn
 
 }]);
