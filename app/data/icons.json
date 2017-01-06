@@ -1,16 +1,16 @@
 [{
 	"name": "Integrity",
-	"imgPath": "img/icons/icon-integrity.jpg"
+	"imgPath": "img/icons/icon-integrity.png"
 }, {
 	"name": "Sound Science",
-	"imgPath": "img/icons/icon-sound-science.jpg"
+	"imgPath": "img/icons/icon-sound-science.png"
 }, {
 	"name": "Commitment",
-	"imgPath": "img/icons/icon-commitment.jpg"
+	"imgPath": "img/icons/icon-commitment.png"
 }, {
 	"name": "Passion",
-	"imgPath": "img/icons/icon-passion.jpg"
+	"imgPath": "img/icons/icon-passion.png"
 }, {
 	"name": "Partnership",
-	"imgPath": "img/icons/icon-partnership.jpg"
+	"imgPath": "img/icons/icon-partnership.png"
 }]
