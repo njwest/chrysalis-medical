@@ -36,3 +36,7 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   height: 55px;
   font-size: 85%;
 }
+
+.form-control:focus {
+  border-color: $blue;
+}

@@ -22,7 +22,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     angular.element( document.querySelector( '#message-input' ) )
   ];
 
-  // remove red border and invalid msgs after time delay
+  // remove red border after time delay
   $scope.resetNameInput = function() {
     $timeout(function() {
       $scope.formInputs[0].removeClass('ng-touched').addClass('ng-untouched');
@@ -51,14 +51,10 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   };
 
   $scope.zoomOutDanger = function() {
-    console.log('zoomOut started');
     document.getElementById('form-messages').className = 'animated zoomOut bg-danger text-danger';
-    console.log('zoomOut fired');
   }
   $scope.zoomOutSuccess = function() {
-    console.log('zoomOut started');
     document.getElementById('form-messages').className = 'animated zoomOut bg-success text-success';
-    console.log('zoomOut fired');
   }
   $scope.removeZoomOut = function() {
     document.getElementById('form-messages').className = 'center-block text-center';
@@ -66,7 +62,6 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   };
 
   $scope.submit = function() {
-    console.log('submit button clicked');
     $scope.$watch('contact.name', function(val) {
     });
 
@@ -121,7 +116,6 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       };
 
       $http(request).success(function(){
-        console.log('Email Sent');
         document.getElementById('form-messages').innerHTML = $scope.successResponse;
         document.getElementById('form-messages').className = 'bg-success text-success';
         document.getElementById('submit-btn').className = 'btn btn-success pull-right animated pulse';
@@ -131,6 +125,9 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         document.getElementById('name-input').value = '';
         document.getElementById('email-input').value = '';
         document.getElementById('message-input').value = '';
+        $scope.contact.name = undefined;
+        $scope.contact.email = undefined;
+        $scope.contact.message = undefined;
         $timeout($scope.zoomOutSuccess, 5000);
         $timeout($scope.removeZoomOut, 6000);
       }).error(function(){
