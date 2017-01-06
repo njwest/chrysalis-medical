@@ -80,6 +80,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
       document.getElementById('form-messages').className = 'bg-danger text-danger'; // show error msg
+      // document.getElementById('form-messages-sm-xs').className = 'bg-danger text-danger';
       document.getElementById('submit-btn').className = 'btn btn-success pull-right animated shake';
 
       $timeout(function() { // shake submit btn on error
@@ -96,9 +97,11 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         ($scope.contact.name === undefined) || ($scope.contact.message === undefined)
       ) {
         document.getElementById('form-messages').innerHTML = $scope.blankFieldError;
+        // document.getElementById('form-messages-sm-xs').innerHTML = $scope.blankFieldError;
       }
       else { // show email error
         document.getElementById('form-messages').innerHTML = $scope.emailError;
+        // document.getElementById('form-messages-sm-xs').innerHTML = $scope.emailError;
       }
 
       // $timeout(function() {
@@ -137,6 +140,10 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       $http(request).success(function(){
         console.log('Email Sent');
         // document.getElementsByClassName('form-control').reset();
+        document.getElementById('form-messages').innerHTML = $scope.successResponse;
+        document.getElementById('form-messages').className = 'bg-success text-success';
+        // document.getElementById('form-messages-sm-xs').innerHTML = $scope.successResponse;
+        // document.getElementById('form-messages-sm-xs').className = 'bg-success text-success';
 
       }).error(function(){
         console.log('Email not sent');

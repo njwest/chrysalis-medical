@@ -5,18 +5,22 @@
   </div>
 </div>
 <!-- content -->
-<div class="row">
-  <!-- sm - lg view -->
-  <div class="col-md-12 hidden-xs">
-    <p ng-repeat="text in howWeWorkText" class=" fadeIn wow"  data-wow-delay="{{ animationTimeDelay[0] }}">
-      {{ text }}
+<!-- sm - lg view -->
+<div class="row hidden-xs">
+  <div class="col-md-12">
+    <p class=" fadeIn wow"  data-wow-delay="0.3s">
+      Chrysalis values the partnerships we have built with both our clients and our internal team members.<br />
+      <br />
+      Each day we strive to meet our 5 core values…
       <br />
       <br />
     </p>
     <br />
   </div>
-  <!-- xs & sm view with no animations -->
-  <div class="col-md-12 visible-xs">
+</div>
+<!-- xs view with no animations -->
+<div class="row visible-xs">
+  <div class="col-md-12">
     <p ng-repeat="text in howWeWorkText">
       {{ text }}
       <br />
@@ -24,42 +28,50 @@
     </p>
     <br />
   </div>
-    <!-- lg-view -->
-    <div class="row visible-lg">
-      <img ng-repeat="icon in icons" class="img-responsive icons icons-lg fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}" />
-    </div> <!-- /lg-view -->
-    <!-- md-view -->
-    <div class="row visible-md">
-      <img ng-repeat="icon in icons" class="img-responsive icons icons-md fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}" />
-    </div> <!-- /md-view -->
-    <!-- sm view -->
-    <div class="row visible-sm">
-      <div ng-repeat="icon in icons | limitTo : 3" class="col-sm-4">
-        <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}"/>
-      </div>
-    </div>
-    <div class="row visible-sm">
-      <div class="col-sm-2">
-        <!-- col-sm-offset-2 -->
-      </div>
-      <div ng-repeat="icon in icons | limitTo : 2 : 2" class="col-sm-4">
-        <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}"  data-wow-delay="{{ animationTimeDelay[$index + 4] }}"/>
-      </div>
-    </div> <!-- /sm view -->
-    <!-- xs view with no animations -->
-    <div class="row visible-xs">
-      <div ng-repeat="icon in icons | limitTo : 2" class="col-xs-6">
-        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
-      </div>
-      <div ng-repeat="icon in icons | limitTo : 2 : 2" class="col-xs-6">
-        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
-      </div>
-      <div ng-repeat="icon in icons | limitTo : 1 : 4" class="col-xs-6 col-xs-offset-3">
-        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
-      </div>
-    </div> <!-- /xs -view -->
+</div> <!-- /row -->
+<!-- lg-view -->
+<div class="row visible-lg">
+  <img ng-repeat="icon in icons" class="img-responsive icons icons-lg fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}" />
+</div> <!-- /lg-view -->
+<!-- md-view -->
+<div class="row visible-md">
+  <img ng-repeat="icon in icons" class="img-responsive icons icons-md fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}" />
+</div> <!-- /md-view -->
+<!-- sm view -->
+<div class="row visible-sm">
+  <div class="col-sm-4">
+    <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icons[0].imgPath }}" alt="{{ icons[0].name }}" data-wow-delay="1s"/>
+  </div>
+  <div class="col-sm-4">
+    <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icons[1].imgPath }}" alt="{{ icons[1].name }}" data-wow-delay="1.7s"/>
+  </div>
+  <div class="col-sm-4">
+    <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icons[2].imgPath }}" alt="{{ icons[2].name }}" data-wow-delay="2.4s"/>
   </div>
 </div>
+<div class="row visible-sm">
+  <div class="col-sm-2">
+    <!-- col-sm-offset-2 -->
+  </div>
+  <div class="col-sm-4">
+    <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icons[3].imgPath }}" alt="{{ icons[3].name }}"  data-wow-delay="3.1s"/>
+  </div>
+  <div class="col-sm-4">
+    <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icons[4].imgPath }}" alt="{{ icons[4].name }}"  data-wow-delay="3.8s"/>
+  </div>
+</div> <!-- /sm view -->
+<!-- xs view with no animations -->
+<div class="row visible-xs">
+  <div ng-repeat="icon in icons | limitTo : 2" class="col-xs-6">
+    <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+  </div>
+  <div ng-repeat="icon in icons | limitTo : 2 : 2" class="col-xs-6">
+    <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+  </div>
+  <div ng-repeat="icon in icons | limitTo : 1 : 4" class="col-xs-6 col-xs-offset-3">
+    <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+  </div>
+</div> <!-- /xs -view -->
 
 <script>
   new WOW().init();
