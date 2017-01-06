@@ -6,21 +6,24 @@ chrysalisApp.controller('ExpertiseController', ['$scope', '$http', '$timeout', f
     $scope.items = expertiseItemsData;
   });
 
-  $scope.initialDelay = 0.3;
-  $scope.delayInterval = 0.7;
+  $scope.firstDelay = "0.3s";
+  $scope.secondDelay = "1s";
+  $scope.thirdDelay = "1.7s";
+  $scope.fourthDelay = "2.4s";
 
   $scope.animationTimeDelay = [
-    $scope.initialDelay + "s",
-    $scope.initialDelay + "s",
-    $scope.initialDelay + "s",
-    $scope.initialDelay + "s",
-    ($scope.initialDelay + $scope.delayInterval) + "s",
-    ($scope.initialDelay + $scope.delayInterval) + "s",
-    ($scope.initialDelay + $scope.delayInterval) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 2)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 2)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 2)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 2)) + "s"
+    $scope.firstDelay,
+    $scope.firstDelay,
+    $scope.firstDelay,
+    $scope.firstDelay,
+    $scope.secondDelay,
+    $scope.secondDelay,
+    $scope.secondDelay,
+    $scope.secondDelay,
+    $scope.thirdDelay,
+    $scope.thirdDelay,
+    $scope.thirdDelay,
+    $scope.fourthDelay
   ];
 
 }]);

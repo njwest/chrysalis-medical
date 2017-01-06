@@ -6,8 +6,8 @@
 </div>
 <!-- content -->
 <div class="row">
-  <!-- md & lg view -->
-  <div class="col-md-12 hidden-xs hidden-sm">
+  <!-- sm - lg view -->
+  <div class="col-md-12 hidden-xs">
     <p ng-repeat="text in howWeWorkText" class=" fadeIn wow"  data-wow-delay="{{ animationTimeDelay[0] }}">
       {{ text }}
       <br />
@@ -16,7 +16,7 @@
     <br />
   </div>
   <!-- xs & sm view with no animations -->
-  <div class="col-md-12 visible-xs visible-sm">
+  <div class="col-md-12 visible-xs">
     <p ng-repeat="text in howWeWorkText">
       {{ text }}
       <br />
@@ -32,10 +32,10 @@
     <div class="row visible-md">
       <img ng-repeat="icon in icons" class="img-responsive icons icons-md fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}" />
     </div> <!-- /md-view -->
-    <!-- sm view with no animations -->
+    <!-- sm view -->
     <div class="row visible-sm">
       <div ng-repeat="icon in icons | limitTo : 3" class="col-sm-4">
-        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+        <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" data-wow-delay="{{ animationTimeDelay[$index + 1] }}"/>
       </div>
     </div>
     <div class="row visible-sm">
@@ -43,7 +43,7 @@
         <!-- col-sm-offset-2 -->
       </div>
       <div ng-repeat="icon in icons | limitTo : 2 : 2" class="col-sm-4">
-        <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
+        <img class="img-responsive center-block fadeInDown wow" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}"  data-wow-delay="{{ animationTimeDelay[$index + 4] }}"/>
       </div>
     </div> <!-- /sm view -->
     <!-- xs view with no animations -->

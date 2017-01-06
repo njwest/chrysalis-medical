@@ -5,19 +5,19 @@ $(window).on('beforeunload', function() {
   $("video").hide(); // Hides black box before video plays on Safari, IE 11, and Firefox
 });
 
-// remove animations on contact form for xs & sm view
+// remove animations on contact form for xs view
 $(window).load(function() {
 
   var viewportWidth = $(window).width();
   // console.log('viewportWidth = ', viewportWidth);
-  if ( (viewportWidth < 992) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ) {
+  if ( (viewportWidth < 768) || ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ) {
     $("#contact-form-div").removeClass("fadeInDown wow").removeAttr("data-wow-delay");
   }
 
   $(window).resize(function () {
     viewportWidth = $(window).width();
     // console.log('viewportWidth resized to = ', viewportWidth);
-    if (viewportWidth < 992) {
+    if (viewportWidth < 768) {
       $("#contact-form-div").removeClass("fadeInDown wow").removeAttr("data-wow-delay");
     }
     else {

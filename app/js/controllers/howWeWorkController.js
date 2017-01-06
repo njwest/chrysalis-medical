@@ -10,21 +10,20 @@ chrysalisApp.controller('HowWeWorkController', ['$scope', '$http', function($sco
     $scope.icons = iconData;
   });
 
-  $scope.initialDelay = 0.4;
-  $scope.delayInterval = 0.5;
+  $scope.firstDelay = "0.3s";
+  $scope.secondDelay = "1s";
+  $scope.thirdDelay = "1.7s";
+  $scope.fourthDelay = "2.4s";
+  $scope.fifthDelay = "3.1s";
+  $scope.sixthDelay = "3.8s";
 
   $scope.animationTimeDelay = [
-    $scope.initialDelay + "s",
-    ($scope.initialDelay + $scope.delayInterval) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 2)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 3)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 4)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 5)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 6)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 7)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 8)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 9)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 10)) + "s",
+    $scope.firstDelay,
+    $scope.secondDelay,
+    $scope.thirdDelay,
+    $scope.fourthDelay,
+    $scope.fifthDelay,
+    $scope.sixthDelay
   ];
 
 }]);

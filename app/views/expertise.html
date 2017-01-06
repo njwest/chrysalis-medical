@@ -3,14 +3,14 @@
   <div class="col-sm-8">
     <!-- title -->
     <div ng-include="'views/title.html'"></div>
-    <!-- md & lg view -->
-    <div ng-repeat="item in items" class="expertise-item fadeInDown wow hidden-sm hidden-xs" data-wow-delay="{{ animationTimeDelay[$index] }}">
+    <!-- sm - lg view -->
+    <div ng-repeat="item in items" class="expertise-item fadeInDown wow hidden-xs" data-wow-delay="{{ animationTimeDelay[$index] }}">
       <div class="expertise-item-text">
         {{ item }}
       </div>
     </div>
-    <!-- xs & sm view with no animations -->
-    <div ng-repeat="item in items" class="panel panel-default hidden-md hidden-lg" data-wow-delay="{{ animationTimeDelay[$index] }}">
+    <!-- xs view with no animations -->
+    <div ng-repeat="item in items" class="panel panel-default hidden-sm hidden-md hidden-lg" data-wow-delay="{{ animationTimeDelay[$index] }}">
       {{ item }}
     </div>
     <br />
@@ -22,7 +22,7 @@
     </video>
   </div>
   <!-- sm view -->
-  <div class="col-sm-4 visible-sm">
+  <div class="col-sm-4 visible-sm fadeIn wow" data-wow-delay="{{ fourthDelay }}">
     <img src="img/dna-blue-segment.jpg" class="img-responsive dna-segment-img" alt="">
   </div>
 </div>

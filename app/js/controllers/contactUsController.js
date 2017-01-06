@@ -8,13 +8,14 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   });
 
   // animations
-  $scope.initialDelay = 0.3;
-  $scope.delayInterval = 0.7  ;
-  $scope.formDelay = $scope.delayInterval + 1 + "s";
+  $scope.firstDelay = "0.3s";
+  $scope.secondDelay = "1s";
+  $scope.thirdDelay = "1.7s";
 
   $scope.animationTimeDelay = [
-    $scope.initialDelay + "s",
-    ($scope.initialDelay + $scope.delayInterval) + "s",
+    $scope.firstDelay,
+    $scope.secondDelay,
+    $scope.thirdDelay
   ];
 
   // form

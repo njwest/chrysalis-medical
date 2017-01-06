@@ -3,12 +3,12 @@
   <div class="col-sm-8">
     <!-- title -->
     <div ng-include="'views/title.html'"></div>
-    <!-- md & lg view -->
-    <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow hidden-xs hidden-sm" data-wow-delay="{{ animationTimeDelay[$index] }}" >
+    <!-- sm - lg view -->
+    <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow hidden-xs" data-wow-delay="{{ animationTimeDelay[$index] }}" >
       {{ paragraph }}
     </p>
-    <!-- xs & sm view with no animations -->
-    <p ng-repeat="paragraph in aboutUsText" class="visible-xs visible-sm" >
+    <!-- xs view with no animations -->
+    <p ng-repeat="paragraph in aboutUsText" class="visible-xs" >
       {{ paragraph }}
     </p>
   </div>
@@ -19,7 +19,7 @@
     </video>
   </div>
   <!-- sm view -->
-  <div class="col-sm-4 visible-sm">
+  <div class="col-sm-4 visible-sm fadeIn wow" data-wow-delay="2.4s">
     <img src="img/dna-green-segment.jpg" class="img-responsive dna-segment-img" alt="">
   </div>
 </div>

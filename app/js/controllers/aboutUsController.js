@@ -6,14 +6,17 @@ chrysalisApp.controller('AboutUsController', ['$scope', '$http', '$timeout', fun
     $scope.aboutUsText = aboutUsTextData;
   });
 
-  $scope.initialDelay = 0.3;
-  $scope.delayInterval = 0.7;
+  // animations
+  $scope.firstDelay = "0.3s";
+  $scope.secondDelay = "1s";
+  $scope.thirdDelay = "1.7s";
+  $scope.fourthDelay = "2.4s";
 
   $scope.animationTimeDelay = [
-    $scope.initialDelay + "s",
-    ($scope.initialDelay + $scope.delayInterval) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 2)) + "s",
-    ($scope.initialDelay + ($scope.delayInterval * 3)) + "s"
+    $scope.firstDelay,
+    $scope.secondDelay,
+    $scope.thirdDelay,
+    $scope.fourthDelay
   ];
 
 }]);
