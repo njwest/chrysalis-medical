@@ -6,6 +6,7 @@ chrysalisApp.controller('ExpertiseController', ['$scope', '$http', '$timeout', f
     $scope.items = expertiseItemsData;
   });
 
+  // animations
   $scope.firstDelay = "0.3s";
   $scope.secondDelay = "1s";
   $scope.thirdDelay = "1.7s";

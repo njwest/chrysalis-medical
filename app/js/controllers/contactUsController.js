@@ -7,16 +7,18 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     $scope.profiles = contactUsProfilesData;
   });
 
+  console.log($scope.profiles);
+
   // animations
   $scope.firstDelay = "0.3s";
   $scope.secondDelay = "1s";
   $scope.thirdDelay = "1.7s";
 
-  $scope.animationTimeDelay = [
-    $scope.firstDelay,
-    $scope.secondDelay,
-    $scope.thirdDelay
-  ];
+  // $scope.animationTimeDelay = [
+  //   $scope.firstDelay,
+  //   $scope.secondDelay,
+  //   $scope.thirdDelay
+  // ];
 
   // form
   $scope.removeRedBorderDelayTimer = 5000;

@@ -8,49 +8,85 @@
 <div class="row">
   <!-- md & lg view -->
   <div class="col-md-6 hidden-xs hidden-sm">
-    <div ng-repeat="profile in profiles" class="row fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index] }}">
+    <div class="row fadeInDown wow" data-wow-delay="{{ firstDelay }}">
       <div class="col-md-4">
-        <img class="img-responsive center-block" ng-src="{{ profile.imgPath }}" alt="{{ profile.name }}" />
+        <img class="img-responsive center-block" ng-src="{{ profiles[0].imgPath }}" alt="{{ profiles[0].name }}" />
       </div>
       <div class="col-md-6">
-        <!-- <h2 class="profile-painter">{{ profile.name }}</h2> -->
-        <img src="{{ profile.imgNamePath }}" class="img-responsive" alt="{{ profile.name }}" />
-        <h3>{{ profile.position }}</h3>
+        <img src="{{ profiles[0].imgNamePath }}" class="img-responsive" alt="{{ profiles[0].name }}" />
+        <h3>{{ profiles[0].position }}</h3>
         <p class="email-font">
-          <a href="mailto:{{ profile.email }}">
-            {{ profile.email }}
+          <a href="mailto:{{ profiles[0].email }}">
+            {{ profiles[0].email }}
+          </a>
+        </p>
+        <br />
+      </div>
+    </div>
+    <div class="row fadeInDown wow" data-wow-delay="{{ secondDelay }}">
+      <div class="col-md-4">
+        <img class="img-responsive center-block" ng-src="{{ profiles[1].imgPath }}" alt="{{ profiles[1].name }}" />
+      </div>
+      <div class="col-md-6">
+        <img src="{{ profiles[1].imgNamePath }}" class="img-responsive" alt="{{ profiles[1].name }}" />
+        <h3>{{ profiles[1].position }}</h3>
+        <p class="email-font">
+          <a href="mailto:{{ profiles[1].email }}">
+            {{ profiles[1].email }}
           </a>
         </p>
         <br />
       </div>
     </div>
   </div>
-
-
-
   <!-- sm view -->
   <div class="col-sm-12 visible-sm">
-    <div ng-repeat="profile in profiles" class="row fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index] }}">
+    <div class="row fadeInDown wow" data-wow-delay="{{ firstDelay }}">
       <div class="col-sm-4">
-        <img class="img-responsive center-block" ng-src="{{ profile.imgPath }}" alt="{{ profile.name }}" />
+        <img class="img-responsive center-block" ng-src="{{ profiles[0].imgPath }}" alt="{{ profiles[0].name }}" />
       </div>
       <!-- xs view -->
       <div class="col-sm-8 text-center hidden-sm">
-        <img src="{{ profile.imgNamePathXs }}" class="img-responsive center-block" alt="{{ profile.name }}" />
-        <h3>{{ profile.position }}</h3>
+        <img src="{{ profiles[0].imgNamePathXs }}" class="img-responsive center-block" alt="{{ profiles[0].name }}" />
+        <h3>{{ profiles[0].position }}</h3>
         <p class="email-font">
-          <a href="mailto:{{ profile.email }}">
-            {{ profile.email }}
+          <a href="mailto:{{ profiles[0].email }}">
+            {{ profiles[0].email }}
           </a>
         </p>
       </div>
       <!-- sm view -->
       <div class="col-sm-8 hidden-xs">
-        <img src="{{ profile.imgNamePath }}" class="img-responsive" alt="{{ profile.name }}" />
-        <h3>{{ profile.position }}</h3>
+        <img src="{{ profiles[0].imgNamePath }}" class="img-responsive" alt="{{ profiles[0].name }}" />
+        <h3>{{ profiles[0].position }}</h3>
         <p class="email-font">
-          <a href="mailto:{{ profile.email }}">
-            {{ profile.email }}
+          <a href="mailto:{{ profiles[0].email }}">
+            {{ profiles[0].email }}
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="row fadeInDown wow" data-wow-delay="{{ secondDelay }}">
+      <div class="col-sm-4">
+        <img class="img-responsive center-block" ng-src="{{ profiles[1].imgPath }}" alt="{{ profiles[1].name }}" />
+      </div>
+      <!-- xs view -->
+      <div class="col-sm-8 text-center hidden-sm">
+        <img src="{{ profiles[0].imgNamePathXs }}" class="img-responsive center-block" alt="{{ profiles[0].name }}" />
+        <h3>{{ profiles[0].position }}</h3>
+        <p class="email-font">
+          <a href="mailto:{{ profiles[0].email }}">
+            {{ profiles[0].email }}
+          </a>
+        </p>
+      </div>
+      <!-- sm view -->
+      <div class="col-sm-8 hidden-xs">
+        <img src="{{ profiles[1].imgNamePath }}" class="img-responsive" alt="{{ profiles[1].name }}" />
+        <h3>{{ profiles[1].position }}</h3>
+        <p class="email-font">
+          <a href="mailto:{{ profiles[1].email }}">
+            {{ profiles[1].email }}
           </a>
         </p>
       </div>
@@ -88,7 +124,7 @@
       </div>
     </div>
   </div>
-  <div id="contact-form-div" class="col-md-6 col-sm-12 fadeInDown wow" data-wow-delay="{{ animationTimeDelay[$index + 2] }}">
+  <div id="contact-form-div" class="col-md-6 col-sm-12 fadeInDown wow" data-wow-delay="{{ thirdDelay }}">
     <form id="contact-form" name="contactForm" novalidate ng-submit="submit()">
       <div class="form-group">
         <input id="name-input" type="name" name="name" class="form-control" placeholder="Name" ng-model="contact.name" ng-required="true" ng-blur="resetNameInput()">

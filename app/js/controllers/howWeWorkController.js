@@ -10,6 +10,7 @@ chrysalisApp.controller('HowWeWorkController', ['$scope', '$http', function($sco
     $scope.icons = iconData;
   });
 
+  // animations
   $scope.firstDelay = "0.3s";
   $scope.secondDelay = "1s";
   $scope.thirdDelay = "1.7s";
