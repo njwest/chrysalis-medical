@@ -3,14 +3,42 @@
   <div class="col-sm-8">
     <!-- title -->
     <div ng-include="'views/title.html'"></div>
-    <!-- sm - lg view -->
-    <div ng-repeat="item in items" class="expertise-item fadeInDown wow hidden-xs" data-wow-delay="{{ animationTimeDelay[$index] }}">
-      <div class="expertise-item-text">
-        {{ item }}
-      </div>
+    <!-- sm - lg view --> 
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="0.3s">
+      {{ items[0] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="0.3s">
+      {{ items[1] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="0.3s">
+      {{ items[2] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="0.3s">
+      {{ items[3] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="1s">
+      {{ items[4] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="1s">
+      {{ items[5] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="1s">
+      {{ items[6] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="1s">
+      {{ items[7] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="1.7s">
+      {{ items[8] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="1.7s">
+      {{ items[9] }}
+    </div>
+    <div class="panel panel-default fadeInDown wow hidden-xs" data-wow-delay="1.7s">
+      {{ items[10] }}
     </div>
     <!-- xs view with no animations -->
-    <div ng-repeat="item in items" class="panel panel-default hidden-sm hidden-md hidden-lg" data-wow-delay="{{ animationTimeDelay[$index] }}">
+    <div ng-repeat="item in items" class="panel panel-default hidden-sm hidden-md hidden-lg">
       {{ item }}
     </div>
     <br />
@@ -22,7 +50,7 @@
     </video>
   </div>
   <!-- sm view -->
-  <div class="col-sm-4 visible-sm fadeIn wow" data-wow-delay="{{ fourthDelay }}">
+  <div class="col-sm-4 visible-sm fadeIn wow" data-wow-delay="2.4s">
     <img src="img/dna-blue-segment.jpg" class="img-responsive dna-segment-img" alt="">
   </div>
 </div>

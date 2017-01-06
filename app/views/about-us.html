@@ -4,8 +4,14 @@
     <!-- title -->
     <div ng-include="'views/title.html'"></div>
     <!-- sm - lg view -->
-    <p ng-repeat="paragraph in aboutUsText" class="fadeInLeft wow hidden-xs" data-wow-delay="{{ animationTimeDelay[$index] }}" >
-      {{ paragraph }}
+    <p class="fadeInLeft wow hidden-xs" data-wow-delay="0.3s" >
+      {{ aboutUsText[0] }}
+    </p>
+    <p class="fadeInLeft wow hidden-xs" data-wow-delay="1s" >
+      {{ aboutUsText[1] }}
+    </p>
+    <p class="fadeInLeft wow hidden-xs" data-wow-delay="1.7s" >
+      {{ aboutUsText[2] }}
     </p>
     <!-- xs view with no animations -->
     <p ng-repeat="paragraph in aboutUsText" class="visible-xs" >
