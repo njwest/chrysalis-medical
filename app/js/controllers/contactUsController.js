@@ -24,18 +24,27 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
 
   // remove red border after time delay
   $scope.resetNameInput = function() {
+    if ($scope.formInputs[0].hasClass('ng-invalid')) {
+      $scope.formInputs[0].removeClass('ng-untouched').addClass('invalid-input');
+    }
     $timeout(function() {
-      $scope.formInputs[0].removeClass('ng-touched').addClass('ng-untouched');
+      $scope.formInputs[0].removeClass('ng-touched invalid-input').addClass('ng-untouched');
     }, $scope.removeRedBorderDelayTimer);
   };
   $scope.resetEmailInput = function() {
+    if ($scope.formInputs[1].hasClass('ng-invalid')) {
+      $scope.formInputs[1].removeClass('ng-untouched').addClass('invalid-input');
+    }
     $timeout(function() {
-      $scope.formInputs[1].removeClass('ng-touched').addClass('ng-untouched');
+      $scope.formInputs[1].removeClass('ng-touched invalid-input').addClass('ng-untouched');
     }, $scope.removeRedBorderDelayTimer);
   };
   $scope.resetMessageInput = function() {
+    if ($scope.formInputs[2].hasClass('ng-invalid')) {
+      $scope.formInputs[2].removeClass('ng-untouched').addClass('invalid-input');
+    }
     $timeout(function() {
-      $scope.formInputs[2].removeClass('ng-touched').addClass('ng-untouched');
+      $scope.formInputs[2].removeClass('ng-touched invalid-input').addClass('ng-untouched');
     }, $scope.removeRedBorderDelayTimer);
   };
 
@@ -47,7 +56,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   $scope.emailError = "<small><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please enter a valid email before clicking 'Submit'.</small>";
 
   $scope.removeBtnAnimationClass = function() {
-    document.getElementById('submit-btn').className = 'btn btn-success pull-right';
+    document.getElementById('submit-btn').className = 'btn btn-success pull-right disabled-btn';
   };
 
   $scope.zoomOutDanger = function() {
@@ -55,22 +64,23 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   }
   $scope.zoomOutSuccess = function() {
     document.getElementById('form-messages').className = 'animated zoomOut bg-success text-success';
-  }
+  };
+  $scope.zoomOutError = function() {
+    document.getElementById('form-messages').className = 'animated zoomOut bg-danger text-danger';
+  };
   $scope.removeZoomOut = function() {
     document.getElementById('form-messages').className = 'center-block text-center';
     document.getElementById('form-messages').innerHTML = '';
   };
 
   $scope.submit = function() {
-    $scope.$watch('contact.name', function(val) {
-    });
 
     // check for blank fields or invalid email before submitting ajax request
     if (
       ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
       document.getElementById('form-messages').className = 'bg-danger text-danger'; // show error msg
-      document.getElementById('submit-btn').className = 'btn btn-success pull-right animated shake';
+      document.getElementById('submit-btn').className = 'btn btn-success pull-right animated shake disabled-btn';
 
       $timeout(function() { // shake submit btn on error
         $scope.removeBtnAnimationClass();
@@ -89,10 +99,30 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         $timeout($scope.removeZoomOut, 6000);
       }
 
+      // apply red border if invalid
+      if ($scope.contact === undefined) {
+        $scope.formInputs[0].addClass('ng-invalid ng-touched').removeClass('ng-valid ng-untouched');
+        $scope.formInputs[1].addClass('ng-invalid ng-touched').removeClass('ng-valid ng-untouched');
+        $scope.formInputs[2].addClass('ng-invalid ng-touched').removeClass('ng-valid ng-untouched');
+      }
+      else {
+        if ($scope.contact.name === undefined) {
+          $scope.formInputs[0].addClass('ng-invalid ng-touched').removeClass('ng-valid ng-untouched');
+        }
+        if ($scope.contact.email === undefined) {
+          $scope.formInputs[1].addClass('ng-invalid ng-touched').removeClass('ng-valid ng-untouched');
+        }
+        if ($scope.contact.message === undefined) {
+          $scope.formInputs[2].addClass('ng-invalid ng-touched').removeClass('ng-valid ng-untouched');
+        }
+      }
+      $scope.resetNameInput();
+      $scope.resetEmailInput();
+      $scope.resetMessageInput();
+
     } // end if statement
 
     else {
-      console.log('else statement fired');
 
       $scope.contactData = {
           "UserEmail" : $scope.contact.email,
@@ -116,12 +146,14 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       };
 
       $http(request).success(function(){
+        $scope.formInputs[0].removeClass('ng-touched invalid-input').addClass('ng-untouched');
+        $scope.formInputs[1].removeClass('ng-touched invalid-input').addClass('ng-untouched');
+        $scope.formInputs[2].removeClass('ng-touched invalid-input').addClass('ng-untouched');
         document.getElementById('form-messages').innerHTML = $scope.successResponse;
         document.getElementById('form-messages').className = 'bg-success text-success';
-        document.getElementById('submit-btn').className = 'btn btn-success pull-right animated pulse';
-        $timeout(function() { // pulse submit btn on error
-          $scope.removeBtnAnimationClass();
-        }, $scope.removeBtnAnimationClassDelayTimer); // remove pulse animation class
+        $timeout(function() {
+          $scope.removeBtnAnimationClass(); // remove animated tada
+        }, $scope.removeBtnAnimationClassDelayTimer);
         document.getElementById('name-input').value = '';
         document.getElementById('email-input').value = '';
         document.getElementById('message-input').value = '';
@@ -132,6 +164,15 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         $timeout($scope.removeZoomOut, 6000);
       }).error(function(){
         console.log('Email not sent');
+        document.getElementById('form-messages').innerHTML = $scope.errorResponse;
+        document.getElementById('name-input').value = '';
+        document.getElementById('email-input').value = '';
+        document.getElementById('message-input').value = '';
+        $scope.contact.name = undefined;
+        $scope.contact.email = undefined;
+        $scope.contact.message = undefined;
+        $timeout($scope.zoomOutError, 5000);
+        $timeout($scope.removeZoomOut, 6000);
       });
     }
   }; // /submit btn

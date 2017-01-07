@@ -19,9 +19,27 @@
   border-radius: 8px;
 }
 
-input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
-  border: 1px solid $red-danger;
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, .invalid-input {
+  border: 1px solid $red-bg-danger;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $red-bg-danger;
+  outline: 0 none;
+}
+
+.valid-input {
+  border: 1px solid $green-bg-success;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $green-bg-success;
+  outline: 0 none;
+}
+
+input.ng-invalid.ng-untouched, textarea.ng-invalid.ng-untouched {
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.075);
+  outline: 0 none;
+}
+
+input.ng-invalid:focus, textarea.ng-invalid:focus {
+  border: 1px solid $blue-bg-info;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $blue-bg-info;
   outline: 0 none;
 }
 
@@ -34,9 +52,21 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   border-radius: 5px;
   margin-bottom: 5px;
   height: 55px;
-  font-size: 85%;
+  font-size: 80%;
 }
 
 .form-control:focus {
   border-color: $blue;
+}
+
+.disabled-btn {
+  opacity: 0.4;
+}
+
+.enabled-btn {
+  opacity: 1;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
 }
