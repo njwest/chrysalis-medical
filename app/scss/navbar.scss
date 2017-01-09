@@ -3,7 +3,7 @@
 }
 
 .blue-shadow {
-  box-shadow: -20px 0 30px 0 $blue;
+  box-shadow: 0 0 30px 0 $blue;
 }
 
 .navbar-default {
@@ -50,4 +50,5 @@
 #navbar-brand-logo {
   position: relative;
   top: -15px;
+  // padding-right: 15px;
 }

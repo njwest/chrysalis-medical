@@ -7,20 +7,17 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     $scope.profiles = contactUsProfilesData;
   });
 
-  // animations
   $scope.firstDelay = "0.3s";
   $scope.secondDelay = "1s";
   $scope.thirdDelay = "1.7s";
-
-  // form
   $scope.removeRedBorderDelayTimer = 5000;
   $scope.removeBtnAnimationClassDelayTimer = 1250;
-
   $scope.formInputs = [
     angular.element( document.querySelector( '#name-input' ) ),
     angular.element( document.querySelector( '#email-input' ) ),
     angular.element( document.querySelector( '#message-input' ) )
   ];
+  $scope.url = "http://www.chrysalismedical.com/emailapi/api/email";
 
   // remove red border after time delay
   $scope.resetNameInput = function() {
@@ -48,17 +45,16 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     }, $scope.removeRedBorderDelayTimer);
   };
 
-  $scope.url = "http://www.chrysalismedical.com/emailapi/api/email";
-
+  // form messages
   $scope.successResponse = "<i class='fa fa-check-circle' aria-hidden='true'></i> Your message has been sent.";
   $scope.errorResponse = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> An error has occurred. Please try again.";
   $scope.blankFieldError = "<small><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please fill out all fields before clicking 'Submit'.</small>";
   $scope.emailError = "<small><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Please enter a valid email before clicking 'Submit'.</small>";
 
+  // animations
   $scope.removeBtnAnimationClass = function() {
     document.getElementById('submit-btn').className = 'btn btn-success pull-right disabled-btn';
   };
-
   $scope.zoomOutDanger = function() {
     document.getElementById('form-messages').className = 'animated zoomOut bg-danger text-danger';
   }
@@ -79,12 +75,12 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     if (
       ($scope.contact === undefined) || ($scope.contact.name === undefined) || ($scope.contact.email === undefined) || ($scope.contact.message === undefined)
     ) {
-      document.getElementById('form-messages').className = 'bg-danger text-danger'; // show error msg
+      document.getElementById('form-messages').className = 'bg-danger text-danger animated zoomIn'; // show error msg
       document.getElementById('submit-btn').className = 'btn btn-success pull-right animated shake disabled-btn';
 
-      $timeout(function() { // shake submit btn on error
+      $timeout(function() { // remove shake animation class
         $scope.removeBtnAnimationClass();
-      }, $scope.removeBtnAnimationClassDelayTimer); // remove shake animation class
+      }, $scope.removeBtnAnimationClassDelayTimer);
 
       if ( // show blank field error
         ($scope.contact === undefined) ||
@@ -150,7 +146,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         $scope.formInputs[1].removeClass('ng-touched invalid-input').addClass('ng-untouched');
         $scope.formInputs[2].removeClass('ng-touched invalid-input').addClass('ng-untouched');
         document.getElementById('form-messages').innerHTML = $scope.successResponse;
-        document.getElementById('form-messages').className = 'bg-success text-success';
+        document.getElementById('form-messages').className = 'bg-success text-success animated zoomIn';
         $timeout(function() {
           $scope.removeBtnAnimationClass(); // remove animated tada
         }, $scope.removeBtnAnimationClassDelayTimer);
