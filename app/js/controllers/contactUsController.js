@@ -122,15 +122,14 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
 
       $scope.contactData = {
           "UserEmail" : $scope.contact.email,
-          "UserName" : $scope.contact.name,
+          "UserFirstName" : $scope.contact.name,
           "FromEmail" : "test@n24i.com",
-          "ToEmail" : "darryl.mendonez@nucleuscentral.com;",
+          "ToEmail" : "marina.tolkacheva@nucleuscentral.com",
           "ReplyToEmail" : "",
           "CopyToEmail" : "",
           "Subject" : "Chrysalis Contacts",
           "EmailContent" : $scope.contact.message
       };
-      console.log('contactData = ', $scope.contactData);
 
       var request = {
         method: 'POST',
@@ -142,13 +141,14 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       };
 
       $http(request).success(function(){
+        console.log('Email sent');
         $scope.formInputs[0].removeClass('ng-touched invalid-input').addClass('ng-untouched');
         $scope.formInputs[1].removeClass('ng-touched invalid-input').addClass('ng-untouched');
         $scope.formInputs[2].removeClass('ng-touched invalid-input').addClass('ng-untouched');
         document.getElementById('form-messages').innerHTML = $scope.successResponse;
-        document.getElementById('form-messages').className = 'bg-success text-success animated zoomIn';
+        document.getElementById('form-messages').className = 'bg-success text-success animated bounceIn';
         $timeout(function() {
-          $scope.removeBtnAnimationClass(); // remove animated tada
+          $scope.removeBtnAnimationClass(); // remove animation classes
         }, $scope.removeBtnAnimationClassDelayTimer);
         document.getElementById('name-input').value = '';
         document.getElementById('email-input').value = '';
