@@ -57,7 +57,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
   };
   $scope.zoomOutDanger = function() {
     document.getElementById('form-messages').className = 'animated zoomOut bg-danger text-danger';
-  }
+  };
   $scope.zoomOutSuccess = function() {
     document.getElementById('form-messages').className = 'animated zoomOut bg-success text-success';
   };
@@ -124,7 +124,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
           "UserEmail" : $scope.contact.email,
           "UserFirstName" : $scope.contact.name,
           "FromEmail" : "test@n24i.com",
-          "ToEmail" : "marina.tolkacheva@nucleuscentral.com",
+          "ToEmail" : "darryl.mendonez@nucleuscentral.com",
           "ReplyToEmail" : "",
           "CopyToEmail" : "",
           "Subject" : "Chrysalis Contacts",
@@ -160,6 +160,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
         $timeout($scope.removeZoomOut, 6000);
       }).error(function(){
         console.log('Email not sent');
+        document.getElementById('form-messages').className = 'bg-danger text-danger animated zoomIn'; // show error msg
         document.getElementById('form-messages').innerHTML = $scope.errorResponse;
         document.getElementById('name-input').value = '';
         document.getElementById('email-input').value = '';

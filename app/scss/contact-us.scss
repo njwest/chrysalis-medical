@@ -70,3 +70,8 @@ input.ng-invalid:focus, textarea.ng-invalid:focus {
 .btn:focus,.btn:active {
    outline: none !important;
 }
+
+a:hover {
+  color: $green;
+  text-decoration: none;
+}
