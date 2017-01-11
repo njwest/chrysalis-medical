@@ -10,27 +10,20 @@ To launch, cd into root folder from terminal, type **node server.js**, and hit e
 Launch another session of terminal, cd into root folder, type in **gulp**, and hit enter. This will allow you to make changes to the html, scss, and js files. Once you make changes, just refresh the browser to view the changes. gulpfile.js will minify js files into the js/min folder and minify the scss files into the css/styles.css file and inject the changes without you having to restart the server.
 
 #API Reference
+http://www.chrysalismedical.com/emailapi/api/email
 
-api/all - commodo ligula...
-api/all/id - consectetuer adipiscing...
-
-Environments
+#Environments
 
 #Production
 
 http://www.chrysalismedical.com
 Login credentials: N/A
-Database info (name, host, credentials)
-
-#Demo
-http://demo-url.com
-Login credentials
-Database info (name, host, credentials)
+Database info (name, host, credentials): N/A
 
 #Staging
 http://staging.chrysalismedical.com
 Login credentials: N/A
-Database info (name, host, credentials)
+Database info (name, host, credentials): N/A
 
 #Authors
 Darryl Mendonez
@@ -43,5 +36,7 @@ Stakeholders wanted a revamp after seeing their initial design developed
 This version breaks up the single-page site into a multi-page site as requested by stakeholders
 
 #Reusability Report
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-<h1>Code Reference</h1>
+N/A
+
+#Code Reference
+N/A

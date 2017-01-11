@@ -1,10 +1,6 @@
 /*jslint node: true */
 'use strict';
 
-// ////////////////////////////////////////////////
-// Required
-// // /////////////////////////////////////////////
-
 var gulp = require('gulp'),
 		sass = require('gulp-sass'),
 		uglify = require('gulp-uglify'),
@@ -25,9 +21,6 @@ var jsSource = [
 	'!app/js/libs'
 ];
 
-// ////////////////////////////////////////////////
-// Sass Tasks
-// ///////////////////////////////////////////////
 gulp.task('sass', function() {
 	gulp.src('app/scss/styles.scss')
 		.pipe(plumber())
@@ -37,9 +30,6 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('app/css'));
 });
 
-// ////////////////////////////////////////////////
-// Script Tasks
-// ///////////////////////////////////////////////
 gulp.task('scripts', function() {
   gulp.src(jsSource)
 		.pipe(rename({suffix:'.min'}))
@@ -47,9 +37,6 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('app/js/min'));
 });
 
-// ////////////////////////////////////////////////
-// Watch Tasks
-// ///////////////////////////////////////////////
 gulp.task('watch', function() {
 	gulp.watch('app/js/*.js', ['scripts']);
 	gulp.watch('app/js/configs/*.js', ['scripts']);
@@ -62,7 +49,4 @@ gulp.task('watch', function() {
 	console.log('watching sass');
 });
 
-// ////////////////////////////////////////////////
-// Default Tasks
-// ///////////////////////////////////////////////
 gulp.task('default', ['scripts', 'sass', 'watch']);
