@@ -4,6 +4,8 @@ chrysalisApp.controller('AboutUsController', ['$scope', '$http', '$timeout', fun
 
   $http.get('data/aboutUsText.json').success(function(aboutUsTextData) {
     $scope.aboutUsText = aboutUsTextData;
+  }).error(function(){
+    console.log('Unable to retrieve data.')
   });
 
   // animations

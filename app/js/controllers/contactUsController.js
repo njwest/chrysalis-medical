@@ -18,6 +18,11 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     angular.element( document.querySelector( '#message-input' ) )
   ];
   $scope.url = "http://www.chrysalismedical.com/emailapi/api/email";
+  $scope.fromEmail = "test@n24i.com";
+  $scope.toEmail = "darryl.mendonez@nucleuscentral.com";
+  $scope.replyToEmail = "darryl.mendonez@nucleuscentral.com";
+  $scope.copyToEmail = "";
+  $scope.subject = "Chrysalis Contacts";
 
   // remove red border after time delay
   $scope.resetNameInput = function() {
@@ -123,11 +128,11 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
       $scope.contactData = {
           "UserEmail" : $scope.contact.email,
           "UserFirstName" : $scope.contact.name,
-          "FromEmail" : "test@n24i.com",
-          "ToEmail" : "darryl.mendonez@nucleuscentral.com",
-          "ReplyToEmail" : "",
-          "CopyToEmail" : "",
-          "Subject" : "Chrysalis Contacts",
+          "FromEmail" : $scope.fromEmail,
+          "ToEmail" : $scope.toEmail,
+          "ReplyToEmail" : $scope.replyToEmail,
+          "CopyToEmail" : $scope.copyToEmail,
+          "Subject" : $scope.subject,
           "EmailContent" : $scope.contact.message
       };
 
