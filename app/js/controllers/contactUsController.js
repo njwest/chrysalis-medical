@@ -18,7 +18,7 @@ chrysalisApp.controller('ContactUsController', ['$scope', '$http', '$log', '$tim
     angular.element( document.querySelector( '#message-input' ) )
   ];
   $scope.url = "http://www.chrysalismedical.com/emailapi/api/email";
-  $scope.fromEmail = "test@n24i.com";
+  $scope.fromEmail = "noreply@chrysalismedical.com";
   $scope.toEmail = "darryl.mendonez@nucleuscentral.com";
   $scope.replyToEmail = "darryl.mendonez@nucleuscentral.com";
   $scope.copyToEmail = "";
