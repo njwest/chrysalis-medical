@@ -1,11 +1,11 @@
 'use strict';
-
 chrysalisApp.controller('NavbarController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 
   $http.get('data/navItems.json').success(function(navItemsData) {
 
     $scope.navItems = navItemsData;
-
+    console.log('working');
+    console.log('navItems = ', $scope.navItems);
     // set class='active' when user types in url in address bar
     $scope.url = $location.$$url; // route name with '/'
 

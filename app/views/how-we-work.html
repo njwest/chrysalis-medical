@@ -1,7 +1,7 @@
 <!-- title -->
 <div class="row">
   <div class="col-sm-8">
-    <div ng-include="'views/title.html'"></div>
+    <div ng-include="'views/partials/title.html'"></div>
   </div>
 </div>
 <!-- content -->
@@ -73,9 +73,13 @@
   <div ng-repeat="icon in icons | limitTo : 2" class="col-xs-6">
     <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
   </div>
+</div>
+<div class="row visible-xs">
   <div ng-repeat="icon in icons | limitTo : 2 : 2" class="col-xs-6">
     <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
   </div>
+</div>
+<div class="row visible-xs">
   <div ng-repeat="icon in icons | limitTo : 1 : 4" class="col-xs-6 col-xs-offset-3">
     <img class="img-responsive center-block" ng-src="{{ icon.imgPath }}" alt="{{ icon.name }}" />
   </div>
