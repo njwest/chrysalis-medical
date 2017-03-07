@@ -1,5 +1,13 @@
 [
   {
+    "name":"Kristen Oeltjen-Bruns, CMPP",
+    "position":"Client Services Director",
+    "email":"Kristen.Oeltjen-Bruns@chrysalismedical.com",
+    "imgPath":"img/profiles/kristen-oeltjen-bruns.png",
+    "imgNamePath":"img/profiles/kristen-oeltjen-bruns-name.png",
+    "imgNamePathXs":"img/profiles/kristen-oeltjen-bruns-name.png"
+  },
+  {
     "name":"Dan Hutta, PhD",
     "position":"VP, Scientific and Medical Services",
     "email":"daniel.hutta@chrysalismedical.com",
