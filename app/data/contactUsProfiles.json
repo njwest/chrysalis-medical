@@ -1,18 +1,18 @@
 [
   {
     "name":"Kristen Oeltjen-Bruns, CMPP",
-    "position":"Client Services Director",
+    "position":"Vice President, Chrysalis",
     "email":"kristen.oeltjen-bruns@chrysalismedical.com",
     "imgPath":"img/profiles/kristen-oeltjen-bruns.png",
     "imgNamePath":"img/profiles/kristen-oeltjen-bruns-name.png",
     "imgNamePathXs":"img/profiles/kristen-oeltjen-bruns-name.png"
   },
   {
-    "name":"Dan Hutta, PhD",
-    "position":"VP, Scientific and Medical Services",
-    "email":"daniel.hutta@chrysalismedical.com",
-    "imgPath":"img/profiles/dan-hutta.png",
-    "imgNamePath":"img/profiles/dan-hutta-name.png",
-    "imgNamePathXs":"img/profiles/dan-hutta-name-xs.png"
+    "name":"Kathy Covino, PhD",
+    "position":"Senior Scientific Director",
+    "email":"kathy.covino@chrysalismedical.com",
+    "imgPath":"img/profiles/kathy-covino.png",
+    "imgNamePath":"img/profiles/kathy-covino-name.png",
+    "imgNamePathXs":"img/profiles/kathy-covino-name.png"
   }
 ]
