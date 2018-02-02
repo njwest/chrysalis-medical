@@ -7,7 +7,7 @@ Website for Chrysalis Medical Communications
 To launch, cd into root folder from terminal, type **node server.js**, and hit enter
 
 #Edit code
-Launch another session of terminal, cd into root folder, type in **gulp**, and hit enter. This will allow you to make changes to the html, scss, and js files. Once you make changes, just refresh the browser to view the changes. gulpfile.js will minify js files into the js/min folder and minify the scss files into the css/styles.css file and inject the changes without you having to restart the server.
+Launch another session of terminal, cd into root folder, type in **gulp**, and hit enter. This will allow you to make changes to the html, scss, and js files. Once you make changes, just refresh the browser to view the changes. gulpfile.js will minify js files into the js/min folder and minify the scss files into the css/styles.css file and inject the changes without you having to restart the server. If an error occurs, you may need to update using the following command: **npm install gulp-sass --save-dev**
 
 #API Reference
 http://www.chrysalismedical.com/emailapi/api/email

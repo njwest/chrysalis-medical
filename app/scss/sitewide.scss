@@ -33,10 +33,7 @@ body {
 }
 
 .page-title {
-  background-image: url('../img/paint-stroke.png');
-  width: 408px;
-  height: 70px;
-  background-repeat: no-repeat;
+  margin-bottom: 10px;
 }
 
 video {
@@ -49,4 +46,8 @@ video {
 
 .dna-segment-video {
   padding-top: 10px;
+}
+
+img {
+  border: 1px red solid;
 }
