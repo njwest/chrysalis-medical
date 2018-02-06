@@ -24,4 +24,13 @@ $(window).load(function() {
       $("#contact-form-div").addClass("fadeInDown wow").attr("data-wow-delay", "{{ formDelay }}");
     }
   });
+
+  // copyright year
+  function displayFullYear() {
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("get-full-year").innerHTML = n;
+  }
+  displayFullYear();
+  
 });
